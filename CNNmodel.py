@@ -29,7 +29,7 @@ def get_model(input_size, no_mask, nb_layers, nb_filters, k_size, dropout=0.2, s
     lr_schedule = tf.keras.optimizers.schedules.ExponentialDecay(
                         initial_learning_rate=0.001,
                         decay_steps=100000,
-                        decay_rate=0.99)
+                        decay_rate=0.01)
 
     #opt = SGD(lr=0.01)     # unet
     #opt = 'adam'       # adadelta

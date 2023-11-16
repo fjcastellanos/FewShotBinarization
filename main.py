@@ -45,7 +45,7 @@ K.set_image_data_format('channels_last')
 
 # ----------------------------------------------------------------------------
 def menu():
-    parser = argparse.ArgumentParser(description='Data augmentation on test')
+    parser = argparse.ArgumentParser(description='Binarization with masking layer and oversampling')
 
     
     parser.add_argument('-db_train_src', required=True, help='Dataset path for training (src imags)')
@@ -177,7 +177,7 @@ if __name__ == "__main__":
 
       print("Results: " + number_to_string(best_fm_test) + separator + number_to_string(prec_test) + separator + number_to_string(recall_test))
       
-      str_result += key + separator + separator + number_to_string(best_fm_test) + separator + number_to_string(prec_test) + separator + number_to_string(recall_test) + separator + "\n"
+      str_result += separator + separator + number_to_string(best_fm_test) + separator + number_to_string(prec_test) + separator + number_to_string(recall_test) + separator + "\n"
       print(str_result)
       
       if config.res is not None:

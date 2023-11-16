@@ -192,7 +192,7 @@ def calculate_mask(gt, window_w, window_h, nb_sequential_patches = -1, batch_siz
 
 
 def get_gt_image_and_regions(gt_path_file, nb_sequential_patches, window_w, window_h, batch_size):
-    gt_img = (utilIO.load_gt_image(gt_path_file)[:,:,3] > 128)*1 #Annotations are in alpha channel
+    gt_img = (utilIO.load_gt_image(gt_path_file) < 128)*1 #Annotations are in alpha channel
 
     regions_mask, n_patches = calculate_mask(gt_img, window_w, window_h, nb_sequential_patches, batch_size)
     gt_img = apply_mask(gt_img, regions_mask=regions_mask)
@@ -605,7 +605,7 @@ def compute_best_threshold(path_model, val_data, batch_size, window_shape, nb_an
         print("Processing..." + str(idx) + "/" + str(len(val_data)) + ": " + page_src)
         
         gr, gt, region_mask, n_annotated_patches_real = get_image_with_gt(page_src, page_gt, nb_annotated_patches, window_w, window_h, batch_size, with_masked_input)
-        
+        gt=gt>0.5
         prediction = predict_image(model, gr, -1, window_shape)
         coords_with_annotations = np.where((region_mask.flatten())!=0)
         
@@ -621,7 +621,7 @@ def compute_best_threshold(path_model, val_data, batch_size, window_shape, nb_an
     return best_fm, best_th, prec, recall, dict_predictions
 
 
-def compute_metrics(config, path_model, test_data, batch_size, window_shape, nb_annotated_patches=-1, threshold=None, with_masked_input=True):
+def compute_metrics(config, path_model, test_data, batch_size, window_shape, threshold=None, with_masked_input=True):
     import CNNmodel
     no_mask = not with_masked_input
     model = CNNmodel.get_model(window_shape, no_mask, config.n_la, config.nb_fil, config.ker, dropout=config.drop, stride=2)
@@ -641,7 +641,8 @@ def compute_metrics(config, path_model, test_data, batch_size, window_shape, nb_
         idx+=1
         print("Processing..." + str(idx) + "/" + str(len(test_data)) + ": " + page_src)
         
-        gr, gt, _, _ = get_image_with_gt(page_src, page_gt, nb_annotated_patches, window_w, window_h, batch_size, False)
+        gr, gt, _, _ = get_image_with_gt(page_src, page_gt, -1, window_w, window_h, batch_size, False)
+        _, _, regions_mask, _ = get_image_with_gt(page_src, page_gt, config.n_an, window_w, window_h, batch_size, False)
         gt=gt>0.5
         prediction_matrix = predict_image(model, gr, -1, window_shape)
 
@@ -651,6 +652,8 @@ def compute_metrics(config, path_model, test_data, batch_size, window_shape, nb_
         utilIO.saveImage((gr)*255, path_result + "_gr.png")
         utilIO.saveImage((prediction_matrix)*255, path_result + "_pred.png")
         utilIO.saveImage((prediction_matrix>threshold)*255, path_result + "_pred_th.png")
+        utilIO.saveImage((regions_mask)*255, path_result + "_annotated_regions.png")
+        
         
         gr=None
         gt=None
@@ -668,7 +671,7 @@ def compute_metrics(config, path_model, test_data, batch_size, window_shape, nb_
         page_src = page_test[0]
         page_gt = page_test[1]
         
-        gr, gt, _, _ = get_image_with_gt(page_src, page_gt, nb_annotated_patches, window_w, window_h, batch_size, with_masked_input)
+        gr, gt, _, _ = get_image_with_gt(page_src, page_gt, -1, window_w, window_h, batch_size, with_masked_input)
         coords_with_annotations = np.where((dict_predictions[utilConst.KEY_RESULT][page_src][0].flatten())!=utilConst.kPIXEL_VALUE_FOR_MASKING)
         predictions = np.concatenate((predictions, (dict_predictions[utilConst.KEY_RESULT][page_src][0].flatten())[coords_with_annotations]))
         gts = np.concatenate((gts, (gt.flatten())[coords_with_annotations]))
@@ -680,6 +683,9 @@ def compute_metrics(config, path_model, test_data, batch_size, window_shape, nb_
 
 
     return dict_results, dict_predictions
+
+
+
 
 
 def predict_image(model, gr_norm, nb_sequential_patches, window_shape):
@@ -695,46 +701,16 @@ def predict_image(model, gr_norm, nb_sequential_patches, window_shape):
     margin = 10
     patch_counter = 0
 
-    
-    for row in range(window_w//2, ROWS+window_w//3-1, window_w//3):
-        for col in range(window_h//2, COLS+window_h//3-1, window_h//3):
-            row = min(row, ROWS-window_w//2)
-            col = min(col, COLS-window_h//2)
-            
-            patch_gr = gr_norm[row-window_w//2:row-window_w//2+window_w, col-window_h//2:col-window_h//2+window_h]
-            list_patches_batch = []
-            list_patches_batch.append(patch_gr)
-            list_masks = []
-            list_masks.append(None)
-            
-            patch_gr_arr = np.array(list_patches_batch)
-            
-            predicted_patches = model.predict(patch_gr_arr, verbose=0)[:,:,:,0]
-            prediction[row-window_w//2+margin:row-window_w//2+window_w-margin, col-window_h//2+margin:col-window_h//2+window_h-margin, 0] = np.maximum(prediction[row-window_w//2+margin:row-window_w//2+window_w-margin, col-window_h//2+margin:col-window_h//2+window_h-margin,0], predicted_patches[0,margin:-margin,margin:-margin])
-
-            
-            predicted_patch = predicted_patches[margin:-margin,margin:-margin]
-            regions_mask_aug_sample = list_masks
-            prediction_correct = predicted_patch
-            regions_mask_correct = regions_mask_aug_sample
-            
-            l = np.where((regions_mask_correct == 0))
-            prediction_correct[l] = utilConst.kPIXEL_VALUE_FOR_MASKING
-
-            prediction[row-window_w//2+margin:row-window_w//2+window_w-margin, col-window_h//2+margin:col-window_h//2+window_h-margin] = prediction_correct
-            
-            patch_counter+=1
-            if (nb_sequential_patches != -1 and patch_counter >=nb_sequential_patches*2) or nb_sequential_patches == 1:
-                return prediction
-
-    return prediction
-
-
-
-
-
-def predict_image(model, gr_norm, nb_sequential_patches, window_shape):
-    
+    '''
+    list_patches_batch = []
+    list_patches_batch.append(gr_norm)
+    image_gr_arr = np.array(list_patches_batch)
+    try:
+        prediction = model.predict(image_gr_arr, verbose=0)[:,:,:,0]
+        return prediction
+    except:
+        list_patches_batch = []
+    '''
 
     window_w = window_shape[0]
     window_h = window_shape[1]
@@ -767,7 +743,7 @@ def predict_image(model, gr_norm, nb_sequential_patches, window_shape):
 
 
 def test_model(config, path_model, test_data, window_shape, threshold, with_masked_input):
-    dict_results, dict_predictions = compute_metrics(config=config, path_model=path_model, test_data=test_data, batch_size=1, window_shape=window_shape, nb_annotated_patches=-1, threshold=threshold, with_masked_input=with_masked_input)
+    dict_results, dict_predictions = compute_metrics(config=config, path_model=path_model, test_data=test_data, batch_size=1, window_shape=window_shape, threshold=threshold, with_masked_input=with_masked_input)
     
     pathfolder_result = path_model.replace(".h5", "/").replace("models/", "results/")
     pathfolder_result_bin = path_model.replace(".h5", "/").replace("models/", "results/bin/")
