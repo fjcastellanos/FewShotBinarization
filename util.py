@@ -27,7 +27,7 @@ def order_corpora_by_resolution(corpora, increase=True):
 def create_Validation_and_Training_partitions(list_src_train, list_gt_train, pages_train=None):
     
     corpora = utilIO.match_SRC_GT_Images(list_src_train, list_gt_train)
-    order_corpora_by_resolution(corpora)
+    corpora = order_corpora_by_resolution(corpora)
     #random.seed(78)
     #random.shuffle(corpora)
     num_val_images = int(0.2*len(corpora))
