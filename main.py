@@ -16,7 +16,7 @@ import copy
 import argparse
 import numpy as np
 
-'''
+
 gpus = tf.config.list_physical_devices('GPU')
 print("Num GPUs Available: ", gpus)
 
@@ -29,7 +29,7 @@ if gpus:
   except RuntimeError as e:
     # Memory growth must be set before GPUs have been initialized
     print(e)
-'''
+
 
 import utilArgparse
 import utilConst
