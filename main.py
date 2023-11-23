@@ -172,7 +172,10 @@ if __name__ == "__main__":
       
       separator = ";"
       print ("SUMMARY:")
-      str_result = "VAL"+separator+str(best_th_val) + separator + number_to_string(best_fm_val) + separator + number_to_string(prec_val) + separator + number_to_string(recall_val) + "\n"  #number_to_string(best_fm_val) + separator + number_to_string(prec_val) + separator + number_to_string(recall_val) + separator + str(best_th_val).replace(".", ",") + separator
+      str_properties = str(config.db_test_src)+separator+"PAG" + separator + str(config.pages_train) + separator + "ANN" + separator + str(config.n_an) + separator + "PAT" + separator + str(config.n_pa) + separator  + str(config.ink_rate) + separator
+        
+      
+      str_result =str_properties+separator+ "VAL"+separator+str(best_th_val) + separator + number_to_string(best_fm_val) + separator + number_to_string(prec_val) + separator + number_to_string(recall_val) + "\n"  #number_to_string(best_fm_val) + separator + number_to_string(prec_val) + separator + number_to_string(recall_val) + separator + str(best_th_val).replace(".", ",") + separator
     
       best_fm_test = dict_results[utilConst.KEY_RESULT][0][0]
       prec_test = dict_results[utilConst.KEY_RESULT][0][1]
@@ -180,12 +183,12 @@ if __name__ == "__main__":
 
       print("Results: " + number_to_string(best_fm_test) + separator + number_to_string(prec_test) + separator + number_to_string(recall_test))
       
-      str_result += separator + separator + number_to_string(best_fm_test) + separator + number_to_string(prec_test) + separator + number_to_string(recall_test) + separator + "\n"
-      print(str_result)
+      str_result += "TEST" + separator + number_to_string(best_fm_test) + separator + number_to_string(prec_test) + separator + number_to_string(recall_test) + separator + "\n"
       
       if config.res is not None:
         utilIO.appendString(str_result, config.res, True)
       
-
-      
+        
+      print ('*'*80)
+      print(str_result)
       
