@@ -140,6 +140,9 @@ def getPathModel(config):
     __remove_attribute_namespace(config_copy, 'n_aug')
     __remove_attribute_namespace(config_copy, 'drop_test')
 
+    if config.ink_rate == 0.0025:
+        __remove_attribute_namespace(config_copy, 'ink_rate')
+
     if config.no_mask is None or config.no_mask == False:
         __remove_attribute_namespace(config_copy, 'no_mask')
 

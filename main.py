@@ -16,7 +16,7 @@ import copy
 import argparse
 import numpy as np
 
-
+'''
 gpus = tf.config.list_physical_devices('GPU')
 print("Num GPUs Available: ", gpus)
 
@@ -29,6 +29,7 @@ if gpus:
   except RuntimeError as e:
     # Memory growth must be set before GPUs have been initialized
     print(e)
+'''
 
 import utilArgparse
 import utilConst
@@ -70,6 +71,8 @@ def menu():
     parser.add_argument('-f',          default=64,      dest='nb_fil',   type=int,   help='Number of filters')
     parser.add_argument('-k',          default=5,        dest='ker',            type=int,   help='kernel size')
     parser.add_argument('-drop',   default=0.2,        dest='drop',          type=float, help='dropout value')
+    
+    parser.add_argument('-ink_rate',   default=0.025,        dest='ink_rate',          type=float, help='Ink proportion to select patches to be annotated')
     
 
     parser.add_argument('-pages_train',   default=-1,      type=int,   help='Number of pages to be used for training. -1 to load all the training set.')
@@ -127,8 +130,8 @@ if __name__ == "__main__":
       
       model = CNNmodel.get_model(input_shape, config.no_mask, config.n_la, config.nb_fil, config.ker, dropout=config.drop, stride=2)
       
-      train_generator = util.create_generator(train_data, config.no_mask, config.ba, input_shape, config.n_pa, config.n_an, config.aug)
-      val_generator = util.create_generator(val_data, config.no_mask, config.ba, input_shape, config.n_pa, config.n_an, augmentation_val)
+      train_generator = util.create_generator(train_data, config.no_mask, config.ba, input_shape, config.n_pa, config.n_an, config.aug, config.ink_rate)
+      val_generator = util.create_generator(val_data, config.no_mask, config.ba, input_shape, config.n_pa, config.n_an, augmentation_val, config.ink_rate)
       
       nb_train_pages = len(train_data)
       nb_val_pages = len(val_data)
@@ -161,7 +164,7 @@ if __name__ == "__main__":
       print("Obtaining best threshold...(Validation partition)")
       
       threshold=None
-      best_fm_val, best_th_val, prec_val, recall_val, dict_predictions = util.compute_best_threshold(path_model, val_data, config.ba, input_shape, nb_annotated_patches=config.n_an, threshold=threshold, with_masked_input=False)
+      best_fm_val, best_th_val, prec_val, recall_val, dict_predictions = util.compute_best_threshold(path_model, val_data, config.ba, input_shape, config.ink_rate, nb_annotated_patches=config.n_an, threshold=threshold, with_masked_input=False)
       
       print("Results of the test...")
       with_mask = not config.no_mask

@@ -4,24 +4,41 @@ import numpy as np
 import utilConst
 import tensorflow as tf
 import cv2
+from operator import itemgetter
+
+
+def order_corpora_by_resolution(corpora, increase=True):
+    list_pages_with_total_pixels = []
+    
+    for page in corpora:
+        page_src = page[0]
+        im = utilIO.load_src_image(page_src)
+        resolution = im.shape
+        total_pixels = resolution[0]*resolution[1]
+        list_pages_with_total_pixels.append( (page, total_pixels) )
+        
+    list_pages_with_total_pixels = sorted(list_pages_with_total_pixels, key=itemgetter(1), reverse = increase) #Descendent order of total pixels
+
+    list_pages_ordered_without_total_pixels = [page for (page, total_pixels) in list_pages_with_total_pixels]
+
+    return list_pages_ordered_without_total_pixels
 
 
 def create_Validation_and_Training_partitions(list_src_train, list_gt_train, pages_train=None):
     
     corpora = utilIO.match_SRC_GT_Images(list_src_train, list_gt_train)
-    random.seed(78)
-    random.shuffle(corpora)
+    order_corpora_by_resolution(corpora)
+    #random.seed(78)
+    #random.shuffle(corpora)
     num_val_images = int(0.2*len(corpora))
-
-    val_data = corpora[0:num_val_images]
 
     if pages_train is None or pages_train == -1:
         pages_train = len(corpora)-num_val_images
-    else:
-        val_data = val_data[0:min(pages_train, len(val_data))]
     assert(pages_train <= (len(corpora)-num_val_images))
-    train_data = corpora[num_val_images:num_val_images+pages_train]
 
+    train_data = corpora[0:pages_train]
+    val_data = corpora[pages_train: pages_train + num_val_images]
+    
     return train_data, val_data
 
 
@@ -86,9 +103,8 @@ def extractSequentialSamplesClass(gr, gt, window_w, window_h, batch_size, idx_st
     return patch_counter
         
 
-def extractRandomSamplesClass(gr, gt, patch_width, patch_height, batch_size, gr_chunks, gt_chunks, regions_mask, augmentation_types):
+def extractRandomSamplesClass(gr, gt, patch_width, patch_height, batch_size, gr_chunks, gt_chunks, regions_mask, augmentation_types, min_rate_annotated_pixels = 0.0025):
 
-    min_rate_annotated_pixels = 0.0025
     potential_training_examples = np.where(gt == 1)
 
     num_coords = len(potential_training_examples[0])
@@ -159,11 +175,11 @@ def apply_mask(gt_img, regions_mask=None):
     else:
         return gt_img
 
-def calculate_mask(gt, window_w, window_h, nb_sequential_patches = -1, batch_size=-1):
+def calculate_mask(gt, window_w, window_h, nb_sequential_patches = -1, batch_size=-1, min_rate_annotated_pixels = 0.0025):
     ROWS = gt.shape[0]
     COLS = gt.shape[1]
     
-    min_rate_annotated_pixels = 0.0025
+    
 
     mask = np.zeros((ROWS, COLS))
 
@@ -180,21 +196,21 @@ def calculate_mask(gt, window_w, window_h, nb_sequential_patches = -1, batch_siz
             if (np.sum(gt_sample == 1) > batch_size):
                 current_rate_annotated_pixels = np.sum(gt_sample == 1) / (window_h*window_w)
                             
-                if nb_sequential_patches == -1 or current_rate_annotated_pixels >= min_rate_annotated_pixels:
+                if nb_sequential_patches == -1 or (nb_sequential_patches == 0 and current_rate_annotated_pixels >= min_rate_annotated_pixels) or current_rate_annotated_pixels >= min_rate_annotated_pixels:
                     
                     mask[row-window_w//2:row-window_w//2+window_w, col-window_h//2:col-window_h//2+window_h] = 1
                     patch_counter += 1
 
-                    if nb_sequential_patches != -1 and patch_counter >=nb_sequential_patches:
+                    if nb_sequential_patches != -1 and nb_sequential_patches != 0 and patch_counter >=nb_sequential_patches:
                         return mask, patch_counter
 
     return mask, patch_counter
 
 
-def get_gt_image_and_regions(gt_path_file, nb_sequential_patches, window_w, window_h, batch_size):
+def get_gt_image_and_regions(gt_path_file, nb_sequential_patches, window_w, window_h, batch_size, min_rate_annotated_pixels):
     gt_img = (utilIO.load_gt_image(gt_path_file) < 128)*1 #Annotations are in alpha channel
 
-    regions_mask, n_patches = calculate_mask(gt_img, window_w, window_h, nb_sequential_patches, batch_size)
+    regions_mask, n_patches = calculate_mask(gt_img, window_w, window_h, nb_sequential_patches, batch_size, min_rate_annotated_pixels)
     gt_img = apply_mask(gt_img, regions_mask=regions_mask)
 
     return gt_img, regions_mask, n_patches
@@ -203,9 +219,9 @@ def get_gt_image_and_regions(gt_path_file, nb_sequential_patches, window_w, wind
 def normalize_image(img):
     return (255.-img) / 255.
 
-def get_image_with_gt(page_src, page_gt, nb_sequential_patches, window_w, window_h, batch_size, with_mask=False):
+def get_image_with_gt(page_src, page_gt, nb_sequential_patches, window_w, window_h, batch_size, min_rate_annotated_pixels, with_mask=False):
 
-    gt, regions_mask, n_annotated_patches_real = get_gt_image_and_regions(page_gt, nb_sequential_patches, window_w, window_h, batch_size)
+    gt, regions_mask, n_annotated_patches_real = get_gt_image_and_regions(page_gt, nb_sequential_patches, window_w, window_h, batch_size, min_rate_annotated_pixels)
     gr = utilIO.load_src_image(page_src)
     gr = normalize_image(gr)
 
@@ -275,14 +291,14 @@ def apply_random_augmentations(gr, gt, regions_mask, augmentation_types, width_o
 
 
 
-def getRandomSamples(page, batch_size, nb_annotated_patches, window_w, window_h, augmentation_types):
+def getRandomSamples(page, batch_size, nb_annotated_patches, window_w, window_h, augmentation_types, min_rate_annotated_pixels):
     gr_chunks = []
     gt_chunks = []
  
-    gr, gt, regions_mask, n_annotated_patches_real = get_image_with_gt(page[0], page[1], nb_annotated_patches, window_w, window_h, batch_size, True)
+    gr, gt, regions_mask, n_annotated_patches_real = get_image_with_gt(page[0], page[1], nb_annotated_patches, window_w, window_h, batch_size, min_rate_annotated_pixels, True)
     
     while len(gr_chunks) < batch_size:
-        extractRandomSamplesClass(gr, gt, window_w, window_h, 1, gr_chunks, gt_chunks, regions_mask, augmentation_types)
+        extractRandomSamplesClass(gr, gt, window_w, window_h, 1, gr_chunks, gt_chunks, regions_mask, augmentation_types, min_rate_annotated_pixels)
 
     gr_chunks_arr = np.array(gr_chunks)
     gt_chunks_arr = np.array(gt_chunks)
@@ -313,17 +329,17 @@ def getSequentialSamples(gr, gt, regions_mask, idx_patch, batch_size, n_annotate
     # convert gr_chunks and gt_chunks to the numpy arrays that are yield below    
     return gr_chunks_arr, gt_chunks_arr
 
-def get_number_annotated_patches(page, window_w, window_h, number_patches=-1):
+def get_number_annotated_patches(page, window_w, window_h, min_rate_annotated_pixels, number_patches=-1):
     if type(page) is tuple:
-        gr, gt, regions_mask, n_annotated_patches_real_total = get_image_with_gt(page[0], page[1], number_patches, window_w, window_h, 1, True)
+        gr, gt, regions_mask, n_annotated_patches_real_total = get_image_with_gt(page[0], page[1], number_patches, window_w, window_h, 1, min_rate_annotated_pixels, True)
     else:
         n_annotated_patches_real_total = 0
         for p in page:
-            gr, gt, regions_mask, n_annotated_patches_real = get_image_with_gt(p[0], p[1], number_patches, window_w, window_h, 1, True)
+            gr, gt, regions_mask, n_annotated_patches_real = get_image_with_gt(p[0], p[1], number_patches, window_w, window_h, 1, min_rate_annotated_pixels, True)
             n_annotated_patches_real_total += n_annotated_patches_real
     return n_annotated_patches_real_total
 
-def create_generator(data_pages, no_mask, batch_size, window_shape, nb_patches, nb_annotated_patches, augmentation_types):
+def create_generator(data_pages, no_mask, batch_size, window_shape, nb_patches, nb_annotated_patches, augmentation_types, min_rate_annotated_pixels):
     if no_mask is None or no_mask == False:
         using_mask = True
     else:
@@ -336,17 +352,17 @@ def create_generator(data_pages, no_mask, batch_size, window_shape, nb_patches, 
         for page in data_pages:
             if utilConst.AUGMENTATION_RANDOM in augmentation_types:
                 assert(nb_patches != -1)
-                yield from getRandomSamples(page, min(batch_size, nb_patches), nb_annotated_patches, window_shape[0], window_shape[1], augmentation_types)
+                yield from getRandomSamples(page, min(batch_size, nb_patches), nb_annotated_patches, window_shape[0], window_shape[1], augmentation_types, min_rate_annotated_pixels)
             else:
                 assert(nb_annotated_patches == nb_patches)
-                real_patches = get_number_annotated_patches(page, window_shape[0], window_shape[1], nb_annotated_patches)
+                real_patches = get_number_annotated_patches(page, window_shape[0], window_shape[1], min_rate_annotated_pixels, nb_annotated_patches)
                 if nb_annotated_patches == -1:
                     nb_annotated_patches_real = real_patches
                     np_patches_real = real_patches
                 else:
                     nb_annotated_patches_real = nb_annotated_patches
                     np_patches_real = nb_patches
-                gr, gt, regions_mask, n_annotated_patches_real = get_image_with_gt(page[0], page[1], nb_annotated_patches_real, window_shape[0], window_shape[1], batch_size, using_mask)
+                gr, gt, regions_mask, n_annotated_patches_real = get_image_with_gt(page[0], page[1], nb_annotated_patches_real, window_shape[0], window_shape[1], batch_size, min_rate_annotated_pixels, using_mask)
                 idx_patch = 0
                 while idx_patch < min(n_annotated_patches_real, nb_annotated_patches_real):    
                     samples = getSequentialSamples(gr, gt, regions_mask, idx_patch, min(batch_size, real_patches), n_annotated_patches_real, n_annotated_patches_real, window_shape[0], window_shape[1], augmentation_types)
@@ -588,7 +604,7 @@ def get_best_threshold(y_pred, y_test, verbose=1, args_th=None):
     return best_fm, best_th, prec, recall
 
 
-def compute_best_threshold(path_model, val_data, batch_size, window_shape, nb_annotated_patches=-1, threshold=None, with_masked_input=True):
+def compute_best_threshold(path_model, val_data, batch_size, window_shape, min_rate_annotated_pixels, nb_annotated_patches=-1, threshold=None, with_masked_input=True):
     model = tf.keras.models.load_model(path_model)
     window_w = window_shape[0]
     window_h = window_shape[1]
@@ -604,7 +620,7 @@ def compute_best_threshold(path_model, val_data, batch_size, window_shape, nb_an
         idx+=1
         print("Processing..." + str(idx) + "/" + str(len(val_data)) + ": " + page_src)
         
-        gr, gt, region_mask, n_annotated_patches_real = get_image_with_gt(page_src, page_gt, nb_annotated_patches, window_w, window_h, batch_size, with_masked_input)
+        gr, gt, region_mask, n_annotated_patches_real = get_image_with_gt(page_src, page_gt, nb_annotated_patches, window_w, window_h, batch_size, min_rate_annotated_pixels, with_masked_input)
         gt=gt>0.5
         prediction = predict_image(model, gr, -1, window_shape)
         coords_with_annotations = np.where((region_mask.flatten())!=0)
@@ -641,8 +657,8 @@ def compute_metrics(config, path_model, test_data, batch_size, window_shape, thr
         idx+=1
         print("Processing..." + str(idx) + "/" + str(len(test_data)) + ": " + page_src)
         
-        gr, gt, _, _ = get_image_with_gt(page_src, page_gt, -1, window_w, window_h, batch_size, False)
-        _, _, regions_mask, _ = get_image_with_gt(page_src, page_gt, config.n_an, window_w, window_h, batch_size, False)
+        gr, gt, _, _ = get_image_with_gt(page_src, page_gt, -1, window_w, window_h, batch_size, 0, False)
+        _, _, regions_mask, _ = get_image_with_gt(page_src, page_gt, config.n_an, window_w, window_h, batch_size, config.ink_rate ,False)
         gt=gt>0.5
         prediction_matrix = predict_image(model, gr, -1, window_shape)
 
@@ -671,7 +687,7 @@ def compute_metrics(config, path_model, test_data, batch_size, window_shape, thr
         page_src = page_test[0]
         page_gt = page_test[1]
         
-        gr, gt, _, _ = get_image_with_gt(page_src, page_gt, -1, window_w, window_h, batch_size, with_masked_input)
+        gr, gt, _, _ = get_image_with_gt(page_src, page_gt, -1, window_w, window_h, batch_size, 0., with_masked_input)
         coords_with_annotations = np.where((dict_predictions[utilConst.KEY_RESULT][page_src][0].flatten())!=utilConst.kPIXEL_VALUE_FOR_MASKING)
         predictions = np.concatenate((predictions, (dict_predictions[utilConst.KEY_RESULT][page_src][0].flatten())[coords_with_annotations]))
         gts = np.concatenate((gts, (gt.flatten())[coords_with_annotations]))
