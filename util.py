@@ -193,7 +193,7 @@ def calculate_mask(gt, window_w, window_h, nb_sequential_patches = -1, batch_siz
             gt_sample = gt[row-window_w//2:row-window_w//2+window_w, col-window_h//2:col-window_h//2+window_h]
             
             
-            if (np.sum(gt_sample == 1) > batch_size):
+            if (np.sum(gt_sample == 1) > 0):
                 current_rate_annotated_pixels = np.sum(gt_sample == 1) / (window_h*window_w)
                             
                 if nb_sequential_patches == -1 or (nb_sequential_patches == 0 and current_rate_annotated_pixels >= min_rate_annotated_pixels) or current_rate_annotated_pixels >= min_rate_annotated_pixels:
@@ -297,6 +297,9 @@ def getRandomSamples(page, batch_size, nb_annotated_patches, window_w, window_h,
  
     gr, gt, regions_mask, n_annotated_patches_real = get_image_with_gt(page[0], page[1], nb_annotated_patches, window_w, window_h, batch_size, min_rate_annotated_pixels, True)
     
+    if n_annotated_patches_real == 0:
+        return None, None
+    
     while len(gr_chunks) < batch_size:
         extractRandomSamplesClass(gr, gt, window_w, window_h, 1, gr_chunks, gt_chunks, regions_mask, augmentation_types, min_rate_annotated_pixels)
 
@@ -305,7 +308,7 @@ def getRandomSamples(page, batch_size, nb_annotated_patches, window_w, window_h,
     gt_chunks_arr = np.reshape(gt_chunks_arr, (gt_chunks_arr.shape[0], gt_chunks_arr.shape[1], gt_chunks_arr.shape[2], 1))
     # convert gr_chunks and gt_chunks to the numpy arrays that are yield below    
 
-    yield gr_chunks_arr, gt_chunks_arr
+    return gr_chunks_arr, gt_chunks_arr
 
 
 
@@ -344,15 +347,28 @@ def create_generator(data_pages, no_mask, batch_size, window_shape, nb_patches, 
         using_mask = True
     else:
         using_mask = False 
+
+    idx_tries = 0
     while(True):
         #print("Shuffle training data...")
         random.shuffle(data_pages)
         #print("Done")
-
+        
         for page in data_pages:
             if utilConst.AUGMENTATION_RANDOM in augmentation_types:
                 assert(nb_patches != -1)
-                yield from getRandomSamples(page, min(batch_size, nb_patches), nb_annotated_patches, window_shape[0], window_shape[1], augmentation_types, min_rate_annotated_pixels)
+
+                gr_chunks_arr, gt_chunks_arr = getRandomSamples(page, min(batch_size, nb_patches), nb_annotated_patches, window_shape[0], window_shape[1], augmentation_types, min_rate_annotated_pixels)
+                if gr_chunks_arr is None and gt_chunks_arr is None:
+                    idx_tries+=1
+                    if idx_tries > len(data_pages):
+                        error_msg = 'It is not possible to annotate samples'
+                        print(error_msg)
+                        raise Exception(error_msg)
+                    continue
+                else:
+                    idx_tries=0
+                    yield gr_chunks_arr, gt_chunks_arr
             else:
                 assert(nb_annotated_patches == nb_patches)
                 real_patches = get_number_annotated_patches(page, window_shape[0], window_shape[1], min_rate_annotated_pixels, nb_annotated_patches)

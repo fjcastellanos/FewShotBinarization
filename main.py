@@ -183,7 +183,7 @@ if __name__ == "__main__":
 
       print("Results: " + number_to_string(best_fm_test) + separator + number_to_string(prec_test) + separator + number_to_string(recall_test))
       
-      str_result += "TEST" + separator + number_to_string(best_fm_test) + separator + number_to_string(prec_test) + separator + number_to_string(recall_test) + separator
+      str_result += separator+"TEST" + separator + number_to_string(best_fm_test) + separator + number_to_string(prec_test) + separator + number_to_string(recall_test) + separator
       
       if config.res is not None:
         utilIO.appendString(str_result, config.res, True)
