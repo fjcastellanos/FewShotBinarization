@@ -143,6 +143,7 @@ if __name__ == "__main__":
       print("Effective patience: " + str(patience))
 
       number_annotated_patches = util.get_number_annotated_patches(train_data, input_shape[0], input_shape[1], config.ink_rate, config.n_pa)  
+      number_annotated_patches_val = util.get_number_annotated_patches(val_data, input_shape[0], input_shape[1], config.ink_rate, config.n_pa)  
       
       if utilConst.AUGMENTATION_RANDOM in config.aug:
         assert(config.n_pa!=-1)
@@ -152,11 +153,13 @@ if __name__ == "__main__":
         print ("Number of annotated patches: " + str(number_annotated_patches))
         steps_per_epoch = np.ceil(number_annotated_patches/config.ba)
 
-      if number_annotated_patches > 0:
+      if number_annotated_patches > 0 and number_annotated_patches_val > 0:
         steps_per_epoch = max(1, steps_per_epoch)
         CNNmodel.train(model, path_model, train_generator, val_generator, steps_per_epoch, nb_val_pages, config.ba, epochs, patience=patience)
       else:
-        print("No samples available with the ink rate considered.")
+        print("No samples available with the ink rate considered. Train (" + str(number_annotated_patches) +") ; Val (" + str(number_annotated_patches_val) + ")")
+        
+        
     else: #TEST MODE
       
       list_src_test = utilIO.listFilesRecursive(config.db_test_src)
