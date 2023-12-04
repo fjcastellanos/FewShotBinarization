@@ -142,17 +142,24 @@ if __name__ == "__main__":
       print("Number of effective epochs: " + str(epochs))
       print("Effective patience: " + str(patience))
 
+      number_annotated_patches = util.get_number_annotated_patches(train_data, input_shape[0], input_shape[1], config.ink_rate, config.n_pa)  
+      number_annotated_patches_val = util.get_number_annotated_patches(val_data, input_shape[0], input_shape[1], config.ink_rate, config.n_pa)  
+      
       if utilConst.AUGMENTATION_RANDOM in config.aug:
         assert(config.n_pa!=-1)
         steps_per_epoch = int(np.ceil((config.n_pa*nb_train_pages)/ config.ba))
       else:
-        number_annotated_patches = util.get_number_annotated_patches(train_data, input_shape[0], input_shape[1], config.n_pa)  
+        
         print ("Number of annotated patches: " + str(number_annotated_patches))
         steps_per_epoch = np.ceil(number_annotated_patches/config.ba)
 
-      steps_per_epoch = max(1, steps_per_epoch)
-      CNNmodel.train(model, path_model, train_generator, val_generator, steps_per_epoch, nb_val_pages, config.ba, epochs, patience=patience)
-    
+      if number_annotated_patches > 0 and number_annotated_patches_val > 0:
+        steps_per_epoch = max(1, steps_per_epoch)
+        CNNmodel.train(model, path_model, train_generator, val_generator, steps_per_epoch, nb_val_pages, config.ba, epochs, patience=patience)
+      else:
+        print("No samples available with the ink rate considered. Train (" + str(number_annotated_patches) +") ; Val (" + str(number_annotated_patches_val) + ")")
+        
+        
     else: #TEST MODE
       
       list_src_test = utilIO.listFilesRecursive(config.db_test_src)
@@ -161,25 +168,38 @@ if __name__ == "__main__":
       
       test_data = utilIO.match_SRC_GT_Images(list_src_test, list_gt_test)
       
+      number_annotated_patches = util.get_number_annotated_patches(train_data, input_shape[0], input_shape[1], config.ink_rate, config.n_pa) 
+      number_annotated_patches_val = util.get_number_annotated_patches(val_data, input_shape[0], input_shape[1], config.ink_rate, config.n_pa)  
+      
       print("Obtaining best threshold...(Validation partition)")
       
       threshold=None
-      best_fm_val, best_th_val, prec_val, recall_val, dict_predictions = util.compute_best_threshold(path_model, val_data, config.ba, input_shape, config.ink_rate, nb_annotated_patches=config.n_an, threshold=threshold, with_masked_input=False)
       
-      print("Results of the test...")
-      with_mask = not config.no_mask
-      dict_results = util.test_model(config, path_model, test_data, input_shape, best_th_val, with_mask)
+      
+      if number_annotated_patches > 0 and number_annotated_patches_val > 0:
+        print("Results of the test...")
+        best_fm_val, best_th_val, prec_val, recall_val, dict_predictions = util.compute_best_threshold(path_model, val_data, config.ba, input_shape, config.ink_rate, nb_annotated_patches=config.n_an, threshold=threshold, with_masked_input=False)
+        with_mask = not config.no_mask
+        dict_results = util.test_model(config, path_model, test_data, input_shape, best_th_val, with_mask)
+        best_fm_test = dict_results[utilConst.KEY_RESULT][0][0]
+        prec_test = dict_results[utilConst.KEY_RESULT][0][1]
+        recall_test = dict_results[utilConst.KEY_RESULT][0][2]
+      else:
+        print("No model is trained with this configuration...")
+        best_fm_val = 0
+        best_th_val = 0
+        prec_val = 0
+        recall_val = 0
+        dict_predictions = None
+        best_fm_test = 0
+        prec_test = 0
+        recall_test = 0
       
       separator = ";"
       print ("SUMMARY:")
-      str_properties = str(config.db_test_src)+separator+"PAG" + separator + str(config.pages_train) + separator + "ANN" + separator + str(config.n_an) + separator + "PAT" + separator + str(config.n_pa) + separator  + str(config.ink_rate) + separator
-        
-      
-      str_result =str_properties+separator+ "VAL"+separator+str(best_th_val) + separator + number_to_string(best_fm_val) + separator + number_to_string(prec_val) + separator + number_to_string(recall_val) + separator  #number_to_string(best_fm_val) + separator + number_to_string(prec_val) + separator + number_to_string(recall_val) + separator + str(best_th_val).replace(".", ",") + separator
+      str_properties = str(config.db_test_src)+separator+"PAG" + separator + str(config.pages_train) + separator + "ANN" + separator + str(config.n_an) + separator + "PAT" + separator + str(config.n_pa) + separator  + str(config.ink_rate) + separator  
+      str_result = str_properties+separator+ "VAL"+separator+str(best_th_val) + separator + number_to_string(best_fm_val) + separator + number_to_string(prec_val) + separator + number_to_string(recall_val) + separator  #number_to_string(best_fm_val) + separator + number_to_string(prec_val) + separator + number_to_string(recall_val) + separator + str(best_th_val).replace(".", ",") + separator
     
-      best_fm_test = dict_results[utilConst.KEY_RESULT][0][0]
-      prec_test = dict_results[utilConst.KEY_RESULT][0][1]
-      recall_test = dict_results[utilConst.KEY_RESULT][0][2]
 
       print("Results: " + number_to_string(best_fm_test) + separator + number_to_string(prec_test) + separator + number_to_string(recall_test))
       
