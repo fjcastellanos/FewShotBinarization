@@ -161,7 +161,7 @@ if __name__ == "__main__":
     list_cols = []
 
     import copy
-    for data_item in all_dataset:
+    for data_item in train_data:
 
         gr, gt, regions_mask, n_annotated_patches_real = util.get_image_with_gt(data_item[0], data_item[1], config.n_an, input_shape[0], input_shape[1], 1, config.ink_rate, True)
         _, gt_full, regions_mask_full, n_annotated_patches_real_full = util.get_image_with_gt(data_item[0], data_item[1], 0, input_shape[0], input_shape[1], 1, config.ink_rate, True)
@@ -258,7 +258,22 @@ if __name__ == "__main__":
 
 
     print("Summary")
-    str_result = config.db_train_src + ";" + number_to_string(config.n_an)+ ";" + number_to_string(config.ink_rate, 5) + ";" + number_to_string(ink_count) + ";" + number_to_string(bg_count) + ";" + number_to_string(rate_count, 5) + ";" + number_to_string(min_annotated_patches,0)+ ";" + number_to_string(max_annotated_patches,0)+ ";" + number_to_string(average_annotated_patches,0)+ ";" + number_to_string(sum_annotated_patches,0) + ";" + number_to_string(min_annotated_patches_full,0)+ ";" + number_to_string(max_annotated_patches_full,0)+ ";" + number_to_string(average_annotated_patches_full,0)+ ";" + number_to_string(sum_annotated_patches_full,0)
+    #datasets/Dibco/train/SRC;1;0,23;15105;50431;0,23048;0;1;0,0;1;0;1;0,0;1;
+    str_result = config.db_train_src + ";" 
+    str_result += number_to_string(config.n_an)+ ";" 
+    str_result += number_to_string(config.ink_rate, 5) + ";" 
+    str_result += number_to_string(ink_count) + ";" 
+    str_result += number_to_string(bg_count) + ";" 
+    str_result += number_to_string(rate_count, 5) + ";"
+    str_result += number_to_string(min_annotated_patches,0)+ ";" 
+    str_result += number_to_string(max_annotated_patches,0)+ ";" 
+    str_result += number_to_string(average_annotated_patches,0)+ ";" 
+    str_result += number_to_string(sum_annotated_patches,0) + ";" 
+    str_result += number_to_string(min_annotated_patches_full,0)+ ";" 
+    str_result += number_to_string(max_annotated_patches_full,0)+ ";" 
+    str_result += number_to_string(average_annotated_patches_full,0)+ ";" 
+    str_result += number_to_string(sum_annotated_patches_full,0)
+    str_result += ";"
     print(str_result)
     pass
     

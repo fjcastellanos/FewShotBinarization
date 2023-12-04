@@ -30,13 +30,16 @@ def create_Validation_and_Training_partitions(list_src_train, list_gt_train, pag
     corpora = order_corpora_by_resolution(corpora)
     #random.seed(78)
     #random.shuffle(corpora)
-    num_val_images = int(0.2*len(corpora))
+    
 
     if pages_train is None or pages_train == -1:
         pages_train = len(corpora)-num_val_images
-    assert(pages_train <= (len(corpora)-num_val_images))
 
     train_data = corpora[0:pages_train]
+
+    num_val_images = min(len(train_data),int(0.2*len(corpora)))
+    assert(pages_train <= (len(corpora)-num_val_images))
+    
     val_data = corpora[pages_train: pages_train + num_val_images]
     
     return train_data, val_data
