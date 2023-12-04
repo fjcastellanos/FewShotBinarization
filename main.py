@@ -162,20 +162,25 @@ if __name__ == "__main__":
         
     else: #TEST MODE
       
+      util.extract_annotated_samples_and_region_mask(path_model, train_data, input_shape, config.ink_rate, config.n_an, with_masked_input=True)
+      
       list_src_test = utilIO.listFilesRecursive(config.db_test_src)
       list_gt_test = utilIO.listFilesRecursive(config.db_test_gt)
       assert(len(list_src_test) == len(list_gt_test))
       
       test_data = utilIO.match_SRC_GT_Images(list_src_test, list_gt_test)
       
-      number_annotated_patches = util.get_number_annotated_patches(train_data, input_shape[0], input_shape[1], config.ink_rate, config.n_pa) 
-      number_annotated_patches_val = util.get_number_annotated_patches(val_data, input_shape[0], input_shape[1], config.ink_rate, config.n_pa)  
+      number_annotated_patches = util.get_number_annotated_patches(train_data, input_shape[0], input_shape[1], config.ink_rate, config.n_an) 
+      number_annotated_patches_val = util.get_number_annotated_patches(val_data, input_shape[0], input_shape[1], config.ink_rate, config.n_an)  
+
+      max_number_annotated_patches = util.get_number_annotated_patches(train_data, input_shape[0], input_shape[1], config.ink_rate, -1) 
+      max_number_annotated_patches_val = util.get_number_annotated_patches(val_data, input_shape[0], input_shape[1], config.ink_rate, -1)
       
       print("Obtaining best threshold...(Validation partition)")
       
       threshold=None
       
-      
+      number_annotated_patches = 0
       if number_annotated_patches > 0 and number_annotated_patches_val > 0:
         print("Results of the test...")
         best_fm_val, best_th_val, prec_val, recall_val, dict_predictions = util.compute_best_threshold(path_model, val_data, config.ba, input_shape, config.ink_rate, nb_annotated_patches=config.n_an, threshold=threshold, with_masked_input=False)
@@ -197,18 +202,60 @@ if __name__ == "__main__":
       
       separator = ";"
       print ("SUMMARY:")
-      str_properties = str(config.db_test_src)+separator+"PAG" + separator + str(config.pages_train) + separator + "ANN" + separator + str(config.n_an) + separator + "PAT" + separator + str(config.n_pa) + separator  + str(config.ink_rate) + separator  
-      str_result = str_properties+separator+ "VAL"+separator+str(best_th_val) + separator + number_to_string(best_fm_val) + separator + number_to_string(prec_val) + separator + number_to_string(recall_val) + separator  #number_to_string(best_fm_val) + separator + number_to_string(prec_val) + separator + number_to_string(recall_val) + separator + str(best_th_val).replace(".", ",") + separator
-    
+      str_header = "Test" + separator
+      str_header += "PAG" + separator
+      str_header += "Num pages train" + separator
+      str_header += "ANN" + separator
+      str_header += "Num annotations per page" + separator
+      str_header += "PAT" + separator
+      str_header += "Num random patches" + separator
+      str_header += "Ink rate" + separator
+      str_header += "VAL" + separator
+      str_header += "Th_bin" + separator
+      str_header += "F1-val" + separator
+      str_header += "P-val" + separator
+      str_header += "R-val" + separator
+      str_header += "Num annotated patches-val" + separator
+      str_header += "Maximum num annotated patches-val" + separator
+      str_header += "TEST" + separator
+      str_header += "F1-test" + separator
+      str_header += "P-test" + separator
+      str_header += "R-test" + separator
+      str_header += "Num annotated patches-test" + separator
+      str_header += "Maximum num annotated patches-test" + separator
+
+      str_properties = str(config.db_test_src) + separator
+      str_properties += "PAG" + separator
+      str_properties += str(config.pages_train) + separator
+      str_properties += "ANN" + separator
+      str_properties += str(config.n_an) + separator
+      str_properties += "PAT" + separator
+      str_properties += str(config.n_pa) + separator
+      str_properties += str(config.ink_rate) + separator  
+      str_result = str_properties+separator
+      str_result += separator + "VAL"+separator
+      str_result += str(best_th_val) + separator
+      str_result += number_to_string(best_fm_val) + separator
+      str_result += number_to_string(prec_val) + separator
+      str_result += number_to_string(recall_val) + separator  #number_to_string(best_fm_val) + separator + number_to_string(prec_val) + separator + number_to_string(recall_val) + separator + str(best_th_val).replace(".", ",") + separator
+      str_result += str(number_annotated_patches_val) + separator
+      str_result += str(max_number_annotated_patches_val) + separator
 
       print("Results: " + number_to_string(best_fm_test) + separator + number_to_string(prec_test) + separator + number_to_string(recall_test))
       
-      str_result += separator+"TEST" + separator + number_to_string(best_fm_test) + separator + number_to_string(prec_test) + separator + number_to_string(recall_test) + separator
+      str_result += separator + "TEST" + separator
+      str_result += number_to_string(best_fm_test) + separator 
+      str_result += number_to_string(prec_test) + separator 
+      str_result += number_to_string(recall_test) + separator
+      str_result += str(number_annotated_patches) + separator
+      str_result += str(max_number_annotated_patches) + separator
+      
       
       if config.res is not None:
         utilIO.appendString(str_result, config.res, True)
       
         
       print ('*'*80)
+      print(str_header)
       print(str_result)
       
