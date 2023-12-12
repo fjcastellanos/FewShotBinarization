@@ -232,7 +232,7 @@ if __name__ == "__main__":
       str_properties += str(config.n_pa) + separator
       str_properties += str(config.ink_rate).replace(".",",") + separator  
       str_result = str_properties+separator
-      str_result += separator + "VAL"+separator
+      str_result += "VAL"+separator
       str_result += str(best_th_val).replace(".",",") + separator
       str_result += number_to_string(best_fm_val) + separator
       str_result += number_to_string(prec_val) + separator
