@@ -6,6 +6,10 @@ models/
 results/
 tests/
 datasets/
+logs
+pruebas
+train
+tests
 
 # C extensions
 *.so
