@@ -180,7 +180,6 @@ if __name__ == "__main__":
       
       threshold=None
       
-      number_annotated_patches = 0
       if number_annotated_patches > 0 and number_annotated_patches_val > 0:
         print("Results of the test...")
         best_fm_val, best_th_val, prec_val, recall_val, dict_predictions = util.compute_best_threshold(path_model, val_data, config.ba, input_shape, config.ink_rate, nb_annotated_patches=config.n_an, threshold=threshold, with_masked_input=False)
