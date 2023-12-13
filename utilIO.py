@@ -149,5 +149,6 @@ def getPathModel(config):
     
     str_config = str(config_copy).replace("Namespace", "modelCNN_").replace("(", "").replace(")", "").replace("=", "_").replace("'", "").replace(",","").replace(" ", "__").replace("[", "_").replace("]","_").replace("]","_").replace("/", "_")
     str_config = "models/modelCNN/"+str_config + ".h5"
+    str_config = str_config.replace("flip","f").replace("rot", "ro").replace("scale", "sc")
     str_config = str_config.replace("datasets","dbs").replace("training", "train").replace("db_train","dtr").replace("pages_train", "pt")
     return str_config

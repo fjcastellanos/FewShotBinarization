@@ -11,31 +11,32 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "args":[
-                "-db_train_src", "datasets/Dibco/train/SRC",
-                "-db_train_gt", "datasets/Dibco/train/GT",
-                "-db_test_src", "datasets/Dibco/test/SRC", 
-                "-db_test_gt", "datasets/Dibco/test/GT",
+                "-db_train_src", "datasets/PHI/train/SRC",
+                "-db_train_gt", "datasets/PHI/train/GT",
+                "-db_test_src", "datasets/PHI/test/SRC", 
+                "-db_test_gt", "datasets/PHI/test/GT",
 
                 "-aug", "random",
                 "-window_w", "256", 
                 "-window_h", "256", 
                 "-l", "4",
-                "-f", "64",
-                "-k", "5",
+                "-f", "32",
+                "-k", "3",
                 "-drop",   "0.2",
 
-                "-npatches", "4",
-                "-n_annotated_patches", "1",
+                "-npatches", "128",
+                "-n_annotated_patches", "32",
                 "-pages_train", "1",
 
                 "-e", "200",
-                "-b", "16",
+                "-b", "32",
                 "-verbose", "1",
 
-                "-res", "results/res.txt", 
+                "-res", "results/info.txt", 
                 "-gpu", "0", 
                 //"-no_mask",
                 "--test",
+                "-ink_rate", "0.0"
             ]
         }
     ]
