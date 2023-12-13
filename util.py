@@ -604,6 +604,7 @@ def apply_augmentation(x_image, y_image, regions_mask, type_augmentation, value_
     regions_mask_out = (regions_mask_out>0.5)*1
     l = np.where((regions_mask_out == 0))
     x_image_out[l] = utilConst.kPIXEL_VALUE_FOR_MASKING
+    y_image_out[l] = 0
         
     return x_image_out, y_image_out, regions_mask_out, type_augmentation_out
 
