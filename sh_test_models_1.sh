@@ -27,7 +27,7 @@ NUMBER_ANNOTATED_PATCHES=1
 EPOCHS=200
 BATCH_SIZE=32
 VERBOSE=1
-PATHRESULTS="results/test_models_0.02_inkrate_varying_random_samples_augmented.txt"
+PATHRESULTS="results/test_models_0.02_inkrate_varying_random_samples_augmented_1.txt"
 OPTIONS="--test"    #--test
 
 
@@ -53,8 +53,8 @@ for FILTERS in 32; do
                     for PAGES_TRAIN in 1; do
                         for NUMBER_ANNOTATED_PATCHES in 1; do
                             for NUMBER_PATCHES in 1 2 4 8 16 32 64 128 256 512 1024 2048; do #1 2 4 8 16 32 64 128 256 512 1024
-                                for source in "PHI" "Salzinnes" ; do #"Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes
-                                    for ink_th in 0.02; do
+                                for source in "Dibco" "Palm" "Einsiedeln" ; do #"Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes
+                                    for ink_th in 0.02; do # 0.0 0.01 0.02 0.03 0.04 0.05 0.06 0.07 0.08 0.09 0.10 0.11 0.12 0.13 0.14 0.15 0.16 0.17 0.18 0.19 0.20 0.21 0.22 0.23 0.24 0.25 0.26 0.27 0.28 0.29 0.30 0.31 0.32 0.33 0.34 0.35 0.36 0.37 0.38 0.39 0.40
                                         target=${source}
 
                                         output_file="logs/${MODE}/out_${TYPE}_inkth_${ink_th}_${source}_aug${AUG_serial}_w${WINDOW_W}_h${WINDOW_H}_l${LAYERS}_f${FILTERS}_k${KERNEL_SIZE}_d${DROPOUT}_pt${PAGES_TRAIN}_np${NUMBER_PATCHES}_nap${NUMBER_ANNOTATED_PATCHES}_e${EPOCHS}_b${BATCH_SIZE}_${options_serial}.txt"

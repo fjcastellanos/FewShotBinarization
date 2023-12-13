@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MODE="test"
+MODE="train"
 GPU=0
 TYPE="CNN"
 
@@ -11,6 +11,7 @@ DB_TEST_SRC=""
 DB_TEST_GT=""
 
 AUG="random flipH flipV rot scale" #"random"  # 'all', 'none', 'flipH', 'flipV', 'wb', 'expos', 'rot', 'scale', 'blur', 'dropout'
+
 
 WINDOW_W=256
 WINDOW_H=256
@@ -27,8 +28,8 @@ NUMBER_ANNOTATED_PATCHES=1
 EPOCHS=200
 BATCH_SIZE=32
 VERBOSE=1
-PATHRESULTS="results/test_models_0.02_inkrate_varying_random_samples_augmented.txt"
-OPTIONS="--test"    #--test
+PATHRESULTS="results/tests_sh_train_models_1.txt"
+OPTIONS=""    #--test
 
 
 
@@ -53,8 +54,8 @@ for FILTERS in 32; do
                     for PAGES_TRAIN in 1; do
                         for NUMBER_ANNOTATED_PATCHES in 1; do
                             for NUMBER_PATCHES in 1 2 4 8 16 32 64 128 256 512 1024 2048; do #1 2 4 8 16 32 64 128 256 512 1024
-                                for source in "PHI" "Salzinnes" ; do #"Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes
-                                    for ink_th in 0.02; do
+                                for source in "Dibco" "Palm" "Einsiedeln" ; do #"Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes
+                                    for ink_th in 0.02; do 
                                         target=${source}
 
                                         output_file="logs/${MODE}/out_${TYPE}_inkth_${ink_th}_${source}_aug${AUG_serial}_w${WINDOW_W}_h${WINDOW_H}_l${LAYERS}_f${FILTERS}_k${KERNEL_SIZE}_d${DROPOUT}_pt${PAGES_TRAIN}_np${NUMBER_PATCHES}_nap${NUMBER_ANNOTATED_PATCHES}_e${EPOCHS}_b${BATCH_SIZE}_${options_serial}.txt"
