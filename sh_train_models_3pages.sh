@@ -10,7 +10,7 @@ DB_TRAIN_GT=""
 DB_TEST_SRC=""
 DB_TEST_GT=""
 
-AUG="random flipH flipV rot scale" #"random"  # 'all', 'none', 'flipH', 'flipV', 'wb', 'expos', 'rot', 'scale', 'blur', 'dropout'
+AUG="flipH flipV rot scale" #"random"  # 'all', 'none', 'flipH', 'flipV', 'wb', 'expos', 'rot', 'scale', 'blur', 'dropout'
 
 
 WINDOW_W=256
@@ -29,14 +29,14 @@ EPOCHS=200
 BATCH_SIZE=32
 VERBOSE=1
 PATHRESULTS="results/tests_sh_train_models_1.txt"
-OPTIONS=""    #--test
+OPTIONS="-no_mask"    #--test
 
 
 
 AUG_serial=${AUG// /.}
 AUG_serial=${AUG_serial////-}
 
-options_serial=${options// /.}
+options_serial=${OPTIONS// /.}
 options_serial=${options_serial////-}
 
 #"sal" "dibco2016" "dibco2014" "palm0" "palm1" "phi" "ein"
@@ -51,10 +51,11 @@ for FILTERS in 32; do
         for LAYERS in 4; do
             for KERNEL_SIZE in 3; do
                 for DROPOUT in 0.2; do
-                    for PAGES_TRAIN in 1; do
-                        for NUMBER_ANNOTATED_PATCHES in 1; do
-                            for NUMBER_PATCHES in 1 2 4 8 16 32 64 128 256 512 1024 2048; do #1 2 4 8 16 32 64 128 256 512 1024
-                                for source in "Dibco" "Palm" "Einsiedeln" ; do #"Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes
+                    for PAGES_TRAIN in 3; do
+                        for NUMBER_ANNOTATED_PATCHES in -1 32 16 8 4 2 1 ; do
+                            for NUMBER_PATCHES in 0; do #1 2 4 8 16 32 64 128 256 512 1024
+								NUMBER_PATCHES=$NUMBER_ANNOTATED_PATCHES
+                                for source in "Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes" ; do #"Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes"
                                     for ink_th in 0.02; do 
                                         target=${source}
 
