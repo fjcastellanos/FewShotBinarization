@@ -5,7 +5,8 @@ import utilConst
 import tensorflow as tf
 import cv2
 from operator import itemgetter
-
+from time import perf_counter
+from datetime import datetime
 
 def order_corpora_by_resolution(corpora, increase=True):
     list_pages_with_total_pixels = []
@@ -31,7 +32,7 @@ def create_Validation_and_Training_partitions(list_src_train, list_gt_train, pag
     #random.seed(78)
     #random.shuffle(corpora)
     
-
+    num_val_images = int(0.2*len(corpora))
     if pages_train is None or pages_train == -1:
         pages_train = len(corpora)-num_val_images
 
@@ -467,6 +468,9 @@ def __calculate_metrics(prediction, gt):
     fm = 2 * (precision * recall) / (precision + recall + epsilon)
     specificity = tn / (tn + fp + epsilon)
 
+    # IoU (Jaccard) y derivados
+    iou = tp / (tp + fp + fn + epsilon)    
+
     gt = gt.astype('int32')
     prediction = prediction.astype('int32')
 
@@ -476,7 +480,8 @@ def __calculate_metrics(prediction, gt):
 
     return {'tp':tp, 'tn':tn, 'fp':fp, 'fn':fn,
             'error':error, 'accuracy':accuracy, 'precision':precision,
-            'recall':recall, 'fm':fm, 'specificity':specificity}
+            'recall':recall, 'fm':fm, 'specificity':specificity,
+            'iou': iou}
 
 
 
@@ -631,6 +636,7 @@ def get_best_threshold(y_pred, y_test, verbose=1, args_th=None):
     best_th = -1
     prec = 0.
     recall = 0.
+    iou = 0.
     
     if args_th is None:
         for i in range(1, 10, 1):
@@ -643,24 +649,50 @@ def get_best_threshold(y_pred, y_test, verbose=1, args_th=None):
                 best_th = th
                 prec = results['precision']
                 recall = results['recall']
+                iou = results['iou']
+                tp = results['tp']
+                fp = results['fp']
+                fn = results['fn']
+                tn = results['tn']
+                specificity = results['specificity']
+               
+
         if verbose:
             print('Best threshold:', best_th)
-            print("Best Fm: %.4f " % best_fm, 
+            print("Fm: %.4f " % best_fm, 
                     "P: %.3f " % prec,
-                    "R: %.3f " % recall)
+                    "R: %.3f " % recall,
+                    "IoU: %.3f " % recall,
+                    "Specificity: %.3f " % specificity,
+                    "TP: %d " % tp,
+                    "TN: %d " % tn,
+                    "FP: %d " % fp,
+                    "FN: %d " % fn)
     else:
         results = run_test(y_pred, y_test, threshold=args_th)
         best_fm = results['fm']
         best_th = args_th
         prec = results['precision']
         recall = results['recall']
+        iou = results['iou']
+        tp = results['tp']
+        fp = results['fp']
+        fn = results['fn']
+        tn = results['tn']
+        specificity = results['specificity']
         if verbose:
             print('Threshold:', best_th)
             print("Fm: %.4f " % best_fm, 
                     "P: %.3f " % prec,
-                    "R: %.3f " % recall)
+                    "R: %.3f " % recall,
+                    "IoU: %.3f " % recall,
+                    "Specificity: %.3f " % specificity,
+                    "TP: %d " % tp,
+                    "TN: %d " % tn,
+                    "FP: %d " % fp,
+                    "FN: %d " % fn)
 
-    return best_fm, best_th, prec, recall
+    return best_fm, best_th, prec, recall, iou, specificity, tp, tn, fp, fn
 
 
 def extract_annotated_samples_and_region_mask(path_model, train_data, window_shape, min_rate_annotated_pixels, nb_annotated_patches=-1, with_masked_input=True):
@@ -727,9 +759,9 @@ def compute_best_threshold(path_model, val_data, batch_size, window_shape, min_r
        
     #predictions = np.array(predictions)
     #gts = np.array(gts)
-    best_fm, best_th, prec, recall = get_best_threshold(predictions, gts, verbose=1, args_th=threshold)
+    best_fm, best_th, prec, recall, iou, specificity, tp, tn, fp, fn = get_best_threshold(predictions, gts, verbose=1, args_th=threshold)
         
-    return best_fm, best_th, prec, recall, dict_predictions
+    return best_fm, best_th, prec, recall, iou, specificity, tp, tn, fp, fn, dict_predictions
 
 
 def compute_metrics(config, path_model, test_data, batch_size, window_shape, threshold=None, with_masked_input=True):
@@ -745,6 +777,7 @@ def compute_metrics(config, path_model, test_data, batch_size, window_shape, thr
     
     idx = 0
     dict_predictions = {}
+    list_elapsed = []
     for page_test in test_data:
         page_src = page_test[0]
         page_gt = page_test[1]
@@ -755,9 +788,13 @@ def compute_metrics(config, path_model, test_data, batch_size, window_shape, thr
         gr, gt, _, _ = get_image_with_gt(page_src, page_gt, -1, window_w, window_h, 0, False)
         _, _, regions_mask, _ = get_image_with_gt(page_src, page_gt, config.n_an, window_w, window_h, config.ink_rate ,False)
         gt=gt>0.5
-        prediction_matrix = predict_image(model, gr, -1, window_shape)
-
         
+        start = datetime.now()
+        prediction_matrix = predict_image(model, gr, -1, window_shape)
+        end = datetime.now()
+        elapsed = (end - start).total_seconds()
+        list_elapsed.append(elapsed)
+        print(f"Duration: {elapsed:.6f} s")
         path_result = path_model.replace("models/modelCNN/", "tests/").replace(".h5", "/") + page_test[0].replace("datasets/", "")
         utilIO.saveImage((gt)*255, path_result + "_gt.png") 
         utilIO.saveImage((gr)*255, path_result + "_gr.png")
@@ -776,8 +813,13 @@ def compute_metrics(config, path_model, test_data, batch_size, window_shape, thr
 
     dict_results = {}
     
+    print(list_elapsed)
+    avg_elapsed = np.mean(list_elapsed)
+    print(f"Duration AVG: {avg_elapsed:.6f} s")
+    
     predictions = np.array(list())
     gts = np.array(list())
+    
     for page_test in test_data:
         page_src = page_test[0]
         page_gt = page_test[1]
@@ -787,10 +829,11 @@ def compute_metrics(config, path_model, test_data, batch_size, window_shape, thr
         predictions = np.concatenate((predictions, (dict_predictions[utilConst.KEY_RESULT][page_src][0].flatten())[coords_with_annotations]))
         gts = np.concatenate((gts, (gt.flatten())[coords_with_annotations]))
     if len(predictions) != 0 and len(gts) != 0:
-        best_fm, best_th, prec, recall = get_best_threshold(predictions, gts, verbose=1, args_th=threshold)
+        
+        best_fm, best_th, prec, recall, iou, specificity, tp, tn, fp, fn = get_best_threshold(predictions, gts, verbose=1, args_th=threshold)
         if utilConst.KEY_RESULT not in dict_results:
             dict_results[utilConst.KEY_RESULT] = {}    
-        dict_results[utilConst.KEY_RESULT][0] = (best_fm, prec, recall)
+        dict_results[utilConst.KEY_RESULT][0] = (best_fm, prec, recall, iou, specificity, tp, tn, fp, fn, avg_elapsed)
 
 
     return dict_results, dict_predictions

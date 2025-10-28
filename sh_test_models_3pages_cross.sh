@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MODE="train"
+MODE="test"
 GPU=0
 TYPE="CNN"
 
@@ -10,8 +10,7 @@ DB_TRAIN_GT=""
 DB_TEST_SRC=""
 DB_TEST_GT=""
 
-AUG="flipH flipV rot scale" #"random"  # 'all', 'none', 'flipH', 'flipV', 'wb', 'expos', 'rot', 'scale', 'blur', 'dropout'
-
+AUG="random flipH flipV rot scale" #"random"  # 'all', 'none', 'flipH', 'flipV', 'wb', 'expos', 'rot', 'scale', 'blur', 'dropout'
 
 WINDOW_W=256
 WINDOW_H=256
@@ -28,8 +27,8 @@ NUMBER_ANNOTATED_PATCHES=1
 EPOCHS=200
 BATCH_SIZE=32
 VERBOSE=1
-PATHRESULTS="results/train_sh_train_models_-1_nomask_norandom_alldbs.txt"
-OPTIONS="-no_mask"    #--test
+PATHRESULTS="results/ours_crosstest_0.02_inkrate_varying_annotations_3pages_nomask.txt"
+OPTIONS="--test -no_mask"    #--test
 
 
 
@@ -51,15 +50,13 @@ for FILTERS in 32; do
         for LAYERS in 4; do
             for KERNEL_SIZE in 3; do
                 for DROPOUT in 0.2; do
-                    for PAGES_TRAIN in -1; do
-                        for NUMBER_ANNOTATED_PATCHES in 1 8 32 -1; do
+                    for PAGES_TRAIN in 3; do
+                        for NUMBER_ANNOTATED_PATCHES in 1 2 4 8 16 32 -1; do
                             for NUMBER_PATCHES in 1024; do #1 2 4 8 16 32 64 128 256 512 1024
-								if ! grep -qw random <<< "$AUG"; then
-								  NUMBER_PATCHES=$NUMBER_ANNOTATED_PATCHES
-								fi
-                                for source in "Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes" "Bickley" "ISOS" ; do #"Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes" "Bickley" "ISOS" 
-                                    for ink_th in 0.02; do 
-                                        target=${source}
+								#NUMBER_PATCHES=$NUMBER_ANNOTATED_PATCHES
+                                for source in "Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes" ; do #"Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes"
+                                for target in "Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes" ; do #"Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes"
+                                    for ink_th in 0.02; do
 
                                         output_file="logs/${MODE}/out_${TYPE}_inkth_${ink_th}_${source}_aug${AUG_serial}_w${WINDOW_W}_h${WINDOW_H}_l${LAYERS}_f${FILTERS}_k${KERNEL_SIZE}_d${DROPOUT}_pt${PAGES_TRAIN}_np${NUMBER_PATCHES}_nap${NUMBER_ANNOTATED_PATCHES}_e${EPOCHS}_b${BATCH_SIZE}_${options_serial}.txt"
                                         echo $output_file
@@ -103,6 +100,7 @@ for FILTERS in 32; do
                                                     ${OPTIONS} \
                                                     &> ${output_file}
                                         fi
+                                    done
                                     done
                                 done
                             done

@@ -59,6 +59,8 @@ def match_SRC_GT_Images(list_src_images, list_gt_images):
         print("\t%s" % (src_image))
         print("\t%s" % (gt_image))
 
+        print("src_basename = " + src_basename)
+        print("gt_basename = " + gt_basename)
         assert(src_basename == gt_basename)
 
         list_matched_data.append( (src_image, gt_image))
@@ -139,6 +141,7 @@ def getPathModel(config):
     __remove_attribute_namespace(config_copy, 'aug_test')
     __remove_attribute_namespace(config_copy, 'n_aug')
     __remove_attribute_namespace(config_copy, 'drop_test')
+    __remove_attribute_namespace(config_copy, 'all_ths')
 
     if config.ink_rate == 0.0025:
         __remove_attribute_namespace(config_copy, 'ink_rate')

@@ -82,6 +82,7 @@ def menu():
     parser.add_argument('-verbose',     default=1,                                  type=int,   help='1=show batch increment, other=mute')
 
     parser.add_argument('--test',   action='store_true', help='Only run test')
+    parser.add_argument('--all_ths',   action='store_true', help='Run the test evaluating all the possible binarization thresholds on the probabilistic map obtained by the model.')
     
     
     parser.add_argument('-res', required=False, help='File where append the results.')
@@ -99,6 +100,121 @@ def tpc_result(result):
   
 def number_to_string(number):
     return str(tpc_result(number)).replace(".",",")
+
+
+def evaluate_with_binarization_threshold(
+                  number_annotated_patches,
+                  number_annotated_patches_val,
+                  path_model, 
+                  val_data, 
+                  test_data,
+                  config, 
+                  input_shape, 
+                  threshold):
+    if number_annotated_patches > 0 and number_annotated_patches_val > 0:
+          print("Results of the test...")
+          best_fm_val, best_th_val, prec_val, recall_val, iou_val, specificity_val, tp_val, tn_val, fp_val, fn_val, dict_predictions = util.compute_best_threshold(path_model, val_data, config.ba, input_shape, config.ink_rate, nb_annotated_patches=config.n_an, threshold=threshold, with_masked_input=False)
+          with_mask = not config.no_mask
+          dict_results = util.test_model(config, path_model, test_data, input_shape, best_th_val, with_mask)
+          # dict_results: best_fm, prec, recall, iou, specificity, tp, tn, fp, fn
+          best_fm_test = dict_results[utilConst.KEY_RESULT][0][0]
+          prec_test = dict_results[utilConst.KEY_RESULT][0][1]
+          recall_test = dict_results[utilConst.KEY_RESULT][0][2]
+          iou_test = dict_results[utilConst.KEY_RESULT][0][3]
+          specificity_test = dict_results[utilConst.KEY_RESULT][0][4]
+          tp_test = dict_results[utilConst.KEY_RESULT][0][5]
+          tn_test = dict_results[utilConst.KEY_RESULT][0][6]
+          fp_test = dict_results[utilConst.KEY_RESULT][0][7]
+          fn_test = dict_results[utilConst.KEY_RESULT][0][8]
+          avg_elapsed = dict_results[utilConst.KEY_RESULT][0][9]
+    else:
+          print("No model is trained with this configuration...")
+          best_fm_val = 0
+          best_th_val = 0
+          prec_val = 0
+          recall_val = 0
+          dict_predictions = None
+          best_fm_test = 0
+          prec_test = 0
+          recall_test = 0
+          iou_test = 0
+          specificity_test = 0
+          tp_test = 0
+          tn_test = 0
+          fp_test = 0
+          fn_test = 0
+          avg_elapsed = 0
+        
+    separator = ";"
+    print ("SUMMARY:")
+    str_header = "Train" + separator
+    str_header += "Test" + separator
+    str_header += "PAG" + separator
+    str_header += "Num pages train" + separator
+    str_header += "ANN" + separator
+    str_header += "Num annotations per page" + separator
+    str_header += "PAT" + separator
+    str_header += "Num random patches" + separator
+    str_header += "Ink rate" + separator
+    str_header += "VAL" + separator
+    str_header += "Th_bin" + separator
+    str_header += "F1-val" + separator
+    str_header += "P-val" + separator
+    str_header += "R-val" + separator
+    str_header += "Num annotated patches-val" + separator
+    str_header += "Maximum num annotated patches-val" + separator
+    str_header += "TEST" + separator
+    str_header += "F1-test" + separator
+    str_header += "P-test" + separator
+    str_header += "R-test" + separator
+    str_header += "Num annotated patches-test" + separator
+    str_header += "Maximum num annotated patches-test" + separator
+    str_header += "IoU-test" + separator
+    str_header += "Specificity-test" + separator
+    str_header += "TP-test" + separator
+    str_header += "TN-test" + separator
+    str_header += "FP-test" + separator
+    str_header += "FN-test" + separator
+    str_header += "TimePerPage(s)"+ separator
+
+    str_properties = str(config.db_train_src) + separator
+    str_properties += str(config.db_test_src) + separator
+    str_properties += "PAG" + separator
+    str_properties += str(config.pages_train) + separator
+    str_properties += "ANN" + separator
+    str_properties += str(config.n_an) + separator
+    str_properties += "PAT" + separator
+    str_properties += str(config.n_pa) + separator
+    str_properties += str(config.ink_rate).replace(".",",") + separator  
+    str_result = str_properties+separator
+    str_result += "VAL"+separator
+    str_result += str(best_th_val).replace(".",",") + separator
+    str_result += number_to_string(best_fm_val) + separator
+    str_result += number_to_string(prec_val) + separator
+    str_result += number_to_string(recall_val) + separator  #number_to_string(best_fm_val) + separator + number_to_string(prec_val) + separator + number_to_string(recall_val) + separator + str(best_th_val).replace(".", ",") + separator
+    str_result += str(number_annotated_patches_val) + separator
+    str_result += str(max_number_annotated_patches_val) + separator
+
+    print("Results: " + number_to_string(best_fm_test) + separator + number_to_string(prec_test) + separator + number_to_string(recall_test) + separator + number_to_string(iou_test) + separator + number_to_string(specificity_test) + separator + number_to_string(tp_test) + separator + number_to_string(tn_test) + separator + number_to_string(fp_test) + separator + number_to_string(fn_test))
+    
+    str_result += separator + "TEST" + separator
+    str_result += number_to_string(best_fm_test) + separator 
+    str_result += number_to_string(prec_test) + separator 
+    str_result += number_to_string(recall_test) + separator
+    str_result += str(number_annotated_patches) + separator
+    str_result += str(max_number_annotated_patches) + separator
+    str_result += number_to_string(iou_test) + separator
+    str_result += number_to_string(specificity_test) + separator
+    str_result += number_to_string(tp_test) + separator
+    str_result += number_to_string(tn_test) + separator
+    str_result += number_to_string(fp_test) + separator
+    str_result += number_to_string(fn_test) + separator
+    str_result += str(avg_elapsed).replace(".",",") + separator
+      
+    if config.res is not None:
+        utilIO.appendString(str_result, config.res, True)
+    return str_header, str_result
+
 
 if __name__ == "__main__":
     config = menu()
@@ -180,80 +296,32 @@ if __name__ == "__main__":
       
       threshold=None
       
-      if number_annotated_patches > 0 and number_annotated_patches_val > 0:
-        print("Results of the test...")
-        best_fm_val, best_th_val, prec_val, recall_val, dict_predictions = util.compute_best_threshold(path_model, val_data, config.ba, input_shape, config.ink_rate, nb_annotated_patches=config.n_an, threshold=threshold, with_masked_input=False)
-        with_mask = not config.no_mask
-        dict_results = util.test_model(config, path_model, test_data, input_shape, best_th_val, with_mask)
-        best_fm_test = dict_results[utilConst.KEY_RESULT][0][0]
-        prec_test = dict_results[utilConst.KEY_RESULT][0][1]
-        recall_test = dict_results[utilConst.KEY_RESULT][0][2]
+      if config.all_ths is False:
+          str_header,str_result = evaluate_with_binarization_threshold(
+                  number_annotated_patches=number_annotated_patches,
+                  number_annotated_patches_val=number_annotated_patches_val,
+                  path_model=path_model, 
+                  val_data=val_data, 
+                  test_data=test_data,
+                  config=config, 
+                  input_shape=input_shape, 
+                  threshold=threshold)
       else:
-        print("No model is trained with this configuration...")
-        best_fm_val = 0
-        best_th_val = 0
-        prec_val = 0
-        recall_val = 0
-        dict_predictions = None
-        best_fm_test = 0
-        prec_test = 0
-        recall_test = 0
-      
-      separator = ";"
-      print ("SUMMARY:")
-      str_header = "Test" + separator
-      str_header += "PAG" + separator
-      str_header += "Num pages train" + separator
-      str_header += "ANN" + separator
-      str_header += "Num annotations per page" + separator
-      str_header += "PAT" + separator
-      str_header += "Num random patches" + separator
-      str_header += "Ink rate" + separator
-      str_header += "VAL" + separator
-      str_header += "Th_bin" + separator
-      str_header += "F1-val" + separator
-      str_header += "P-val" + separator
-      str_header += "R-val" + separator
-      str_header += "Num annotated patches-val" + separator
-      str_header += "Maximum num annotated patches-val" + separator
-      str_header += "TEST" + separator
-      str_header += "F1-test" + separator
-      str_header += "P-test" + separator
-      str_header += "R-test" + separator
-      str_header += "Num annotated patches-test" + separator
-      str_header += "Maximum num annotated patches-test" + separator
-
-      str_properties = str(config.db_test_src) + separator
-      str_properties += "PAG" + separator
-      str_properties += str(config.pages_train) + separator
-      str_properties += "ANN" + separator
-      str_properties += str(config.n_an) + separator
-      str_properties += "PAT" + separator
-      str_properties += str(config.n_pa) + separator
-      str_properties += str(config.ink_rate).replace(".",",") + separator  
-      str_result = str_properties+separator
-      str_result += "VAL"+separator
-      str_result += str(best_th_val).replace(".",",") + separator
-      str_result += number_to_string(best_fm_val) + separator
-      str_result += number_to_string(prec_val) + separator
-      str_result += number_to_string(recall_val) + separator  #number_to_string(best_fm_val) + separator + number_to_string(prec_val) + separator + number_to_string(recall_val) + separator + str(best_th_val).replace(".", ",") + separator
-      str_result += str(number_annotated_patches_val) + separator
-      str_result += str(max_number_annotated_patches_val) + separator
-
-      print("Results: " + number_to_string(best_fm_test) + separator + number_to_string(prec_test) + separator + number_to_string(recall_test))
-      
-      str_result += separator + "TEST" + separator
-      str_result += number_to_string(best_fm_test) + separator 
-      str_result += number_to_string(prec_test) + separator 
-      str_result += number_to_string(recall_test) + separator
-      str_result += str(number_annotated_patches) + separator
-      str_result += str(max_number_annotated_patches) + separator
-      
-      
-      if config.res is not None:
-        utilIO.appendString(str_result, config.res, True)
-      
+          str_result_complete = ""
+          for th in [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]:
+            str_header,str_result = evaluate_with_binarization_threshold(
+                    number_annotated_patches=number_annotated_patches,
+                    number_annotated_patches_val=number_annotated_patches_val,
+                    path_model=path_model, 
+                    val_data=val_data, 
+                    test_data=test_data,
+                    config=config, 
+                    input_shape=input_shape, 
+                    threshold=th)
+            str_result_complete += str_result
         
+          str_result = str_result_complete
+
       print ('*'*80)
       print(str_header)
       print(str_result)
