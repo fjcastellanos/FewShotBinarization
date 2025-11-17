@@ -10,7 +10,7 @@ DB_TRAIN_GT=""
 DB_TEST_SRC=""
 DB_TEST_GT=""
 
-AUG="flipH flipV rot scale" #"random"  # 'all', 'none', 'flipH', 'flipV', 'wb', 'expos', 'rot', 'scale', 'blur', 'dropout'
+AUG="random flipH flipV rot scale" #"random"  # 'all', 'none', 'flipH', 'flipV', 'wb', 'expos', 'rot', 'scale', 'blur', 'dropout'
 
 
 WINDOW_W=256
@@ -28,8 +28,8 @@ NUMBER_ANNOTATED_PATCHES=1
 EPOCHS=200
 BATCH_SIZE=32
 VERBOSE=1
-PATHRESULTS="results/train_sh_train_models_-1_nomask_norandom_alldbs.txt"
-OPTIONS="-no_mask"    #--test
+PATHRESULTS="results/train_sh_train_models_1page_mask_random_ISOS_8-1.txt"
+OPTIONS=""    #--test -no_mask
 
 
 
@@ -51,13 +51,13 @@ for FILTERS in 32; do
         for LAYERS in 4; do
             for KERNEL_SIZE in 3; do
                 for DROPOUT in 0.2; do
-                    for PAGES_TRAIN in -1; do
-                        for NUMBER_ANNOTATED_PATCHES in 1 8 32 -1; do
+                    for PAGES_TRAIN in 1; do
+                        for NUMBER_ANNOTATED_PATCHES in 8; do #1 8 32 -1
                             for NUMBER_PATCHES in 1024; do #1 2 4 8 16 32 64 128 256 512 1024
 								if ! grep -qw random <<< "$AUG"; then
 								  NUMBER_PATCHES=$NUMBER_ANNOTATED_PATCHES
 								fi
-                                for source in "Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes" "Bickley" "ISOS" ; do #"Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes" "Bickley" "ISOS" 
+                                for source in "ISOS" ; do #"Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes" "Bickley" "ISOS" 
                                     for ink_th in 0.02; do 
                                         target=${source}
 

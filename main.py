@@ -253,7 +253,7 @@ if __name__ == "__main__":
       nb_val_pages = len(val_data)
       
       epochs = config.ep
-      patience = 20
+      patience = 50
       
       print("Number of effective epochs: " + str(epochs))
       print("Effective patience: " + str(patience))

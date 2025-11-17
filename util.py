@@ -335,12 +335,16 @@ def apply_random_augmentations(gr, gt, regions_mask, augmentation_types, width_o
 
 
 
-def getRandomSamples(page, batch_size, nb_annotated_patches, window_w, window_h, augmentation_types, min_rate_annotated_pixels):
+def getRandomSamples(page, batch_size, nb_annotated_patches, window_w, window_h, augmentation_types, min_rate_annotated_pixels, using_mask=True):
     gr_chunks = []
     gt_chunks = []
  
-    gr, gt, regions_mask, n_annotated_patches_real = get_image_with_gt(page[0], page[1], nb_annotated_patches, window_w, window_h, min_rate_annotated_pixels, True)
+    gr, gt, regions_mask, n_annotated_patches_real = get_image_with_gt(page[0], page[1], nb_annotated_patches, window_w, window_h, min_rate_annotated_pixels, using_mask)
     
+    if using_mask is False:
+        gr_masked, gt_masked, regions_mask_masked, n_annotated_patches_real_masked = get_image_with_gt(page[0], page[1], nb_annotated_patches, window_w, window_h, min_rate_annotated_pixels, True)
+        gt = gt_masked
+
     if n_annotated_patches_real == 0:
         return None, None
     
@@ -402,7 +406,7 @@ def create_generator(data_pages, no_mask, batch_size, window_shape, nb_patches, 
             if utilConst.AUGMENTATION_RANDOM in augmentation_types:
                 assert(nb_patches != -1)
 
-                gr_chunks_arr, gt_chunks_arr = getRandomSamples(page, min(batch_size, nb_patches), nb_annotated_patches, window_shape[0], window_shape[1], augmentation_types, min_rate_annotated_pixels)
+                gr_chunks_arr, gt_chunks_arr = getRandomSamples(page, min(batch_size, nb_patches), nb_annotated_patches, window_shape[0], window_shape[1], augmentation_types, min_rate_annotated_pixels, using_mask)
                 if gr_chunks_arr is None and gt_chunks_arr is None:
                     idx_tries+=1
                     if idx_tries > len(data_pages):

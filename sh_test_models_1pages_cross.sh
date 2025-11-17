@@ -27,7 +27,7 @@ NUMBER_ANNOTATED_PATCHES=1
 EPOCHS=200
 BATCH_SIZE=32
 VERBOSE=1
-PATHRESULTS="results/ours_crosstest_0.02_inkrate_varying_annotations_ALLpages_ALLDBS_1_8_32_-1_WITHmask_WITHrandom.txt"
+PATHRESULTS="results/ours_crosstest_0.02_inkrate_varying_annotations_1pages_ALLDBS_1_8_32_-1_mask_random_ONLY_ISOS8_AS_SOURCE.txt"
 OPTIONS="--test"    #--test
 
 
@@ -50,13 +50,13 @@ for FILTERS in 32; do
         for LAYERS in 4; do
             for KERNEL_SIZE in 3; do
                 for DROPOUT in 0.2; do
-                    for PAGES_TRAIN in -1; do
-                        for NUMBER_ANNOTATED_PATCHES in 1 8 32 -1; do
+                    for PAGES_TRAIN in 1; do
+                        for NUMBER_ANNOTATED_PATCHES in 8; do
                             for NUMBER_PATCHES in 1024; do #1 2 4 8 16 32 64 128 256 512 1024
 								if ! grep -qw random <<< "$AUG"; then
 								  NUMBER_PATCHES=$NUMBER_ANNOTATED_PATCHES
 								fi
-                                for source in "Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes" "Bickley" "ISOS"; do #"Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes"
+                                for source in "ISOS"; do #"Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes"
                                     for target in "Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes" "Bickley" "ISOS" ; do #"Dibco" "Einsiedeln" "Palm" "PHI" "Salzinnes"
                                     for ink_th in 0.02; do
 
