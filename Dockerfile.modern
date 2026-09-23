@@ -1,0 +1,49 @@
+FROM tensorflow/tensorflow:2.9.0-gpu
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1
+
+# Dependencias del sistema
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        ffmpeg \
+        libsm6 \
+        libgl1 \
+        libglib2.0-0 \
+        nano \
+    && rm -rf /var/lib/apt/lists/*
+
+# Actualizar pip
+RUN python -m pip install --upgrade pip
+
+# Librerías del proyecto antiguo (TensorFlow/Keras)
+RUN python -m pip install \
+    opencv-python \
+    scikit-learn \
+    tqdm \
+    pandas \
+    Pillow \
+    matplotlib \
+    scikit-multilearn \
+    tensorflow-addons \
+    pycocotools \
+    pytest
+
+# PyTorch para los modelos modernos
+RUN python -m pip install \
+    torch==2.2.2 \
+    torchvision==0.17.2 \
+    --index-url https://download.pytorch.org/whl/cu118
+
+# Transformers / modelos modernos
+RUN python -m pip install \
+    "transformers>=4.45,<5" \
+    "safetensors>=0.4,<1"
+
+# Alias
+RUN echo 'alias ll="ls -l"' >> /root/.bashrc
+
+WORKDIR /workspace
+
+CMD ["bash"]

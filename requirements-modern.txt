@@ -1,0 +1,9 @@
+# Install in an environment/container separate from the legacy TensorFlow/Keras stack.
+# Dockerfile.modern already provides torch 2.2.2 + CUDA 11.8.
+torch>=2.2,<2.5
+# Matches the torch 2.2.2 base image used by Dockerfile.modern.
+torchvision==0.17.2
+transformers>=4.45,<5
+safetensors>=0.4,<1
+opencv-python>=4.8,<5
+numpy>=1.24,<2

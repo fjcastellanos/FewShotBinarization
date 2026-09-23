@@ -16,7 +16,7 @@
                 "-db_test_src", "datasets/PHI/test/SRC", 
                 "-db_test_gt", "datasets/PHI/test/GT",
 
-                "-aug", "random",
+                "-aug", "random", "flipH", "flipV", "rot", "scale",
                 "-window_w", "256", 
                 "-window_h", "256", 
                 "-l", "4",
@@ -24,7 +24,7 @@
                 "-k", "3",
                 "-drop",   "0.2",
 
-                "-npatches", "128",
+                "-npatches", "1024",
                 "-n_annotated_patches", "32",
                 "-pages_train", "1",
 
@@ -36,7 +36,7 @@
                 "-gpu", "0", 
                 //"-no_mask",
                 "--test",
-                "-ink_rate", "0.0"
+                "-ink_rate", "0.02"
             ]
         }
     ]
