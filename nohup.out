@@ -1,13 +1,22 @@
 ==================================================================
-mode=train model=segformer_b0 source=Bickley target=Bickley
+mode=train model=deeplabv3_resnet50 source=Bickley target=Bickley
 pages=1 annotations=8 npatches=1024
-log=logs/modern/train/segformer_b0/Bickley__to__Bickley.log
+log=logs/modern/train/deeplabv3_resnet50/Bickley__to__Bickley.log
+==================================================================
+Traceback (most recent call last):
+  File "main_modern.py", line 10, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+==================================================================
+mode=train model=deeplabv3_resnet50 source=Bickley target=Bickley
+pages=1 annotations=8 npatches=1024
+log=logs/modern/train/deeplabv3_resnet50/Bickley__to__Bickley.log
 ==================================================================
 CONFIG
   dataset=Bickley
-  model=segformer_b0
+  model=deeplabv3_resnet50
   experiment=full masking=True oversampling=True
-  checkpoint=models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  checkpoint=models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
   train_pages=1 val_pages=1
   virtual_samples_per_page=1024
   total_samples_per_epoch=1024
@@ -15,11 +24,6 @@ CONFIG
   max_epochs=50 patience=10 min_delta=0.0001
   early_stopping_monitor=full_page_val_F1
   train_page[0]=18.png annotated_windows=8 annotated_ratio=0.328330
-/usr/local/lib/python3.8/dist-packages/transformers/utils/hub.py:128: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
-  warnings.warn(
-2026-09-23 11:54:44.005408: I tensorflow/core/util/util.cc:169] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-Some weights of SegformerForSemanticSegmentation were not initialized from the model checkpoint at nvidia/mit-b0 and are newly initialized: ['decode_head.batch_norm.bias', 'decode_head.batch_norm.num_batches_tracked', 'decode_head.batch_norm.running_mean', 'decode_head.batch_norm.running_var', 'decode_head.batch_norm.weight', 'decode_head.classifier.bias', 'decode_head.classifier.weight', 'decode_head.linear_c.0.proj.bias', 'decode_head.linear_c.0.proj.weight', 'decode_head.linear_c.1.proj.bias', 'decode_head.linear_c.1.proj.weight', 'decode_head.linear_c.2.proj.bias', 'decode_head.linear_c.2.proj.weight', 'decode_head.linear_c.3.proj.bias', 'decode_head.linear_c.3.proj.weight', 'decode_head.linear_fuse.weight']
-You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
 Device: cuda
 Samples/epoch: 1024
 Physical batch: 4
@@ -27,42 +31,20 @@ Gradient accumulation: 8
 Effective batch (nominal): 32
 Optimizer updates/epoch: 32
 Early stopping: val_F1, patience=10, min_delta=0.0001
-Epoch 001: train_loss=0.519866 val_F1=0.595689 P=0.474320 R=0.800547 th=0.50
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 002: train_loss=0.299786 val_F1=0.652824 P=0.565716 R=0.771654 th=0.40
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 003: train_loss=0.232780 val_F1=0.677990 P=0.641457 R=0.718947 th=0.40
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 004: train_loss=0.203234 val_F1=0.679936 P=0.670396 R=0.689761 th=0.40
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 005: train_loss=0.182448 val_F1=0.688167 P=0.676258 R=0.700514 th=0.40
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 006: train_loss=0.167832 val_F1=0.691413 P=0.691079 R=0.691758 th=0.40
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 007: train_loss=0.155567 val_F1=0.695438 P=0.696952 R=0.693941 th=0.40
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 008: train_loss=0.146098 val_F1=0.697771 P=0.634932 R=0.774426 th=0.30
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 009: train_loss=0.138186 val_F1=0.706251 P=0.713644 R=0.699020 th=0.40
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 010: train_loss=0.131996 val_F1=0.715650 P=0.658722 R=0.783360 th=0.30
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 011: train_loss=0.126035 val_F1=0.718429 P=0.662953 R=0.784049 th=0.30
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 012: train_loss=0.121323 val_F1=0.724499 P=0.667240 R=0.792518 th=0.30
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 013: train_loss=0.117202 val_F1=0.725605 P=0.674225 R=0.785473 th=0.30
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 001: train_loss=0.474102 val_F1=0.349553 P=0.272421 R=0.487629 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 002: train_loss=0.280188 val_F1=0.458286 P=0.386933 R=0.561919 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
 ==================================================================
-mode=train model=segformer_b1 source=Bickley target=Bickley
+mode=train model=deeplabv3_resnet101 source=Bickley target=Bickley
 pages=1 annotations=8 npatches=1024
-log=logs/modern/train/segformer_b1/Bickley__to__Bickley.log
+log=logs/modern/train/deeplabv3_resnet101/Bickley__to__Bickley.log
 ==================================================================
 CONFIG
   dataset=Bickley
-  model=segformer_b1
+  model=deeplabv3_resnet101
   experiment=full masking=True oversampling=True
-  checkpoint=models/modern/segformer_b1/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  checkpoint=models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
   train_pages=1 val_pages=1
   virtual_samples_per_page=1024
   total_samples_per_epoch=1024
@@ -70,11 +52,6 @@ CONFIG
   max_epochs=50 patience=10 min_delta=0.0001
   early_stopping_monitor=full_page_val_F1
   train_page[0]=18.png annotated_windows=8 annotated_ratio=0.328330
-/usr/local/lib/python3.8/dist-packages/transformers/utils/hub.py:128: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
-  warnings.warn(
-2026-09-23 11:59:44.041844: I tensorflow/core/util/util.cc:169] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-Some weights of SegformerForSemanticSegmentation were not initialized from the model checkpoint at nvidia/mit-b1 and are newly initialized: ['decode_head.batch_norm.bias', 'decode_head.batch_norm.num_batches_tracked', 'decode_head.batch_norm.running_mean', 'decode_head.batch_norm.running_var', 'decode_head.batch_norm.weight', 'decode_head.classifier.bias', 'decode_head.classifier.weight', 'decode_head.linear_c.0.proj.bias', 'decode_head.linear_c.0.proj.weight', 'decode_head.linear_c.1.proj.bias', 'decode_head.linear_c.1.proj.weight', 'decode_head.linear_c.2.proj.bias', 'decode_head.linear_c.2.proj.weight', 'decode_head.linear_c.3.proj.bias', 'decode_head.linear_c.3.proj.weight', 'decode_head.linear_fuse.weight']
-You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
 Device: cuda
 Samples/epoch: 1024
 Physical batch: 4
@@ -82,45 +59,9 @@ Gradient accumulation: 8
 Effective batch (nominal): 32
 Optimizer updates/epoch: 32
 Early stopping: val_F1, patience=10, min_delta=0.0001
-Epoch 014: train_loss=0.114860 val_F1=0.728335 P=0.733643 R=0.723113 th=0.40
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 001: train_loss=0.515617 val_F1=0.599982 P=0.550015 R=0.659947 th=0.60
-  saved best checkpoint: models/modern/segformer_b1/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 015: train_loss=0.111640 val_F1=0.729671 P=0.731487 R=0.727874 th=0.40
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 002: train_loss=0.305645 val_F1=0.630816 P=0.569541 R=0.706878 th=0.50
-  saved best checkpoint: models/modern/segformer_b1/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 016: train_loss=0.110473 val_F1=0.729870 P=0.671426 R=0.799470 th=0.30
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 003: train_loss=0.238418 val_F1=0.638845 P=0.589834 R=0.696752 th=0.50
-  saved best checkpoint: models/modern/segformer_b1/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 017: train_loss=0.106845 val_F1=0.735588 P=0.724956 R=0.746547 th=0.40
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 004: train_loss=0.204027 val_F1=0.649498 P=0.598877 R=0.709479 th=0.40
-  saved best checkpoint: models/modern/segformer_b1/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 018: train_loss=0.104707 val_F1=0.739926 P=0.682454 R=0.807979 th=0.30
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 005: train_loss=0.182052 val_F1=0.656751 P=0.596634 R=0.730351 th=0.40
-  saved best checkpoint: models/modern/segformer_b1/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 019: train_loss=0.103471 val_F1=0.739773 P=0.681001 R=0.809659 th=0.30
-  no val_F1 improvement: 1/10
-Epoch 006: train_loss=0.167098 val_F1=0.661256 P=0.615036 R=0.714999 th=0.40
-  saved best checkpoint: models/modern/segformer_b1/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 020: train_loss=0.102429 val_F1=0.744735 P=0.696611 R=0.800012 th=0.30
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 007: train_loss=0.155195 val_F1=0.671496 P=0.616731 R=0.736947 th=0.40
-  saved best checkpoint: models/modern/segformer_b1/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 021: train_loss=0.100920 val_F1=0.747142 P=0.692419 R=0.811269 th=0.30
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 008: train_loss=0.146149 val_F1=0.673720 P=0.655179 R=0.693353 th=0.40
-  saved best checkpoint: models/modern/segformer_b1/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 022: train_loss=0.099887 val_F1=0.748436 P=0.745672 R=0.751231 th=0.40
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 009: train_loss=0.137944 val_F1=0.681807 P=0.645640 R=0.722276 th=0.40
-  saved best checkpoint: models/modern/segformer_b1/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 023: train_loss=0.097400 val_F1=0.749397 P=0.748173 R=0.750635 th=0.40
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 010: train_loss=0.131556 val_F1=0.687551 P=0.667077 R=0.709332 th=0.40
-  saved best checkpoint: models/modern/segformer_b1/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
-Epoch 024: train_loss=0.097038 val_F1=0.755425 P=0.752338 R=0.758547 th=0.40
-  saved best checkpoint: models/modern/segformer_b0/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 003: train_loss=0.227123 val_F1=0.511604 P=0.445035 R=0.601604 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 001: train_loss=0.564777 val_F1=0.390315 P=0.284786 R=0.620115 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 004: train_loss=0.208908 val_F1=0.544824 P=0.492479 R=0.609632 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt

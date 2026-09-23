@@ -4,7 +4,6 @@ ENV DEBIAN_FRONTEND=noninteractive \
     PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1
 
-# Dependencias del sistema
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         ffmpeg \
@@ -12,12 +11,16 @@ RUN apt-get update \
         libgl1 \
         libglib2.0-0 \
         nano \
+        wget \
+        ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-# Actualizar pip
+# ============================================================
+# Entorno antiguo TensorFlow / Keras (Python 3.8 de la imagen)
+# ============================================================
+
 RUN python -m pip install --upgrade pip
 
-# Librerías del proyecto antiguo (TensorFlow/Keras)
 RUN python -m pip install \
     opencv-python \
     scikit-learn \
@@ -30,18 +33,46 @@ RUN python -m pip install \
     pycocotools \
     pytest
 
-# PyTorch para los modelos modernos
-RUN python -m pip install \
-    torch==2.2.2 \
-    torchvision==0.17.2 \
-    --index-url https://download.pytorch.org/whl/cu118
 
-# Transformers / modelos modernos
-RUN python -m pip install \
+# ============================================================
+# Entorno moderno: Python 3.10 + PyTorch CUDA 12.8
+# ============================================================
+
+# Miniforge: entorno conda basado en conda-forge
+RUN wget -q \
+    https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh \
+    -O /tmp/miniforge.sh \
+    && bash /tmp/miniforge.sh -b -p /opt/conda \
+    && rm /tmp/miniforge.sh
+
+RUN /opt/conda/bin/conda create -y \
+    -n modern \
+    python=3.10 \
+    pip \
+    && /opt/conda/bin/conda clean -afy
+
+RUN /opt/conda/envs/modern/bin/python -m pip install --upgrade pip
+
+# RTX 5090 / Blackwell
+RUN /opt/conda/envs/modern/bin/python -m pip install \
+    torch==2.7.1 \
+    torchvision==0.22.1 \
+    --index-url https://download.pytorch.org/whl/cu128
+
+# Dependencias modernas
+RUN /opt/conda/envs/modern/bin/python -m pip install \
     "transformers>=4.45,<5" \
-    "safetensors>=0.4,<1"
+    "safetensors>=0.4,<1" \
+    "numpy>=1.24,<2" \
+    opencv-python \
+    Pillow \
+    tqdm \
+    scikit-learn \
+    pandas \
+    matplotlib \
+    pycocotools \
+    pytest
 
-# Alias
 RUN echo 'alias ll="ls -l"' >> /root/.bashrc
 
 WORKDIR /workspace

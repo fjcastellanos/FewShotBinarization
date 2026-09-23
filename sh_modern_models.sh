@@ -1,4 +1,6 @@
 #!/bin/bash
+MODERN_PYTHON="${MODERN_PYTHON:-/opt/conda/envs/modern/bin/python}"
+
 # Cache de Hugging Face en una ruta escribible
 export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$(pwd)/.cache}"
 export HF_HOME="${HF_HOME:-${XDG_CACHE_HOME}/huggingface}"
@@ -140,7 +142,7 @@ run_one() {
     echo "log=$log_file"
     echo "=================================================================="
 
-    python -u main_modern.py "${args[@]}" 2>&1 | tee "$log_file"
+    "${MODERN_PYTHON}" -u main_modern.py "${args[@]}" 2>&1 | tee "$log_file"
 }
 
 validate_model() {
