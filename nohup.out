@@ -65,3 +65,2380 @@ Epoch 001: train_loss=0.564777 val_F1=0.390315 P=0.284786 R=0.620115 th=0.40
   saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
 Epoch 004: train_loss=0.208908 val_F1=0.544824 P=0.492479 R=0.609632 th=0.40
   saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 005: train_loss=0.194676 val_F1=0.549346 P=0.432714 R=0.752067 th=0.30
+Epoch 002: train_loss=0.311545 val_F1=0.476239 P=0.376840 R=0.646878 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 006: train_loss=0.186557 val_F1=0.560687 P=0.444539 R=0.759012 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 003: train_loss=0.252280 val_F1=0.514552 P=0.445066 R=0.609764 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 007: train_loss=0.178610 val_F1=0.570022 P=0.456561 R=0.758539 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 004: train_loss=0.230411 val_F1=0.516528 P=0.446349 R=0.612907 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 008: train_loss=0.173606 val_F1=0.574730 P=0.470605 R=0.738039 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 005: train_loss=0.213585 val_F1=0.528492 P=0.460902 R=0.619325 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 009: train_loss=0.170504 val_F1=0.573649 P=0.463301 R=0.753012 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 006: train_loss=0.203828 val_F1=0.546276 P=0.428731 R=0.752640 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 010: train_loss=0.168630 val_F1=0.578723 P=0.464217 R=0.768232 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 007: train_loss=0.194770 val_F1=0.546053 P=0.435430 R=0.732047 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 011: train_loss=0.165412 val_F1=0.580932 P=0.477687 R=0.741128 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 008: train_loss=0.187410 val_F1=0.550074 P=0.440325 R=0.732712 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 012: train_loss=0.163733 val_F1=0.586485 P=0.478647 R=0.757061 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 013: train_loss=0.161852 val_F1=0.588430 P=0.482926 R=0.752934 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 009: train_loss=0.182526 val_F1=0.557285 P=0.444154 R=0.747763 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 014: train_loss=0.160847 val_F1=0.593901 P=0.492353 R=0.748235 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 010: train_loss=0.179449 val_F1=0.551314 P=0.434267 R=0.754753 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 015: train_loss=0.160098 val_F1=0.596201 P=0.491656 R=0.757231 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 011: train_loss=0.175158 val_F1=0.564109 P=0.459681 R=0.729949 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 016: train_loss=0.160747 val_F1=0.593834 P=0.488522 R=0.757045 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 012: train_loss=0.174624 val_F1=0.576586 P=0.466471 R=0.754769 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 017: train_loss=0.157846 val_F1=0.598871 P=0.495007 R=0.757912 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 013: train_loss=0.172306 val_F1=0.582002 P=0.485422 R=0.726573 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 018: train_loss=0.155391 val_F1=0.597655 P=0.497799 R=0.747639 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 014: train_loss=0.169446 val_F1=0.575711 P=0.473947 R=0.733138 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 019: train_loss=0.155222 val_F1=0.596586 P=0.487936 R=0.767497 th=0.30
+  no val_F1 improvement: 2/10
+Epoch 015: train_loss=0.167983 val_F1=0.579554 P=0.473635 R=0.746508 th=0.30
+  no val_F1 improvement: 2/10
+Epoch 020: train_loss=0.155234 val_F1=0.595067 P=0.484755 R=0.770392 th=0.30
+  no val_F1 improvement: 3/10
+Epoch 021: train_loss=0.155030 val_F1=0.595474 P=0.494747 R=0.747716 th=0.30
+  no val_F1 improvement: 4/10
+Epoch 016: train_loss=0.167906 val_F1=0.586625 P=0.492273 R=0.725737 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 022: train_loss=0.153659 val_F1=0.600868 P=0.496715 R=0.760304 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 017: train_loss=0.164343 val_F1=0.590983 P=0.488053 R=0.748947 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 023: train_loss=0.151130 val_F1=0.601347 P=0.501954 R=0.749837 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 018: train_loss=0.161830 val_F1=0.590478 P=0.489514 R=0.743930 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 024: train_loss=0.151113 val_F1=0.601746 P=0.494570 R=0.768240 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 019: train_loss=0.161289 val_F1=0.597677 P=0.492579 R=0.759801 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 025: train_loss=0.151259 val_F1=0.598985 P=0.489026 R=0.772753 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 020: train_loss=0.160664 val_F1=0.593205 P=0.500877 R=0.727278 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 026: train_loss=0.151346 val_F1=0.604667 P=0.499013 R=0.767094 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 021: train_loss=0.160496 val_F1=0.600559 P=0.512462 R=0.725249 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 027: train_loss=0.153029 val_F1=0.602419 P=0.494924 R=0.769579 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 022: train_loss=0.159169 val_F1=0.599266 P=0.505393 R=0.735979 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 028: train_loss=0.151112 val_F1=0.605729 P=0.501721 R=0.764152 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 029: train_loss=0.150292 val_F1=0.604743 P=0.500296 R=0.764322 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 023: train_loss=0.156079 val_F1=0.598467 P=0.502994 R=0.738689 th=0.30
+  no val_F1 improvement: 2/10
+Epoch 030: train_loss=0.147856 val_F1=0.607240 P=0.496029 R=0.782748 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 024: train_loss=0.155802 val_F1=0.601479 P=0.503272 R=0.747321 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 031: train_loss=0.149798 val_F1=0.605762 P=0.490719 R=0.791280 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 025: train_loss=0.155791 val_F1=0.602021 P=0.504887 R=0.745448 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 032: train_loss=0.149297 val_F1=0.608073 P=0.504070 R=0.766165 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 026: train_loss=0.155845 val_F1=0.598736 P=0.504447 R=0.736390 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 033: train_loss=0.145900 val_F1=0.610361 P=0.508441 R=0.763401 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 027: train_loss=0.157147 val_F1=0.597649 P=0.503155 R=0.735856 th=0.30
+  no val_F1 improvement: 2/10
+Epoch 034: train_loss=0.151523 val_F1=0.607758 P=0.499975 R=0.774797 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 028: train_loss=0.155083 val_F1=0.605619 P=0.506661 R=0.752632 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 035: train_loss=0.145935 val_F1=0.608166 P=0.496106 R=0.785636 th=0.30
+  no val_F1 improvement: 2/10
+Epoch 036: train_loss=0.144200 val_F1=0.605241 P=0.498246 R=0.770771 th=0.30
+  no val_F1 improvement: 3/10
+Epoch 029: train_loss=0.154026 val_F1=0.605270 P=0.504590 R=0.756155 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 037: train_loss=0.148165 val_F1=0.606170 P=0.496204 R=0.778769 th=0.30
+  no val_F1 improvement: 4/10
+Epoch 030: train_loss=0.151485 val_F1=0.604404 P=0.508096 R=0.745773 th=0.30
+  no val_F1 improvement: 2/10
+Epoch 038: train_loss=0.146949 val_F1=0.611867 P=0.511411 R=0.761450 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 031: train_loss=0.153239 val_F1=0.605267 P=0.512378 R=0.739308 th=0.30
+  no val_F1 improvement: 3/10
+Epoch 039: train_loss=0.145218 val_F1=0.608784 P=0.498627 R=0.781432 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 032: train_loss=0.152598 val_F1=0.606389 P=0.512185 R=0.743071 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 040: train_loss=0.144905 val_F1=0.610356 P=0.505713 R=0.769618 th=0.30
+  no val_F1 improvement: 2/10
+Epoch 033: train_loss=0.149264 val_F1=0.605055 P=0.525887 R=0.712297 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 041: train_loss=0.145082 val_F1=0.611649 P=0.504157 R=0.777414 th=0.30
+  no val_F1 improvement: 3/10
+Epoch 034: train_loss=0.155361 val_F1=0.603886 P=0.510982 R=0.738093 th=0.30
+  no val_F1 improvement: 2/10
+Epoch 042: train_loss=0.143275 val_F1=0.613721 P=0.515005 R=0.759267 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 035: train_loss=0.149450 val_F1=0.606003 P=0.515630 R=0.734803 th=0.30
+  no val_F1 improvement: 3/10
+Epoch 043: train_loss=0.144894 val_F1=0.611503 P=0.507126 R=0.769997 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 036: train_loss=0.147570 val_F1=0.602640 P=0.511722 R=0.732860 th=0.30
+  no val_F1 improvement: 4/10
+Epoch 044: train_loss=0.142668 val_F1=0.611241 P=0.510819 R=0.760823 th=0.30
+  no val_F1 improvement: 2/10
+Epoch 045: train_loss=0.144961 val_F1=0.611368 P=0.505931 R=0.772335 th=0.30
+  no val_F1 improvement: 3/10
+Epoch 037: train_loss=0.151356 val_F1=0.606030 P=0.512688 R=0.740942 th=0.30
+  no val_F1 improvement: 5/10
+Epoch 046: train_loss=0.146005 val_F1=0.612309 P=0.509139 R=0.767930 th=0.30
+  no val_F1 improvement: 4/10
+Epoch 038: train_loss=0.150071 val_F1=0.606851 P=0.520525 R=0.727518 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 047: train_loss=0.144125 val_F1=0.614309 P=0.512723 R=0.766111 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 039: train_loss=0.148242 val_F1=0.592261 P=0.484339 R=0.762085 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 048: train_loss=0.144979 val_F1=0.614635 P=0.513973 R=0.764346 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 040: train_loss=0.148066 val_F1=0.604054 P=0.501323 R=0.759755 th=0.30
+  no val_F1 improvement: 2/10
+Epoch 049: train_loss=0.144143 val_F1=0.616898 P=0.511689 R=0.776586 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 041: train_loss=0.148010 val_F1=0.605735 P=0.510624 R=0.744403 th=0.30
+  no val_F1 improvement: 3/10
+Epoch 050: train_loss=0.145359 val_F1=0.616660 P=0.515873 R=0.766405 th=0.30
+  no val_F1 improvement: 1/10
+Restored best checkpoint from epoch 49 (val_F1=0.616898, th=0.30)
+BEST checkpoint epoch=49 val_F1=0.616898 threshold=0.30
+Summary: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=train model=deeplabv3_resnet50 source=Dibco target=Dibco
+pages=1 annotations=8 npatches=1024
+log=logs/modern/train/deeplabv3_resnet50/Dibco__to__Dibco.log
+==================================================================
+CONFIG
+  dataset=Dibco
+  model=deeplabv3_resnet50
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=HW01.png annotated_windows=8 annotated_ratio=0.120115
+Device: cuda
+Samples/epoch: 1024
+Physical batch: 4
+Gradient accumulation: 8
+Effective batch (nominal): 32
+Optimizer updates/epoch: 32
+Early stopping: val_F1, patience=10, min_delta=0.0001
+Epoch 042: train_loss=0.146026 val_F1=0.602002 P=0.514765 R=0.724854 th=0.30
+  no val_F1 improvement: 4/10
+Epoch 001: train_loss=0.492685 val_F1=0.398388 P=0.303010 R=0.581408 th=0.50
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 043: train_loss=0.147780 val_F1=0.593185 P=0.495395 R=0.739092 th=0.30
+  no val_F1 improvement: 5/10
+Epoch 002: train_loss=0.204693 val_F1=0.456296 P=0.368239 R=0.599718 th=0.40
+Epoch 044: train_loss=0.145537 val_F1=0.588985 P=0.490072 R=0.737938 th=0.30
+  no val_F1 improvement: 6/10
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 045: train_loss=0.147723 val_F1=0.595808 P=0.496813 R=0.744085 th=0.30
+  no val_F1 improvement: 7/10
+Epoch 003: train_loss=0.150039 val_F1=0.530191 P=0.435218 R=0.678198 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 046: train_loss=0.148625 val_F1=0.604085 P=0.511878 R=0.736823 th=0.30
+  no val_F1 improvement: 8/10
+Epoch 004: train_loss=0.125393 val_F1=0.589285 P=0.475883 R=0.773657 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 047: train_loss=0.146341 val_F1=0.600392 P=0.505727 R=0.738674 th=0.30
+  no val_F1 improvement: 9/10
+Epoch 005: train_loss=0.110462 val_F1=0.622674 P=0.544458 R=0.727147 th=0.50
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 048: train_loss=0.147533 val_F1=0.598586 P=0.509758 R=0.724916 th=0.30
+  no val_F1 improvement: 10/10
+Early stopping at epoch 48; best val_F1=0.606851
+Restored best checkpoint from epoch 38 (val_F1=0.606851, th=0.30)
+BEST checkpoint epoch=38 val_F1=0.606851 threshold=0.30
+Summary: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=train model=deeplabv3_resnet101 source=Dibco target=Dibco
+pages=1 annotations=8 npatches=1024
+log=logs/modern/train/deeplabv3_resnet101/Dibco__to__Dibco.log
+==================================================================
+CONFIG
+  dataset=Dibco
+  model=deeplabv3_resnet101
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=HW01.png annotated_windows=8 annotated_ratio=0.120115
+Device: cuda
+Samples/epoch: 1024
+Physical batch: 4
+Gradient accumulation: 8
+Effective batch (nominal): 32
+Optimizer updates/epoch: 32
+Early stopping: val_F1, patience=10, min_delta=0.0001
+Epoch 006: train_loss=0.100348 val_F1=0.644719 P=0.551392 R=0.776090 th=0.50
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 007: train_loss=0.093139 val_F1=0.654642 P=0.588590 R=0.737404 th=0.50
+Epoch 001: train_loss=0.401054 val_F1=0.454937 P=0.361330 R=0.614022 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 008: train_loss=0.086978 val_F1=0.652670 P=0.534316 R=0.838391 th=0.40
+  no val_F1 improvement: 1/10
+Epoch 002: train_loss=0.164480 val_F1=0.532734 P=0.448483 R=0.655976 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 009: train_loss=0.082603 val_F1=0.658022 P=0.579922 R=0.760445 th=0.50
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 003: train_loss=0.125840 val_F1=0.598665 P=0.524703 R=0.696913 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 010: train_loss=0.079109 val_F1=0.665259 P=0.547686 R=0.847127 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 004: train_loss=0.110312 val_F1=0.622440 P=0.537089 R=0.740057 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 011: train_loss=0.076028 val_F1=0.675325 P=0.570258 R=0.827866 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 005: train_loss=0.099371 val_F1=0.646842 P=0.559513 R=0.766488 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 012: train_loss=0.073091 val_F1=0.686985 P=0.582016 R=0.838164 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 006: train_loss=0.091367 val_F1=0.664313 P=0.574357 R=0.787694 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 013: train_loss=0.070934 val_F1=0.683776 P=0.581314 R=0.830101 th=0.40
+  no val_F1 improvement: 1/10
+Epoch 014: train_loss=0.068613 val_F1=0.674308 P=0.594690 R=0.778551 th=0.50
+  no val_F1 improvement: 2/10
+Epoch 007: train_loss=0.085849 val_F1=0.659973 P=0.563599 R=0.796118 th=0.40
+  no val_F1 improvement: 1/10
+Epoch 015: train_loss=0.066901 val_F1=0.682187 P=0.575033 R=0.838437 th=0.40
+  no val_F1 improvement: 3/10
+Epoch 008: train_loss=0.080584 val_F1=0.664592 P=0.561775 R=0.813492 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 016: train_loss=0.065557 val_F1=0.683639 P=0.567973 R=0.858476 th=0.40
+  no val_F1 improvement: 4/10
+Epoch 009: train_loss=0.077226 val_F1=0.676807 P=0.582731 R=0.807118 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 017: train_loss=0.063812 val_F1=0.690065 P=0.583476 R=0.844318 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 010: train_loss=0.074133 val_F1=0.676284 P=0.576548 R=0.817759 th=0.40
+  no val_F1 improvement: 1/10
+Epoch 018: train_loss=0.062385 val_F1=0.691146 P=0.595598 R=0.823222 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 011: train_loss=0.071492 val_F1=0.674433 P=0.572191 R=0.821178 th=0.40
+  no val_F1 improvement: 2/10
+Epoch 019: train_loss=0.061951 val_F1=0.692528 P=0.590224 R=0.837746 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 012: train_loss=0.068857 val_F1=0.682352 P=0.571765 R=0.845990 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 020: train_loss=0.060474 val_F1=0.689213 P=0.589054 R=0.830426 th=0.40
+  no val_F1 improvement: 1/10
+Epoch 021: train_loss=0.060218 val_F1=0.695284 P=0.609780 R=0.808691 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 013: train_loss=0.067121 val_F1=0.685834 P=0.582284 R=0.834193 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 022: train_loss=0.058872 val_F1=0.692915 P=0.598346 R=0.823001 th=0.40
+  no val_F1 improvement: 1/10
+Epoch 014: train_loss=0.065200 val_F1=0.693060 P=0.589545 R=0.840684 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 023: train_loss=0.057987 val_F1=0.695936 P=0.602637 R=0.823431 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 015: train_loss=0.063753 val_F1=0.696357 P=0.603324 R=0.823326 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 024: train_loss=0.057205 val_F1=0.696068 P=0.605935 R=0.817713 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 016: train_loss=0.062585 val_F1=0.692455 P=0.593025 R=0.831958 th=0.40
+  no val_F1 improvement: 1/10
+Epoch 025: train_loss=0.056643 val_F1=0.700218 P=0.600381 R=0.839894 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 017: train_loss=0.060966 val_F1=0.693754 P=0.600260 R=0.821759 th=0.40
+  no val_F1 improvement: 2/10
+Epoch 026: train_loss=0.055887 val_F1=0.697496 P=0.614735 R=0.806021 th=0.40
+  no val_F1 improvement: 1/10
+Epoch 027: train_loss=0.055768 val_F1=0.702146 P=0.603990 R=0.838408 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 018: train_loss=0.059676 val_F1=0.698263 P=0.597587 R=0.839749 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 028: train_loss=0.054433 val_F1=0.699757 P=0.611985 R=0.816935 th=0.40
+  no val_F1 improvement: 1/10
+Epoch 019: train_loss=0.059332 val_F1=0.701478 P=0.598296 R=0.847679 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 029: train_loss=0.054254 val_F1=0.699962 P=0.602402 R=0.835244 th=0.40
+  no val_F1 improvement: 2/10
+Epoch 020: train_loss=0.057997 val_F1=0.697573 P=0.594465 R=0.843969 th=0.40
+  no val_F1 improvement: 1/10
+Epoch 030: train_loss=0.053808 val_F1=0.703751 P=0.598704 R=0.853519 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 021: train_loss=0.057755 val_F1=0.699218 P=0.604428 R=0.829282 th=0.40
+  no val_F1 improvement: 2/10
+Epoch 031: train_loss=0.053105 val_F1=0.703853 P=0.607003 R=0.837491 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 022: train_loss=0.056641 val_F1=0.706243 P=0.608893 R=0.840660 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 032: train_loss=0.052959 val_F1=0.702929 P=0.602070 R=0.844393 th=0.40
+  no val_F1 improvement: 1/10
+Epoch 033: train_loss=0.052597 val_F1=0.701238 P=0.597111 R=0.849368 th=0.40
+  no val_F1 improvement: 2/10
+Epoch 023: train_loss=0.055874 val_F1=0.704243 P=0.597960 R=0.856491 th=0.40
+  no val_F1 improvement: 1/10
+Epoch 034: train_loss=0.051932 val_F1=0.705133 P=0.612021 R=0.831674 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 024: train_loss=0.055278 val_F1=0.701557 P=0.600431 R=0.843662 th=0.40
+  no val_F1 improvement: 2/10
+Epoch 035: train_loss=0.051499 val_F1=0.705579 P=0.607885 R=0.840701 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 025: train_loss=0.054695 val_F1=0.702487 P=0.600288 R=0.846640 th=0.40
+  no val_F1 improvement: 3/10
+Epoch 036: train_loss=0.051603 val_F1=0.708612 P=0.614745 R=0.836324 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 026: train_loss=0.053978 val_F1=0.705792 P=0.603258 R=0.850332 th=0.40
+  no val_F1 improvement: 4/10
+Epoch 037: train_loss=0.051261 val_F1=0.708280 P=0.616990 R=0.831291 th=0.40
+  no val_F1 improvement: 1/10
+Epoch 027: train_loss=0.053926 val_F1=0.700327 P=0.595934 R=0.849078 th=0.40
+  no val_F1 improvement: 5/10
+Epoch 038: train_loss=0.051067 val_F1=0.705764 P=0.604179 R=0.848428 th=0.40
+  no val_F1 improvement: 2/10
+Epoch 028: train_loss=0.052629 val_F1=0.703907 P=0.598959 R=0.853461 th=0.40
+  no val_F1 improvement: 6/10
+Epoch 039: train_loss=0.050951 val_F1=0.705027 P=0.606022 R=0.842710 th=0.40
+  no val_F1 improvement: 3/10
+Epoch 040: train_loss=0.050590 val_F1=0.710666 P=0.607715 R=0.855626 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 029: train_loss=0.052525 val_F1=0.702372 P=0.600041 R=0.846796 th=0.40
+  no val_F1 improvement: 7/10
+Epoch 041: train_loss=0.050154 val_F1=0.701459 P=0.598151 R=0.847917 th=0.40
+  no val_F1 improvement: 1/10
+Epoch 030: train_loss=0.052177 val_F1=0.707211 P=0.598247 R=0.864723 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 042: train_loss=0.049578 val_F1=0.707802 P=0.607420 R=0.847946 th=0.40
+  no val_F1 improvement: 2/10
+Epoch 031: train_loss=0.051571 val_F1=0.709465 P=0.597617 R=0.872833 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 043: train_loss=0.049932 val_F1=0.708307 P=0.602883 R=0.858430 th=0.40
+  no val_F1 improvement: 3/10
+Epoch 032: train_loss=0.051486 val_F1=0.707548 P=0.604774 R=0.852416 th=0.40
+  no val_F1 improvement: 1/10
+Epoch 044: train_loss=0.049688 val_F1=0.710035 P=0.596079 R=0.877877 th=0.40
+  no val_F1 improvement: 4/10
+Epoch 033: train_loss=0.051162 val_F1=0.706578 P=0.593559 R=0.872774 th=0.40
+  no val_F1 improvement: 2/10
+Epoch 045: train_loss=0.049313 val_F1=0.712571 P=0.607513 R=0.861576 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 034: train_loss=0.050479 val_F1=0.706894 P=0.602958 R=0.854140 th=0.40
+  no val_F1 improvement: 3/10
+Epoch 046: train_loss=0.049213 val_F1=0.711558 P=0.612515 R=0.848822 th=0.40
+  no val_F1 improvement: 1/10
+Epoch 047: train_loss=0.048657 val_F1=0.713207 P=0.610191 R=0.858087 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 035: train_loss=0.050169 val_F1=0.707612 P=0.607536 R=0.847174 th=0.40
+  no val_F1 improvement: 4/10
+Epoch 048: train_loss=0.048604 val_F1=0.711466 P=0.607734 R=0.857913 th=0.40
+  no val_F1 improvement: 1/10
+Epoch 036: train_loss=0.050299 val_F1=0.708338 P=0.597249 R=0.870209 th=0.40
+  no val_F1 improvement: 5/10
+Epoch 049: train_loss=0.048953 val_F1=0.710317 P=0.598250 R=0.874063 th=0.40
+  no val_F1 improvement: 2/10
+Epoch 037: train_loss=0.050061 val_F1=0.706336 P=0.595306 R=0.868293 th=0.40
+  no val_F1 improvement: 6/10
+Epoch 050: train_loss=0.048451 val_F1=0.714350 P=0.606638 R=0.868583 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Restored best checkpoint from epoch 50 (val_F1=0.714350, th=0.40)
+BEST checkpoint epoch=50 val_F1=0.714350 threshold=0.40
+Summary: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=train model=deeplabv3_resnet50 source=Einsiedeln target=Einsiedeln
+pages=1 annotations=8 npatches=1024
+log=logs/modern/train/deeplabv3_resnet50/Einsiedeln__to__Einsiedeln.log
+==================================================================
+CONFIG
+  dataset=Einsiedeln
+  model=deeplabv3_resnet50
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=e-codices_sbe-0611_0001r_Layered.png annotated_windows=8 annotated_ratio=0.025303
+Device: cuda
+Samples/epoch: 1024
+Physical batch: 4
+Gradient accumulation: 8
+Effective batch (nominal): 32
+Optimizer updates/epoch: 32
+Early stopping: val_F1, patience=10, min_delta=0.0001
+Epoch 038: train_loss=0.049810 val_F1=0.709222 P=0.605342 R=0.856154 th=0.40
+  no val_F1 improvement: 7/10
+Epoch 039: train_loss=0.049678 val_F1=0.710256 P=0.598861 R=0.872577 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 040: train_loss=0.049490 val_F1=0.710540 P=0.604243 R=0.862232 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 001: train_loss=0.459955 val_F1=0.694525 P=0.724096 R=0.667284 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 041: train_loss=0.049004 val_F1=0.711070 P=0.598043 R=0.876792 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 042: train_loss=0.048471 val_F1=0.711330 P=0.598171 R=0.877308 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 002: train_loss=0.199524 val_F1=0.743165 P=0.742991 R=0.743349 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 043: train_loss=0.048911 val_F1=0.709977 P=0.608140 R=0.852793 th=0.40
+  no val_F1 improvement: 1/10
+Epoch 044: train_loss=0.048667 val_F1=0.708106 P=0.603001 R=0.857600 th=0.40
+  no val_F1 improvement: 2/10
+Epoch 045: train_loss=0.048286 val_F1=0.712548 P=0.607416 R=0.861704 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 003: train_loss=0.140562 val_F1=0.766515 P=0.767164 R=0.765877 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 046: train_loss=0.048203 val_F1=0.712986 P=0.607270 R=0.863283 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 047: train_loss=0.047673 val_F1=0.714849 P=0.611109 R=0.861025 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 004: train_loss=0.116876 val_F1=0.777776 P=0.778489 R=0.777075 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 048: train_loss=0.047749 val_F1=0.713139 P=0.607322 R=0.863626 th=0.40
+  no val_F1 improvement: 1/10
+Epoch 049: train_loss=0.048036 val_F1=0.712806 P=0.609867 R=0.857565 th=0.40
+  no val_F1 improvement: 2/10
+Epoch 050: train_loss=0.047549 val_F1=0.717635 P=0.609179 R=0.873088 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Restored best checkpoint from epoch 50 (val_F1=0.717635, th=0.40)
+BEST checkpoint epoch=50 val_F1=0.717635 threshold=0.40
+Summary: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=train model=deeplabv3_resnet101 source=Einsiedeln target=Einsiedeln
+pages=1 annotations=8 npatches=1024
+log=logs/modern/train/deeplabv3_resnet101/Einsiedeln__to__Einsiedeln.log
+==================================================================
+Epoch 005: train_loss=0.102806 val_F1=0.785467 P=0.786186 R=0.784759 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+CONFIG
+  dataset=Einsiedeln
+  model=deeplabv3_resnet101
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=e-codices_sbe-0611_0001r_Layered.png annotated_windows=8 annotated_ratio=0.025303
+Device: cuda
+Samples/epoch: 1024
+Physical batch: 4
+Gradient accumulation: 8
+Effective batch (nominal): 32
+Optimizer updates/epoch: 32
+Early stopping: val_F1, patience=10, min_delta=0.0001
+Epoch 006: train_loss=0.094441 val_F1=0.793228 P=0.787553 R=0.798996 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 001: train_loss=0.449716 val_F1=0.724540 P=0.703518 R=0.746868 th=0.40
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 007: train_loss=0.087581 val_F1=0.796317 P=0.796321 R=0.796323 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 002: train_loss=0.197791 val_F1=0.768437 P=0.735914 R=0.803978 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 008: train_loss=0.081830 val_F1=0.803253 P=0.798918 R=0.807646 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 003: train_loss=0.142557 val_F1=0.790393 P=0.763806 R=0.818907 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 009: train_loss=0.077185 val_F1=0.805381 P=0.810600 R=0.800238 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 004: train_loss=0.117786 val_F1=0.799579 P=0.777311 R=0.823171 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 010: train_loss=0.073600 val_F1=0.807698 P=0.818165 R=0.797505 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 005: train_loss=0.102454 val_F1=0.805413 P=0.790236 R=0.821195 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 011: train_loss=0.069928 val_F1=0.812139 P=0.813265 R=0.811027 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 006: train_loss=0.092987 val_F1=0.809830 P=0.793583 R=0.826767 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 012: train_loss=0.067168 val_F1=0.813663 P=0.822048 R=0.805458 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 007: train_loss=0.085778 val_F1=0.812151 P=0.802347 R=0.822209 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 013: train_loss=0.064462 val_F1=0.814951 P=0.826966 R=0.803291 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 008: train_loss=0.079828 val_F1=0.817793 P=0.810512 R=0.825216 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 014: train_loss=0.062839 val_F1=0.818354 P=0.828686 R=0.808285 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 009: train_loss=0.075180 val_F1=0.821184 P=0.817436 R=0.824977 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 015: train_loss=0.060288 val_F1=0.818337 P=0.829206 R=0.807758 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 010: train_loss=0.071573 val_F1=0.822185 P=0.830804 R=0.813752 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 016: train_loss=0.059057 val_F1=0.819881 P=0.834791 R=0.805505 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 011: train_loss=0.068073 val_F1=0.824863 P=0.820345 R=0.829441 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 017: train_loss=0.057542 val_F1=0.821917 P=0.799334 R=0.845823 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 012: train_loss=0.065467 val_F1=0.825933 P=0.830150 R=0.821769 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 018: train_loss=0.056313 val_F1=0.823462 P=0.798692 R=0.849829 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 013: train_loss=0.062786 val_F1=0.829666 P=0.836343 R=0.823105 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 019: train_loss=0.055356 val_F1=0.824617 P=0.800671 R=0.850050 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 014: train_loss=0.061263 val_F1=0.830510 P=0.837669 R=0.823483 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 020: train_loss=0.053701 val_F1=0.824345 P=0.836291 R=0.812746 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 015: train_loss=0.058731 val_F1=0.830256 P=0.838651 R=0.822037 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 021: train_loss=0.053213 val_F1=0.826997 P=0.840558 R=0.813877 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 016: train_loss=0.057699 val_F1=0.833577 P=0.842641 R=0.824715 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 022: train_loss=0.052688 val_F1=0.828622 P=0.804502 R=0.854243 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 023: train_loss=0.050865 val_F1=0.828966 P=0.807264 R=0.851877 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 017: train_loss=0.056269 val_F1=0.835359 P=0.847343 R=0.823719 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 024: train_loss=0.050531 val_F1=0.830960 P=0.844539 R=0.817821 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 018: train_loss=0.055106 val_F1=0.835450 P=0.844433 R=0.826666 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 025: train_loss=0.049106 val_F1=0.831747 P=0.810170 R=0.854516 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 019: train_loss=0.054111 val_F1=0.837295 P=0.847935 R=0.826928 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 026: train_loss=0.049246 val_F1=0.833888 P=0.813171 R=0.855698 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 020: train_loss=0.052556 val_F1=0.838832 P=0.844586 R=0.833165 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 027: train_loss=0.047940 val_F1=0.833751 P=0.814386 R=0.854070 th=0.20
+  no val_F1 improvement: 1/10
+Epoch 021: train_loss=0.052107 val_F1=0.840359 P=0.851392 R=0.829617 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 028: train_loss=0.047615 val_F1=0.834376 P=0.815149 R=0.854542 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 022: train_loss=0.051635 val_F1=0.841766 P=0.850913 R=0.832824 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 029: train_loss=0.047470 val_F1=0.834716 P=0.817229 R=0.852978 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 023: train_loss=0.049908 val_F1=0.841218 P=0.848789 R=0.833791 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 030: train_loss=0.046739 val_F1=0.835171 P=0.814509 R=0.856919 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 024: train_loss=0.049667 val_F1=0.842897 P=0.846964 R=0.838878 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 031: train_loss=0.045941 val_F1=0.836299 P=0.815989 R=0.857656 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 025: train_loss=0.048203 val_F1=0.841749 P=0.846351 R=0.837207 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 032: train_loss=0.045514 val_F1=0.840192 P=0.820988 R=0.860326 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 026: train_loss=0.048307 val_F1=0.844322 P=0.850907 R=0.837849 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 033: train_loss=0.045712 val_F1=0.840190 P=0.821410 R=0.859859 th=0.20
+  no val_F1 improvement: 1/10
+Epoch 027: train_loss=0.047142 val_F1=0.842206 P=0.850538 R=0.834045 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 034: train_loss=0.044410 val_F1=0.841448 P=0.820252 R=0.863779 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 028: train_loss=0.046864 val_F1=0.846352 P=0.853682 R=0.839155 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 035: train_loss=0.044449 val_F1=0.840191 P=0.818329 R=0.863265 th=0.20
+  no val_F1 improvement: 1/10
+Epoch 029: train_loss=0.046701 val_F1=0.845848 P=0.854850 R=0.837042 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 036: train_loss=0.043679 val_F1=0.840675 P=0.817221 R=0.865524 th=0.20
+  no val_F1 improvement: 2/10
+Epoch 030: train_loss=0.046113 val_F1=0.847777 P=0.850809 R=0.844777 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 037: train_loss=0.043503 val_F1=0.841206 P=0.821196 R=0.862226 th=0.20
+  no val_F1 improvement: 3/10
+Epoch 031: train_loss=0.045279 val_F1=0.849760 P=0.851963 R=0.847577 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 038: train_loss=0.042694 val_F1=0.841970 P=0.823006 R=0.861839 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 032: train_loss=0.044807 val_F1=0.849718 P=0.858236 R=0.841378 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 039: train_loss=0.042410 val_F1=0.842631 P=0.824950 R=0.861097 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 033: train_loss=0.045084 val_F1=0.850262 P=0.857379 R=0.843273 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 040: train_loss=0.042721 val_F1=0.843466 P=0.822084 R=0.865999 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 034: train_loss=0.043885 val_F1=0.852507 P=0.854353 R=0.850679 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 041: train_loss=0.042419 val_F1=0.843697 P=0.823552 R=0.864863 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 035: train_loss=0.043832 val_F1=0.849676 P=0.853616 R=0.845783 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 042: train_loss=0.041999 val_F1=0.845122 P=0.826329 R=0.864801 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 036: train_loss=0.043129 val_F1=0.850989 P=0.854206 R=0.847807 th=0.30
+  no val_F1 improvement: 2/10
+Epoch 043: train_loss=0.041806 val_F1=0.845933 P=0.824820 R=0.868165 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 037: train_loss=0.042921 val_F1=0.852505 P=0.858121 R=0.846971 th=0.30
+  no val_F1 improvement: 3/10
+Epoch 044: train_loss=0.041240 val_F1=0.847893 P=0.828400 R=0.868335 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 045: train_loss=0.041120 val_F1=0.846986 P=0.830271 R=0.864399 th=0.20
+  no val_F1 improvement: 1/10
+Epoch 038: train_loss=0.042094 val_F1=0.852685 P=0.858975 R=0.846496 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 046: train_loss=0.040860 val_F1=0.845910 P=0.852476 R=0.839455 th=0.30
+  no val_F1 improvement: 2/10
+Epoch 039: train_loss=0.041807 val_F1=0.853675 P=0.859606 R=0.847836 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 047: train_loss=0.040749 val_F1=0.847530 P=0.828922 R=0.867005 th=0.20
+  no val_F1 improvement: 3/10
+Epoch 040: train_loss=0.042094 val_F1=0.854386 P=0.858685 R=0.850141 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 048: train_loss=0.040190 val_F1=0.847217 P=0.831572 R=0.863473 th=0.20
+  no val_F1 improvement: 4/10
+Epoch 041: train_loss=0.041921 val_F1=0.855021 P=0.860532 R=0.849590 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 049: train_loss=0.040599 val_F1=0.849581 P=0.827536 R=0.872844 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 042: train_loss=0.041434 val_F1=0.856294 P=0.857695 R=0.854909 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 050: train_loss=0.039611 val_F1=0.850264 P=0.829398 R=0.872217 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Restored best checkpoint from epoch 50 (val_F1=0.850264, th=0.20)
+BEST checkpoint epoch=50 val_F1=0.850264 threshold=0.20
+Summary: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=train model=deeplabv3_resnet50 source=ISOS target=ISOS
+pages=1 annotations=8 npatches=1024
+log=logs/modern/train/deeplabv3_resnet50/ISOS__to__ISOS.log
+==================================================================
+CONFIG
+  dataset=ISOS
+  model=deeplabv3_resnet50
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=FH.IP.7v.png annotated_windows=8 annotated_ratio=0.251087
+Device: cuda
+Samples/epoch: 1024
+Physical batch: 4
+Gradient accumulation: 8
+Effective batch (nominal): 32
+Optimizer updates/epoch: 32
+Early stopping: val_F1, patience=10, min_delta=0.0001
+Epoch 043: train_loss=0.041229 val_F1=0.856558 P=0.860281 R=0.852878 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 001: train_loss=0.367206 val_F1=0.782225 P=0.766495 R=0.798624 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 002: train_loss=0.157747 val_F1=0.836324 P=0.851290 R=0.821885 th=0.70
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 003: train_loss=0.114463 val_F1=0.851950 P=0.869731 R=0.834891 th=0.70
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 004: train_loss=0.095353 val_F1=0.859560 P=0.847713 R=0.871754 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 044: train_loss=0.040769 val_F1=0.857442 P=0.861359 R=0.853571 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 005: train_loss=0.085220 val_F1=0.867298 P=0.861813 R=0.872863 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 006: train_loss=0.078214 val_F1=0.870764 P=0.869978 R=0.871562 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 007: train_loss=0.072801 val_F1=0.873943 P=0.878876 R=0.869075 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 008: train_loss=0.069036 val_F1=0.877142 P=0.884198 R=0.870207 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 009: train_loss=0.066000 val_F1=0.879209 P=0.887098 R=0.871469 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 045: train_loss=0.040620 val_F1=0.856085 P=0.861671 R=0.850580 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 010: train_loss=0.063096 val_F1=0.879564 P=0.887405 R=0.871870 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 011: train_loss=0.061127 val_F1=0.879043 P=0.891313 R=0.867116 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 012: train_loss=0.059656 val_F1=0.879603 P=0.893729 R=0.865927 th=0.60
+  no val_F1 improvement: 2/10
+Epoch 013: train_loss=0.057505 val_F1=0.881250 P=0.895518 R=0.867439 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 046: train_loss=0.040323 val_F1=0.857097 P=0.855947 R=0.858261 th=0.30
+  no val_F1 improvement: 2/10
+Epoch 014: train_loss=0.056700 val_F1=0.881993 P=0.896105 R=0.868328 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 015: train_loss=0.055441 val_F1=0.882083 P=0.902021 R=0.863017 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 016: train_loss=0.054561 val_F1=0.881189 P=0.900572 R=0.862632 th=0.60
+  no val_F1 improvement: 2/10
+Epoch 017: train_loss=0.053486 val_F1=0.881677 P=0.900004 R=0.864091 th=0.60
+  no val_F1 improvement: 3/10
+Epoch 018: train_loss=0.052382 val_F1=0.883907 P=0.903578 R=0.865084 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 047: train_loss=0.040322 val_F1=0.857717 P=0.863496 R=0.852023 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 019: train_loss=0.051573 val_F1=0.882834 P=0.904129 R=0.862528 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 020: train_loss=0.050904 val_F1=0.882661 P=0.904119 R=0.862208 th=0.60
+  no val_F1 improvement: 2/10
+Epoch 021: train_loss=0.050141 val_F1=0.883032 P=0.907001 R=0.860307 th=0.60
+  no val_F1 improvement: 3/10
+Epoch 022: train_loss=0.049447 val_F1=0.885126 P=0.905656 R=0.865515 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 048: train_loss=0.039753 val_F1=0.853901 P=0.863973 R=0.844072 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 023: train_loss=0.048861 val_F1=0.883893 P=0.906912 R=0.862024 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 024: train_loss=0.048236 val_F1=0.885335 P=0.907394 R=0.864333 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 025: train_loss=0.047922 val_F1=0.886467 P=0.906774 R=0.867058 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 026: train_loss=0.047499 val_F1=0.885078 P=0.911843 R=0.859849 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 049: train_loss=0.040135 val_F1=0.860367 P=0.863514 R=0.857253 th=0.30
+Epoch 027: train_loss=0.046678 val_F1=0.883216 P=0.904855 R=0.862597 th=0.60
+  no val_F1 improvement: 2/10
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 028: train_loss=0.046308 val_F1=0.884876 P=0.908774 R=0.862212 th=0.60
+  no val_F1 improvement: 3/10
+Epoch 029: train_loss=0.045920 val_F1=0.883967 P=0.910467 R=0.858975 th=0.60
+  no val_F1 improvement: 4/10
+Epoch 030: train_loss=0.045497 val_F1=0.885940 P=0.912647 R=0.860761 th=0.60
+  no val_F1 improvement: 5/10
+Epoch 031: train_loss=0.045256 val_F1=0.886709 P=0.909702 R=0.864860 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 050: train_loss=0.039269 val_F1=0.860914 P=0.864163 R=0.857698 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Restored best checkpoint from epoch 50 (val_F1=0.860914, th=0.30)
+BEST checkpoint epoch=50 val_F1=0.860914 threshold=0.30
+Summary: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=train model=deeplabv3_resnet101 source=ISOS target=ISOS
+pages=1 annotations=8 npatches=1024
+log=logs/modern/train/deeplabv3_resnet101/ISOS__to__ISOS.log
+==================================================================
+Epoch 032: train_loss=0.044684 val_F1=0.886946 P=0.913060 R=0.862293 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+CONFIG
+  dataset=ISOS
+  model=deeplabv3_resnet101
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=FH.IP.7v.png annotated_windows=8 annotated_ratio=0.251087
+Device: cuda
+Samples/epoch: 1024
+Physical batch: 4
+Gradient accumulation: 8
+Effective batch (nominal): 32
+Optimizer updates/epoch: 32
+Early stopping: val_F1, patience=10, min_delta=0.0001
+Epoch 033: train_loss=0.044832 val_F1=0.885417 P=0.906296 R=0.865488 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 001: train_loss=0.481408 val_F1=0.800447 P=0.777289 R=0.825037 th=0.70
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 034: train_loss=0.044064 val_F1=0.886807 P=0.910247 R=0.864552 th=0.60
+  no val_F1 improvement: 2/10
+Epoch 002: train_loss=0.195361 val_F1=0.845395 P=0.860763 R=0.830576 th=0.70
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 035: train_loss=0.043835 val_F1=0.886469 P=0.912244 R=0.862120 th=0.60
+  no val_F1 improvement: 3/10
+Epoch 003: train_loss=0.149286 val_F1=0.853410 P=0.842381 R=0.864741 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 036: train_loss=0.043793 val_F1=0.887004 P=0.910236 R=0.864937 th=0.60
+  no val_F1 improvement: 4/10
+Epoch 037: train_loss=0.043045 val_F1=0.886720 P=0.914400 R=0.860676 th=0.60
+  no val_F1 improvement: 5/10
+Epoch 004: train_loss=0.128327 val_F1=0.860658 P=0.849895 R=0.871708 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 038: train_loss=0.043140 val_F1=0.887126 P=0.908628 R=0.866627 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 005: train_loss=0.115329 val_F1=0.863443 P=0.862692 R=0.864206 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 039: train_loss=0.042321 val_F1=0.886011 P=0.909415 R=0.863790 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 006: train_loss=0.105681 val_F1=0.869098 P=0.874951 R=0.863332 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 040: train_loss=0.042933 val_F1=0.887461 P=0.909650 R=0.866338 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 007: train_loss=0.096999 val_F1=0.870765 P=0.885631 R=0.856400 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 041: train_loss=0.042111 val_F1=0.887527 P=0.912460 R=0.863929 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 008: train_loss=0.091056 val_F1=0.866960 P=0.874212 R=0.859837 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 042: train_loss=0.042052 val_F1=0.887357 P=0.915499 R=0.860903 th=0.60
+  no val_F1 improvement: 2/10
+Epoch 009: train_loss=0.086332 val_F1=0.870609 P=0.878035 R=0.863317 th=0.60
+  no val_F1 improvement: 2/10
+Epoch 043: train_loss=0.041742 val_F1=0.888755 P=0.916182 R=0.862932 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 044: train_loss=0.041683 val_F1=0.889356 P=0.913855 R=0.866146 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 010: train_loss=0.081225 val_F1=0.870316 P=0.871026 R=0.869618 th=0.60
+  no val_F1 improvement: 3/10
+Epoch 045: train_loss=0.041367 val_F1=0.887680 P=0.914618 R=0.862293 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 011: train_loss=0.077368 val_F1=0.871013 P=0.876364 R=0.865738 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 046: train_loss=0.041249 val_F1=0.888391 P=0.913189 R=0.864914 th=0.60
+  no val_F1 improvement: 2/10
+Epoch 012: train_loss=0.074263 val_F1=0.870350 P=0.874400 R=0.866346 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 047: train_loss=0.041090 val_F1=0.887157 P=0.912874 R=0.862859 th=0.60
+  no val_F1 improvement: 3/10
+Epoch 013: train_loss=0.071106 val_F1=0.873451 P=0.879707 R=0.867293 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 048: train_loss=0.040179 val_F1=0.887578 P=0.912907 R=0.863625 th=0.60
+  no val_F1 improvement: 4/10
+Epoch 014: train_loss=0.069224 val_F1=0.875465 P=0.879363 R=0.871612 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 049: train_loss=0.040678 val_F1=0.889427 P=0.918239 R=0.862378 th=0.60
+  no val_F1 improvement: 5/10
+Epoch 015: train_loss=0.067169 val_F1=0.879015 P=0.889966 R=0.868340 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 050: train_loss=0.040671 val_F1=0.888150 P=0.914485 R=0.863298 th=0.60
+  no val_F1 improvement: 6/10
+Restored best checkpoint from epoch 44 (val_F1=0.889356, th=0.60)
+BEST checkpoint epoch=44 val_F1=0.889356 threshold=0.60
+Summary: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=train model=deeplabv3_resnet50 source=Palm target=Palm
+pages=1 annotations=8 npatches=1024
+log=logs/modern/train/deeplabv3_resnet50/Palm__to__Palm.log
+==================================================================
+CONFIG
+  dataset=Palm
+  model=deeplabv3_resnet50
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=IIB-2-180-P1.png annotated_windows=4 annotated_ratio=0.081779
+Device: cuda
+Samples/epoch: 1024
+Physical batch: 4
+Gradient accumulation: 8
+Effective batch (nominal): 32
+Optimizer updates/epoch: 32
+Early stopping: val_F1, patience=10, min_delta=0.0001
+Epoch 016: train_loss=0.064957 val_F1=0.875498 P=0.888466 R=0.862913 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 001: train_loss=0.421274 val_F1=0.205765 P=0.116369 R=0.887819 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 017: train_loss=0.063306 val_F1=0.876077 P=0.890479 R=0.862143 th=0.60
+  no val_F1 improvement: 2/10
+Epoch 002: train_loss=0.259648 val_F1=0.229930 P=0.138344 R=0.680347 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 018: train_loss=0.061563 val_F1=0.876745 P=0.891688 R=0.862305 th=0.60
+  no val_F1 improvement: 3/10
+Epoch 003: train_loss=0.214365 val_F1=0.260399 P=0.155891 R=0.790072 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 019: train_loss=0.060100 val_F1=0.879633 P=0.896726 R=0.863190 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 004: train_loss=0.188819 val_F1=0.274311 P=0.164822 R=0.817160 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 020: train_loss=0.059388 val_F1=0.874326 P=0.893934 R=0.855569 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 005: train_loss=0.165264 val_F1=0.298915 P=0.185200 R=0.774460 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 021: train_loss=0.058589 val_F1=0.877024 P=0.895541 R=0.859268 th=0.60
+  no val_F1 improvement: 2/10
+Epoch 006: train_loss=0.153663 val_F1=0.304429 P=0.189240 R=0.778019 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 022: train_loss=0.057992 val_F1=0.879087 P=0.894340 R=0.864356 th=0.60
+  no val_F1 improvement: 3/10
+Epoch 007: train_loss=0.144011 val_F1=0.322168 P=0.204189 R=0.763095 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 023: train_loss=0.057498 val_F1=0.880985 P=0.895762 R=0.866696 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 008: train_loss=0.143077 val_F1=0.367474 P=0.239072 R=0.793861 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 024: train_loss=0.056492 val_F1=0.883518 P=0.902116 R=0.865680 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 009: train_loss=0.136741 val_F1=0.380903 P=0.278681 R=0.601579 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 025: train_loss=0.055703 val_F1=0.885049 P=0.899775 R=0.870807 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 010: train_loss=0.132753 val_F1=0.412514 P=0.297901 R=0.670487 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 026: train_loss=0.054650 val_F1=0.881581 P=0.895591 R=0.868013 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 011: train_loss=0.126719 val_F1=0.392371 P=0.286511 R=0.622323 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 027: train_loss=0.053996 val_F1=0.880599 P=0.900290 R=0.861762 th=0.60
+  no val_F1 improvement: 2/10
+Epoch 012: train_loss=0.123634 val_F1=0.365651 P=0.239852 R=0.768992 th=0.20
+  no val_F1 improvement: 2/10
+Epoch 028: train_loss=0.052829 val_F1=0.882240 P=0.898495 R=0.866573 th=0.60
+  no val_F1 improvement: 3/10
+Epoch 013: train_loss=0.122847 val_F1=0.416369 P=0.316043 R=0.610035 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 014: train_loss=0.118230 val_F1=0.394841 P=0.265817 R=0.767284 th=0.20
+  no val_F1 improvement: 1/10
+Epoch 029: train_loss=0.051899 val_F1=0.884004 P=0.904568 R=0.864364 th=0.60
+  no val_F1 improvement: 4/10
+Epoch 015: train_loss=0.118330 val_F1=0.390803 P=0.261699 R=0.771345 th=0.20
+  no val_F1 improvement: 2/10
+Epoch 030: train_loss=0.051335 val_F1=0.885232 P=0.910775 R=0.861092 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 016: train_loss=0.117721 val_F1=0.412590 P=0.284221 R=0.752452 th=0.20
+  no val_F1 improvement: 3/10
+Epoch 031: train_loss=0.050700 val_F1=0.882498 P=0.901470 R=0.864318 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 017: train_loss=0.115973 val_F1=0.410685 P=0.281346 R=0.760149 th=0.20
+  no val_F1 improvement: 4/10
+Epoch 032: train_loss=0.049924 val_F1=0.883442 P=0.905528 R=0.862416 th=0.60
+  no val_F1 improvement: 2/10
+Epoch 018: train_loss=0.113858 val_F1=0.421184 P=0.291561 R=0.758342 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 033: train_loss=0.049722 val_F1=0.882025 P=0.901011 R=0.863833 th=0.60
+  no val_F1 improvement: 3/10
+Epoch 019: train_loss=0.112087 val_F1=0.407571 P=0.281229 R=0.740054 th=0.20
+  no val_F1 improvement: 1/10
+Epoch 034: train_loss=0.048918 val_F1=0.885089 P=0.906505 R=0.864672 th=0.60
+  no val_F1 improvement: 4/10
+Epoch 020: train_loss=0.111023 val_F1=0.419834 P=0.291674 R=0.748918 th=0.20
+  no val_F1 improvement: 2/10
+Epoch 035: train_loss=0.048408 val_F1=0.885965 P=0.907209 R=0.865703 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 021: train_loss=0.109796 val_F1=0.440890 P=0.313899 R=0.740469 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 036: train_loss=0.048320 val_F1=0.883259 P=0.907189 R=0.860569 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 022: train_loss=0.109428 val_F1=0.416064 P=0.288335 R=0.746983 th=0.20
+  no val_F1 improvement: 1/10
+Epoch 037: train_loss=0.047340 val_F1=0.885651 P=0.912814 R=0.860068 th=0.60
+  no val_F1 improvement: 2/10
+Epoch 023: train_loss=0.108084 val_F1=0.429012 P=0.303505 R=0.731534 th=0.20
+  no val_F1 improvement: 2/10
+Epoch 038: train_loss=0.047415 val_F1=0.885306 P=0.909651 R=0.862239 th=0.60
+  no val_F1 improvement: 3/10
+Epoch 024: train_loss=0.106950 val_F1=0.432681 P=0.306483 R=0.735578 th=0.20
+  no val_F1 improvement: 3/10
+Epoch 039: train_loss=0.046374 val_F1=0.885919 P=0.906811 R=0.865977 th=0.60
+  no val_F1 improvement: 4/10
+Epoch 025: train_loss=0.107219 val_F1=0.434746 P=0.313123 R=0.710883 th=0.20
+  no val_F1 improvement: 4/10
+Epoch 040: train_loss=0.046792 val_F1=0.886753 P=0.908218 R=0.866288 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 026: train_loss=0.106817 val_F1=0.438141 P=0.312812 R=0.731049 th=0.20
+  no val_F1 improvement: 5/10
+Epoch 041: train_loss=0.045805 val_F1=0.886650 P=0.910712 R=0.863837 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 027: train_loss=0.105819 val_F1=0.450766 P=0.328347 R=0.718758 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 042: train_loss=0.045691 val_F1=0.886895 P=0.909658 R=0.865253 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 028: train_loss=0.106061 val_F1=0.442490 P=0.320850 R=0.712697 th=0.20
+  no val_F1 improvement: 1/10
+Epoch 043: train_loss=0.045219 val_F1=0.886394 P=0.910925 R=0.863159 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 029: train_loss=0.105225 val_F1=0.450014 P=0.327534 R=0.718829 th=0.20
+  no val_F1 improvement: 2/10
+Epoch 044: train_loss=0.045161 val_F1=0.887814 P=0.912397 R=0.864529 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 030: train_loss=0.104064 val_F1=0.450498 P=0.328733 R=0.715561 th=0.20
+  no val_F1 improvement: 3/10
+Epoch 045: train_loss=0.044832 val_F1=0.885606 P=0.907798 R=0.864483 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 031: train_loss=0.103819 val_F1=0.440404 P=0.319110 R=0.710468 th=0.20
+  no val_F1 improvement: 4/10
+Epoch 046: train_loss=0.044696 val_F1=0.885895 P=0.909240 R=0.863729 th=0.60
+  no val_F1 improvement: 2/10
+Epoch 032: train_loss=0.103345 val_F1=0.451831 P=0.328839 R=0.721820 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 047: train_loss=0.044293 val_F1=0.887334 P=0.911782 R=0.864171 th=0.60
+  no val_F1 improvement: 3/10
+Epoch 033: train_loss=0.102849 val_F1=0.452518 P=0.329087 R=0.724134 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 048: train_loss=0.043322 val_F1=0.888760 P=0.911494 R=0.867143 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 034: train_loss=0.102512 val_F1=0.447456 P=0.323080 R=0.727561 th=0.20
+  no val_F1 improvement: 1/10
+Epoch 035: train_loss=0.102221 val_F1=0.480021 P=0.358410 R=0.726558 th=0.20
+Epoch 049: train_loss=0.043615 val_F1=0.889655 P=0.918096 R=0.862932 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 036: train_loss=0.101453 val_F1=0.468066 P=0.345689 R=0.724591 th=0.20
+  no val_F1 improvement: 1/10
+Epoch 050: train_loss=0.043545 val_F1=0.888965 P=0.915242 R=0.864164 th=0.60
+  no val_F1 improvement: 1/10
+Restored best checkpoint from epoch 49 (val_F1=0.889655, th=0.60)
+BEST checkpoint epoch=49 val_F1=0.889655 threshold=0.60
+Summary: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=train model=deeplabv3_resnet101 source=Palm target=Palm
+pages=1 annotations=8 npatches=1024
+log=logs/modern/train/deeplabv3_resnet101/Palm__to__Palm.log
+==================================================================
+CONFIG
+  dataset=Palm
+  model=deeplabv3_resnet101
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=IIB-2-180-P1.png annotated_windows=4 annotated_ratio=0.081779
+Device: cuda
+Samples/epoch: 1024
+Physical batch: 4
+Gradient accumulation: 8
+Effective batch (nominal): 32
+Optimizer updates/epoch: 32
+Early stopping: val_F1, patience=10, min_delta=0.0001
+Epoch 037: train_loss=0.102209 val_F1=0.438575 P=0.314125 R=0.726356 th=0.20
+  no val_F1 improvement: 2/10
+Epoch 001: train_loss=0.310698 val_F1=0.232855 P=0.134728 R=0.857190 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 038: train_loss=0.101542 val_F1=0.459852 P=0.334707 R=0.734487 th=0.20
+  no val_F1 improvement: 3/10
+Epoch 002: train_loss=0.215169 val_F1=0.282154 P=0.176836 R=0.697695 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 039: train_loss=0.100707 val_F1=0.451074 P=0.328940 R=0.717486 th=0.20
+  no val_F1 improvement: 4/10
+Epoch 040: train_loss=0.100776 val_F1=0.453312 P=0.330294 R=0.722373 th=0.20
+  no val_F1 improvement: 5/10
+Epoch 003: train_loss=0.176992 val_F1=0.301695 P=0.194932 R=0.667049 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 041: train_loss=0.099694 val_F1=0.456851 P=0.337530 R=0.706690 th=0.20
+  no val_F1 improvement: 6/10
+Epoch 004: train_loss=0.155294 val_F1=0.372678 P=0.249156 R=0.739122 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 042: train_loss=0.100512 val_F1=0.465298 P=0.343819 R=0.719541 th=0.20
+  no val_F1 improvement: 7/10
+Epoch 005: train_loss=0.141926 val_F1=0.359174 P=0.239842 R=0.714870 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 043: train_loss=0.099215 val_F1=0.462270 P=0.339598 R=0.723705 th=0.20
+  no val_F1 improvement: 8/10
+Epoch 006: train_loss=0.134840 val_F1=0.347572 P=0.235389 R=0.664076 th=0.30
+  no val_F1 improvement: 2/10
+Epoch 044: train_loss=0.099292 val_F1=0.456526 P=0.333548 R=0.723170 th=0.20
+  no val_F1 improvement: 9/10
+Epoch 007: train_loss=0.128577 val_F1=0.394910 P=0.275378 R=0.697826 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 045: train_loss=0.099115 val_F1=0.472605 P=0.350860 R=0.723755 th=0.20
+  no val_F1 improvement: 10/10
+Early stopping at epoch 45; best val_F1=0.480021
+Restored best checkpoint from epoch 35 (val_F1=0.480021, th=0.20)
+BEST checkpoint epoch=35 val_F1=0.480021 threshold=0.20
+Summary: models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=train model=deeplabv3_resnet50 source=PHI target=PHI
+pages=1 annotations=8 npatches=1024
+log=logs/modern/train/deeplabv3_resnet50/PHI__to__PHI.log
+==================================================================
+CONFIG
+  dataset=PHI
+  model=deeplabv3_resnet50
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=Persian09.png annotated_windows=8 annotated_ratio=0.226170
+Device: cuda
+Samples/epoch: 1024
+Physical batch: 4
+Gradient accumulation: 8
+Effective batch (nominal): 32
+Optimizer updates/epoch: 32
+Early stopping: val_F1, patience=10, min_delta=0.0001
+Epoch 008: train_loss=0.125184 val_F1=0.412662 P=0.291304 R=0.707367 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 001: train_loss=0.553571 val_F1=0.661354 P=0.631833 R=0.693781 th=0.70
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 002: train_loss=0.350431 val_F1=0.743658 P=0.718651 R=0.770479 th=0.70
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 009: train_loss=0.121863 val_F1=0.426329 P=0.308183 R=0.691401 th=0.30
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 003: train_loss=0.271426 val_F1=0.769430 P=0.725841 R=0.818600 th=0.70
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 010: train_loss=0.118648 val_F1=0.407881 P=0.296201 R=0.654773 th=0.30
+  no val_F1 improvement: 1/10
+Epoch 004: train_loss=0.244679 val_F1=0.788065 P=0.754765 R=0.824449 th=0.70
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 011: train_loss=0.115341 val_F1=0.419657 P=0.310299 R=0.648071 th=0.30
+  no val_F1 improvement: 2/10
+Epoch 005: train_loss=0.233619 val_F1=0.803095 P=0.850255 R=0.760901 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 006: train_loss=0.223241 val_F1=0.812646 P=0.859859 R=0.770357 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 012: train_loss=0.113064 val_F1=0.403138 P=0.271782 R=0.780262 th=0.20
+  no val_F1 improvement: 3/10
+Epoch 007: train_loss=0.217055 val_F1=0.822726 P=0.854061 R=0.793619 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 013: train_loss=0.111846 val_F1=0.420998 P=0.288226 R=0.780592 th=0.20
+  no val_F1 improvement: 4/10
+Epoch 008: train_loss=0.212901 val_F1=0.828998 P=0.860451 R=0.799772 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 014: train_loss=0.109303 val_F1=0.416474 P=0.283864 R=0.781634 th=0.20
+  no val_F1 improvement: 5/10
+Epoch 009: train_loss=0.208810 val_F1=0.831099 P=0.862863 R=0.801600 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 015: train_loss=0.109535 val_F1=0.420619 P=0.289075 R=0.771877 th=0.20
+  no val_F1 improvement: 6/10
+Epoch 010: train_loss=0.204603 val_F1=0.834713 P=0.865169 R=0.806337 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 011: train_loss=0.202261 val_F1=0.835171 P=0.860534 R=0.811269 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 016: train_loss=0.108549 val_F1=0.427426 P=0.295292 R=0.773606 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 012: train_loss=0.201260 val_F1=0.835832 P=0.857003 R=0.815691 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 017: train_loss=0.107267 val_F1=0.451385 P=0.318044 R=0.777275 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 013: train_loss=0.200111 val_F1=0.836931 P=0.844021 R=0.829970 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 018: train_loss=0.105636 val_F1=0.454879 P=0.322731 R=0.770310 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 014: train_loss=0.196914 val_F1=0.832461 P=0.860885 R=0.805863 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 015: train_loss=0.195396 val_F1=0.834988 P=0.854518 R=0.816340 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 019: train_loss=0.104531 val_F1=0.452202 P=0.321327 R=0.762967 th=0.20
+  no val_F1 improvement: 1/10
+Epoch 016: train_loss=0.195329 val_F1=0.831737 P=0.851382 R=0.812988 th=0.80
+  no val_F1 improvement: 3/10
+Epoch 020: train_loss=0.103968 val_F1=0.467122 P=0.336813 R=0.761907 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 017: train_loss=0.192210 val_F1=0.832643 P=0.855536 R=0.810953 th=0.80
+  no val_F1 improvement: 4/10
+Epoch 021: train_loss=0.103173 val_F1=0.470086 P=0.340643 R=0.758218 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 018: train_loss=0.189992 val_F1=0.834957 P=0.862056 R=0.809520 th=0.80
+  no val_F1 improvement: 5/10
+Epoch 022: train_loss=0.103089 val_F1=0.461778 P=0.334185 R=0.746997 th=0.20
+  no val_F1 improvement: 1/10
+Epoch 019: train_loss=0.191798 val_F1=0.835661 P=0.838798 R=0.832557 th=0.80
+  no val_F1 improvement: 6/10
+Epoch 020: train_loss=0.189901 val_F1=0.838072 P=0.846205 R=0.830103 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 023: train_loss=0.102143 val_F1=0.475392 P=0.348736 R=0.746540 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 021: train_loss=0.190303 val_F1=0.837517 P=0.845661 R=0.829538 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 024: train_loss=0.101376 val_F1=0.479162 P=0.352741 R=0.746841 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 022: train_loss=0.187309 val_F1=0.842241 P=0.843539 R=0.840957 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 025: train_loss=0.101594 val_F1=0.489706 P=0.363508 R=0.750148 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 023: train_loss=0.187083 val_F1=0.843094 P=0.836332 R=0.849976 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 024: train_loss=0.187222 val_F1=0.841777 P=0.823487 R=0.860908 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 026: train_loss=0.101358 val_F1=0.480096 P=0.356698 R=0.734051 th=0.20
+  no val_F1 improvement: 1/10
+Epoch 025: train_loss=0.186837 val_F1=0.835126 P=0.836433 R=0.833832 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 027: train_loss=0.100415 val_F1=0.477713 P=0.355210 R=0.729217 th=0.20
+  no val_F1 improvement: 2/10
+Epoch 026: train_loss=0.185280 val_F1=0.840514 P=0.830551 R=0.850729 th=0.80
+  no val_F1 improvement: 3/10
+Epoch 028: train_loss=0.100858 val_F1=0.475009 P=0.351219 R=0.733579 th=0.20
+  no val_F1 improvement: 3/10
+Epoch 027: train_loss=0.183256 val_F1=0.841309 P=0.841610 R=0.841017 th=0.80
+  no val_F1 improvement: 4/10
+Epoch 028: train_loss=0.183427 val_F1=0.843357 P=0.839040 R=0.847729 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 029: train_loss=0.100318 val_F1=0.492734 P=0.366530 R=0.751509 th=0.20
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 029: train_loss=0.183778 val_F1=0.843574 P=0.834595 R=0.852758 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 030: train_loss=0.099418 val_F1=0.477149 P=0.351639 R=0.742007 th=0.20
+  no val_F1 improvement: 1/10
+Epoch 030: train_loss=0.183261 val_F1=0.839057 P=0.827843 R=0.850589 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 031: train_loss=0.099396 val_F1=0.486429 P=0.358852 R=0.754777 th=0.20
+  no val_F1 improvement: 2/10
+Epoch 031: train_loss=0.181660 val_F1=0.848653 P=0.839984 R=0.857513 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 032: train_loss=0.098793 val_F1=0.484980 P=0.357421 R=0.754135 th=0.20
+  no val_F1 improvement: 3/10
+Epoch 032: train_loss=0.181568 val_F1=0.845648 P=0.843955 R=0.847358 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 033: train_loss=0.182295 val_F1=0.843486 P=0.844009 R=0.842973 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 033: train_loss=0.098545 val_F1=0.489016 P=0.366408 R=0.734961 th=0.20
+  no val_F1 improvement: 4/10
+Epoch 034: train_loss=0.180627 val_F1=0.844340 P=0.845208 R=0.843483 th=0.80
+  no val_F1 improvement: 3/10
+Epoch 034: train_loss=0.098447 val_F1=0.479354 P=0.353122 R=0.746065 th=0.20
+  no val_F1 improvement: 5/10
+Epoch 035: train_loss=0.180349 val_F1=0.850114 P=0.853051 R=0.847206 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 035: train_loss=0.098119 val_F1=0.486988 P=0.361659 R=0.745264 th=0.20
+  no val_F1 improvement: 6/10
+Epoch 036: train_loss=0.179263 val_F1=0.849542 P=0.853392 R=0.845737 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 036: train_loss=0.097683 val_F1=0.474561 P=0.349182 R=0.740444 th=0.20
+  no val_F1 improvement: 7/10
+Epoch 037: train_loss=0.179589 val_F1=0.847350 P=0.827160 R=0.868561 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 038: train_loss=0.179968 val_F1=0.845863 P=0.840873 R=0.850923 th=0.80
+  no val_F1 improvement: 3/10
+Epoch 037: train_loss=0.098278 val_F1=0.479748 P=0.354681 R=0.741082 th=0.20
+  no val_F1 improvement: 8/10
+Epoch 039: train_loss=0.178220 val_F1=0.848877 P=0.843331 R=0.854507 th=0.80
+  no val_F1 improvement: 4/10
+Epoch 038: train_loss=0.097768 val_F1=0.478685 P=0.354691 R=0.735989 th=0.20
+  no val_F1 improvement: 9/10
+Epoch 040: train_loss=0.176184 val_F1=0.850188 P=0.837981 R=0.862767 th=0.80
+  no val_F1 improvement: 5/10
+Epoch 039: train_loss=0.097193 val_F1=0.491602 P=0.368632 R=0.737701 th=0.20
+  no val_F1 improvement: 10/10
+Early stopping at epoch 39; best val_F1=0.492734
+Restored best checkpoint from epoch 29 (val_F1=0.492734, th=0.20)
+BEST checkpoint epoch=29 val_F1=0.492734 threshold=0.20
+Summary: models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=train model=deeplabv3_resnet101 source=PHI target=PHI
+pages=1 annotations=8 npatches=1024
+log=logs/modern/train/deeplabv3_resnet101/PHI__to__PHI.log
+==================================================================
+CONFIG
+  dataset=PHI
+  model=deeplabv3_resnet101
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=Persian09.png annotated_windows=8 annotated_ratio=0.226170
+Epoch 041: train_loss=0.178733 val_F1=0.854790 P=0.838842 R=0.871367 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Device: cuda
+Samples/epoch: 1024
+Physical batch: 4
+Gradient accumulation: 8
+Effective batch (nominal): 32
+Optimizer updates/epoch: 32
+Early stopping: val_F1, patience=10, min_delta=0.0001
+Epoch 042: train_loss=0.176732 val_F1=0.851916 P=0.847385 R=0.856505 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 001: train_loss=0.533048 val_F1=0.685974 P=0.584083 R=0.830941 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 043: train_loss=0.178548 val_F1=0.850927 P=0.845679 R=0.856250 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 002: train_loss=0.319588 val_F1=0.722785 P=0.685429 R=0.764460 th=0.70
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 044: train_loss=0.175782 val_F1=0.852350 P=0.831428 R=0.874362 th=0.80
+  no val_F1 improvement: 3/10
+Epoch 003: train_loss=0.264137 val_F1=0.755779 P=0.820702 R=0.700383 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 045: train_loss=0.176416 val_F1=0.848635 P=0.838664 R=0.858856 th=0.80
+  no val_F1 improvement: 4/10
+Epoch 004: train_loss=0.241549 val_F1=0.766102 P=0.841521 R=0.703098 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 046: train_loss=0.176608 val_F1=0.854923 P=0.840612 R=0.869740 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 047: train_loss=0.176183 val_F1=0.851326 P=0.852513 R=0.850152 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 005: train_loss=0.231314 val_F1=0.788010 P=0.813819 R=0.763798 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 048: train_loss=0.175055 val_F1=0.851737 P=0.843352 R=0.860301 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 006: train_loss=0.221224 val_F1=0.793509 P=0.812717 R=0.775198 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 049: train_loss=0.177143 val_F1=0.852207 P=0.843778 R=0.860817 th=0.80
+  no val_F1 improvement: 3/10
+Epoch 007: train_loss=0.214936 val_F1=0.799464 P=0.805262 R=0.793759 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 050: train_loss=0.175863 val_F1=0.852495 P=0.842018 R=0.863247 th=0.80
+  no val_F1 improvement: 4/10
+Restored best checkpoint from epoch 46 (val_F1=0.854923, th=0.80)
+BEST checkpoint epoch=46 val_F1=0.854923 threshold=0.80
+Summary: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=train model=deeplabv3_resnet50 source=Salzinnes target=Salzinnes
+pages=1 annotations=8 npatches=1024
+log=logs/modern/train/deeplabv3_resnet50/Salzinnes__to__Salzinnes.log
+==================================================================
+CONFIG
+  dataset=Salzinnes
+  model=deeplabv3_resnet50
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=CF-009.png annotated_windows=8 annotated_ratio=0.032125
+Device: cuda
+Samples/epoch: 1024
+Physical batch: 4
+Gradient accumulation: 8
+Effective batch (nominal): 32
+Optimizer updates/epoch: 32
+Early stopping: val_F1, patience=10, min_delta=0.0001
+Epoch 008: train_loss=0.211009 val_F1=0.802156 P=0.814722 R=0.789981 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 009: train_loss=0.206979 val_F1=0.804197 P=0.796929 R=0.811609 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 010: train_loss=0.202631 val_F1=0.808307 P=0.821315 R=0.795714 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 001: train_loss=0.325031 val_F1=0.528650 P=0.445413 R=0.650160 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 011: train_loss=0.200424 val_F1=0.803640 P=0.797472 R=0.809915 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 012: train_loss=0.199489 val_F1=0.812419 P=0.807546 R=0.817361 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 002: train_loss=0.144610 val_F1=0.569704 P=0.473468 R=0.715056 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 013: train_loss=0.198357 val_F1=0.812489 P=0.794493 R=0.831330 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 014: train_loss=0.195225 val_F1=0.809203 P=0.810547 R=0.807874 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 015: train_loss=0.193712 val_F1=0.811568 P=0.784290 R=0.840823 th=0.80
+  no val_F1 improvement: 3/10
+Epoch 003: train_loss=0.118123 val_F1=0.573673 P=0.480731 R=0.711179 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 016: train_loss=0.193732 val_F1=0.807727 P=0.820292 R=0.795550 th=0.80
+  no val_F1 improvement: 4/10
+Epoch 017: train_loss=0.190682 val_F1=0.810774 P=0.817154 R=0.804503 th=0.80
+  no val_F1 improvement: 5/10
+Epoch 018: train_loss=0.188442 val_F1=0.817662 P=0.815921 R=0.819420 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 004: train_loss=0.108105 val_F1=0.603895 P=0.517204 R=0.725514 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 019: train_loss=0.190192 val_F1=0.817666 P=0.803879 R=0.831943 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 020: train_loss=0.188354 val_F1=0.819833 P=0.800073 R=0.840604 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 005: train_loss=0.099964 val_F1=0.595444 P=0.505086 R=0.725189 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 021: train_loss=0.188803 val_F1=0.821660 P=0.805541 R=0.838448 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 022: train_loss=0.185987 val_F1=0.824629 P=0.799807 R=0.851051 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 023: train_loss=0.185705 val_F1=0.824425 P=0.801092 R=0.849168 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 006: train_loss=0.092483 val_F1=0.590762 P=0.497289 R=0.727521 th=0.60
+  no val_F1 improvement: 2/10
+Epoch 024: train_loss=0.185829 val_F1=0.821563 P=0.801987 R=0.842129 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 025: train_loss=0.185649 val_F1=0.822579 P=0.793925 R=0.853389 th=0.80
+  no val_F1 improvement: 3/10
+Epoch 007: train_loss=0.087177 val_F1=0.606128 P=0.516391 R=0.733626 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 026: train_loss=0.184038 val_F1=0.818651 P=0.778905 R=0.862682 th=0.80
+  no val_F1 improvement: 4/10
+Epoch 027: train_loss=0.182105 val_F1=0.828303 P=0.800460 R=0.858163 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 028: train_loss=0.182378 val_F1=0.824252 P=0.791071 R=0.860350 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 008: train_loss=0.081548 val_F1=0.602118 P=0.538482 R=0.682822 th=0.70
+  no val_F1 improvement: 1/10
+Epoch 029: train_loss=0.182691 val_F1=0.824507 P=0.796779 R=0.854246 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 030: train_loss=0.182187 val_F1=0.824001 P=0.798724 R=0.850942 th=0.80
+  no val_F1 improvement: 3/10
+Epoch 009: train_loss=0.081405 val_F1=0.603067 P=0.509377 R=0.739003 th=0.60
+  no val_F1 improvement: 2/10
+Epoch 031: train_loss=0.180537 val_F1=0.827300 P=0.798006 R=0.858837 th=0.80
+  no val_F1 improvement: 4/10
+Epoch 032: train_loss=0.180474 val_F1=0.830034 P=0.804801 R=0.856912 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 033: train_loss=0.181233 val_F1=0.826158 P=0.793000 R=0.862220 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 010: train_loss=0.078491 val_F1=0.613614 P=0.588476 R=0.641007 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 034: train_loss=0.179762 val_F1=0.828884 P=0.810513 R=0.848117 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 035: train_loss=0.179346 val_F1=0.834955 P=0.826083 R=0.844030 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 036: train_loss=0.178471 val_F1=0.832481 P=0.809966 R=0.856293 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 011: train_loss=0.074826 val_F1=0.618845 P=0.597032 R=0.642323 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 037: train_loss=0.178675 val_F1=0.828242 P=0.799776 R=0.858819 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 038: train_loss=0.179064 val_F1=0.831197 P=0.809021 R=0.854634 th=0.80
+  no val_F1 improvement: 3/10
+Epoch 012: train_loss=0.075047 val_F1=0.622454 P=0.601681 R=0.644723 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 039: train_loss=0.177318 val_F1=0.830242 P=0.796196 R=0.867340 th=0.80
+  no val_F1 improvement: 4/10
+Epoch 040: train_loss=0.175385 val_F1=0.834373 P=0.802089 R=0.869375 th=0.80
+  no val_F1 improvement: 5/10
+Epoch 041: train_loss=0.177945 val_F1=0.837619 P=0.891707 R=0.789726 th=0.90
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 013: train_loss=0.073359 val_F1=0.639437 P=0.630139 R=0.649023 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 042: train_loss=0.175864 val_F1=0.834291 P=0.895593 R=0.780852 th=0.90
+  no val_F1 improvement: 1/10
+Epoch 043: train_loss=0.177787 val_F1=0.832995 P=0.811263 R=0.855934 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 014: train_loss=0.073703 val_F1=0.636043 P=0.625191 R=0.647288 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 044: train_loss=0.174939 val_F1=0.831596 P=0.799392 R=0.866514 th=0.80
+  no val_F1 improvement: 3/10
+Epoch 045: train_loss=0.175631 val_F1=0.835177 P=0.801426 R=0.871908 th=0.80
+  no val_F1 improvement: 4/10
+Epoch 046: train_loss=0.175803 val_F1=0.835929 P=0.797530 R=0.878224 th=0.80
+  no val_F1 improvement: 5/10
+Epoch 015: train_loss=0.072933 val_F1=0.631193 P=0.617927 R=0.645052 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 047: train_loss=0.175441 val_F1=0.836974 P=0.814507 R=0.860726 th=0.80
+  no val_F1 improvement: 6/10
+Epoch 048: train_loss=0.174418 val_F1=0.834970 P=0.799716 R=0.873487 th=0.80
+  no val_F1 improvement: 7/10
+Epoch 049: train_loss=0.176454 val_F1=0.834555 P=0.796110 R=0.876912 th=0.80
+  no val_F1 improvement: 8/10
+Epoch 016: train_loss=0.070451 val_F1=0.642083 P=0.634171 R=0.650205 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 050: train_loss=0.175145 val_F1=0.833889 P=0.801676 R=0.868810 th=0.80
+  no val_F1 improvement: 9/10
+Restored best checkpoint from epoch 41 (val_F1=0.837619, th=0.90)
+BEST checkpoint epoch=41 val_F1=0.837619 threshold=0.90
+Summary: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=train model=deeplabv3_resnet101 source=Salzinnes target=Salzinnes
+pages=1 annotations=8 npatches=1024
+log=logs/modern/train/deeplabv3_resnet101/Salzinnes__to__Salzinnes.log
+==================================================================
+CONFIG
+  dataset=Salzinnes
+  model=deeplabv3_resnet101
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=CF-009.png annotated_windows=8 annotated_ratio=0.032125
+Device: cuda
+Samples/epoch: 1024
+Physical batch: 4
+Gradient accumulation: 8
+Effective batch (nominal): 32
+Optimizer updates/epoch: 32
+Early stopping: val_F1, patience=10, min_delta=0.0001
+Epoch 017: train_loss=0.068881 val_F1=0.640908 P=0.632509 R=0.649544 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 001: train_loss=0.443801 val_F1=0.483754 P=0.433696 R=0.546888 th=0.70
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 018: train_loss=0.068542 val_F1=0.664537 P=0.674829 R=0.654563 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 002: train_loss=0.174523 val_F1=0.538921 P=0.437150 R=0.702471 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 019: train_loss=0.067015 val_F1=0.679563 P=0.697095 R=0.662901 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 003: train_loss=0.144371 val_F1=0.552346 P=0.449256 R=0.716854 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 020: train_loss=0.067326 val_F1=0.673798 P=0.684447 R=0.663484 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 004: train_loss=0.127234 val_F1=0.575415 P=0.475600 R=0.728270 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 021: train_loss=0.065637 val_F1=0.669113 P=0.674506 R=0.663816 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 005: train_loss=0.117766 val_F1=0.592569 P=0.497003 R=0.733652 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 022: train_loss=0.064433 val_F1=0.665480 P=0.746700 R=0.600203 th=0.90
+  no val_F1 improvement: 3/10
+Epoch 006: train_loss=0.107145 val_F1=0.586920 P=0.490528 R=0.730475 th=0.60
+  no val_F1 improvement: 1/10
+Epoch 023: train_loss=0.063643 val_F1=0.677055 P=0.771546 R=0.603191 th=0.90
+  no val_F1 improvement: 4/10
+Epoch 024: train_loss=0.064040 val_F1=0.683797 P=0.788057 R=0.603908 th=0.90
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 007: train_loss=0.100350 val_F1=0.596984 P=0.498173 R=0.744707 th=0.60
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 025: train_loss=0.063030 val_F1=0.688223 P=0.714030 R=0.664226 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 008: train_loss=0.092427 val_F1=0.589355 P=0.516925 R=0.685405 th=0.70
+  no val_F1 improvement: 1/10
+Epoch 026: train_loss=0.063485 val_F1=0.707866 P=0.753313 R=0.667600 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 009: train_loss=0.091662 val_F1=0.588712 P=0.516396 R=0.684592 th=0.70
+  no val_F1 improvement: 2/10
+Epoch 027: train_loss=0.064025 val_F1=0.690655 P=0.794352 R=0.610914 th=0.90
+  no val_F1 improvement: 1/10
+Epoch 010: train_loss=0.087642 val_F1=0.595055 P=0.521605 R=0.692593 th=0.70
+  no val_F1 improvement: 3/10
+Epoch 028: train_loss=0.060430 val_F1=0.698226 P=0.737251 R=0.663133 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 011: train_loss=0.082722 val_F1=0.594599 P=0.556270 R=0.638612 th=0.80
+  no val_F1 improvement: 4/10
+Epoch 029: train_loss=0.061697 val_F1=0.696613 P=0.735984 R=0.661249 th=0.80
+  no val_F1 improvement: 3/10
+Epoch 012: train_loss=0.083141 val_F1=0.601253 P=0.564473 R=0.643172 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 030: train_loss=0.060588 val_F1=0.719209 P=0.776682 R=0.669664 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 013: train_loss=0.081006 val_F1=0.631360 P=0.614410 R=0.649284 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 031: train_loss=0.059375 val_F1=0.705077 P=0.735867 R=0.676769 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 014: train_loss=0.081428 val_F1=0.620647 P=0.596131 R=0.647277 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 032: train_loss=0.059544 val_F1=0.707043 P=0.739412 R=0.677398 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 015: train_loss=0.080279 val_F1=0.612846 P=0.582551 R=0.646475 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 033: train_loss=0.058811 val_F1=0.699215 P=0.731460 R=0.669702 th=0.80
+  no val_F1 improvement: 3/10
+Epoch 016: train_loss=0.077015 val_F1=0.630328 P=0.607342 R=0.655132 th=0.80
+  no val_F1 improvement: 3/10
+Epoch 034: train_loss=0.058553 val_F1=0.711701 P=0.751215 R=0.676144 th=0.80
+  no val_F1 improvement: 4/10
+Epoch 017: train_loss=0.075406 val_F1=0.626741 P=0.602882 R=0.652577 th=0.80
+  no val_F1 improvement: 4/10
+Epoch 035: train_loss=0.058409 val_F1=0.720363 P=0.762933 R=0.682302 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 018: train_loss=0.074510 val_F1=0.637397 P=0.620715 R=0.655010 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 036: train_loss=0.057408 val_F1=0.720285 P=0.766226 R=0.679549 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 019: train_loss=0.072575 val_F1=0.650396 P=0.634490 R=0.667130 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 037: train_loss=0.058030 val_F1=0.722150 P=0.768667 R=0.680951 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 020: train_loss=0.072883 val_F1=0.646574 P=0.626630 R=0.667841 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 038: train_loss=0.057861 val_F1=0.717429 P=0.766382 R=0.674363 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 021: train_loss=0.071142 val_F1=0.649112 P=0.631922 R=0.667275 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 039: train_loss=0.056831 val_F1=0.748012 P=0.834518 R=0.677764 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 022: train_loss=0.069389 val_F1=0.642848 P=0.674911 R=0.613703 th=0.90
+  no val_F1 improvement: 3/10
+Epoch 040: train_loss=0.057567 val_F1=0.733157 P=0.798406 R=0.677776 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 023: train_loss=0.068833 val_F1=0.650761 P=0.696739 R=0.610484 th=0.90
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 041: train_loss=0.055514 val_F1=0.732866 P=0.801993 R=0.674718 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 024: train_loss=0.068644 val_F1=0.657694 P=0.647618 R=0.668100 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 042: train_loss=0.056317 val_F1=0.742130 P=0.811429 R=0.683745 th=0.80
+  no val_F1 improvement: 3/10
+Epoch 043: train_loss=0.056050 val_F1=0.739063 P=0.801379 R=0.685748 th=0.80
+  no val_F1 improvement: 4/10
+Epoch 025: train_loss=0.067861 val_F1=0.660030 P=0.712046 R=0.615105 th=0.90
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 044: train_loss=0.054960 val_F1=0.739953 P=0.799562 R=0.688623 th=0.80
+  no val_F1 improvement: 5/10
+Epoch 026: train_loss=0.068399 val_F1=0.679787 P=0.692417 R=0.667618 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 045: train_loss=0.055701 val_F1=0.740074 P=0.805917 R=0.684186 th=0.80
+  no val_F1 improvement: 6/10
+Epoch 027: train_loss=0.068271 val_F1=0.668966 P=0.664205 R=0.673805 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 046: train_loss=0.054884 val_F1=0.749927 P=0.813964 R=0.695239 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 028: train_loss=0.064816 val_F1=0.667069 P=0.673394 R=0.660872 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 047: train_loss=0.055661 val_F1=0.734715 P=0.794793 R=0.683091 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 029: train_loss=0.066100 val_F1=0.674841 P=0.683649 R=0.666268 th=0.80
+  no val_F1 improvement: 3/10
+Epoch 048: train_loss=0.054336 val_F1=0.749206 P=0.818981 R=0.690395 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 030: train_loss=0.064686 val_F1=0.693130 P=0.721855 R=0.666612 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 049: train_loss=0.054082 val_F1=0.745984 P=0.805394 R=0.694745 th=0.80
+  no val_F1 improvement: 3/10
+Epoch 031: train_loss=0.063555 val_F1=0.685078 P=0.693340 R=0.677021 th=0.80
+  no val_F1 improvement: 1/10
+Epoch 050: train_loss=0.056081 val_F1=0.735639 P=0.799534 R=0.681210 th=0.80
+  no val_F1 improvement: 4/10
+Restored best checkpoint from epoch 46 (val_F1=0.749927, th=0.80)
+BEST checkpoint epoch=46 val_F1=0.749927 threshold=0.80
+Summary: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+Epoch 032: train_loss=0.063468 val_F1=0.676210 P=0.677645 R=0.674791 th=0.80
+  no val_F1 improvement: 2/10
+Epoch 033: train_loss=0.062373 val_F1=0.671743 P=0.674453 R=0.669064 th=0.80
+  no val_F1 improvement: 3/10
+Epoch 034: train_loss=0.062331 val_F1=0.675071 P=0.677447 R=0.672721 th=0.80
+  no val_F1 improvement: 4/10
+Epoch 035: train_loss=0.062044 val_F1=0.678682 P=0.679421 R=0.677954 th=0.80
+  no val_F1 improvement: 5/10
+Epoch 036: train_loss=0.060875 val_F1=0.682392 P=0.684821 R=0.679990 th=0.80
+  no val_F1 improvement: 6/10
+Epoch 037: train_loss=0.061439 val_F1=0.684711 P=0.689404 R=0.680092 th=0.80
+  no val_F1 improvement: 7/10
+Epoch 038: train_loss=0.061294 val_F1=0.690935 P=0.708299 R=0.674412 th=0.80
+  no val_F1 improvement: 8/10
+Epoch 039: train_loss=0.059769 val_F1=0.695584 P=0.713874 R=0.678218 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 040: train_loss=0.060410 val_F1=0.683998 P=0.749310 R=0.629167 th=0.90
+  no val_F1 improvement: 1/10
+Epoch 041: train_loss=0.058425 val_F1=0.692198 P=0.773088 R=0.626639 th=0.90
+  no val_F1 improvement: 2/10
+Epoch 042: train_loss=0.059435 val_F1=0.691686 P=0.702685 R=0.681036 th=0.80
+  no val_F1 improvement: 3/10
+Epoch 043: train_loss=0.059127 val_F1=0.693920 P=0.709118 R=0.679368 th=0.80
+  no val_F1 improvement: 4/10
+Epoch 044: train_loss=0.057855 val_F1=0.700041 P=0.717604 R=0.683326 th=0.80
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 045: train_loss=0.058518 val_F1=0.698697 P=0.778118 R=0.633995 th=0.90
+  no val_F1 improvement: 1/10
+Epoch 046: train_loss=0.057642 val_F1=0.702719 P=0.781763 R=0.638200 th=0.90
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 047: train_loss=0.058362 val_F1=0.697206 P=0.776291 R=0.632753 th=0.90
+  no val_F1 improvement: 1/10
+Epoch 048: train_loss=0.057148 val_F1=0.701190 P=0.783096 R=0.634803 th=0.90
+  no val_F1 improvement: 2/10
+Epoch 049: train_loss=0.056958 val_F1=0.704867 P=0.783651 R=0.640485 th=0.90
+  saved best checkpoint: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+Epoch 050: train_loss=0.058822 val_F1=0.697757 P=0.774951 R=0.634557 th=0.90
+  no val_F1 improvement: 1/10
+Restored best checkpoint from epoch 49 (val_F1=0.704867, th=0.90)
+BEST checkpoint epoch=49 val_F1=0.704867 threshold=0.90
+Summary: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=test model=deeplabv3_resnet50 source=Bickley target=Bickley
+pages=1 annotations=8 npatches=1024
+log=logs/modern/test/deeplabv3_resnet50/Bickley__to__Bickley.log
+==================================================================
+CONFIG
+  dataset=Bickley
+  model=deeplabv3_resnet50
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=18.png annotated_windows=8 annotated_ratio=0.328330
+BEST checkpoint epoch=49 val_F1=0.616898 threshold=0.30
+TEST page=30.png F1=0.565248 P=0.436214 R=0.802705 IoU=0.393973 time=0.056693s
+TEST page=5.png F1=0.588539 P=0.455359 R=0.831844 IoU=0.416977 time=0.056995s
+TEST GLOBAL F1=0.577001 P=0.445863 R=0.817443 IoU=0.405487 Specificity=0.867652
+Duration AVG: 0.056844 s
+********************************************************************************
+Train;Test;PAG;Num pages train;ANN;Num annotations per page;PAT;Num random patches;Ink rate;VAL;Th_bin;F1-val;P-val;R-val;Num annotated patches-val;Maximum num annotated patches-val;TEST;F1-test;P-test;R-test;Num annotated patches-test;Maximum num annotated patches-test;IoU-test;Specificity-test;TP-test;TN-test;FP-test;FN-test;TimePerPage(s);
+datasets/Bickley/train/SRC;datasets/Bickley/test/SRC;PAG;1;ANN;8;PAT;1024;0,02;;VAL;0,30000000000000004;52,1;39,8;75,2;8;30;;TEST;57,7;44,6;81,7;8;28;40,5;86,8;26709800,0;217629100,0;33196100,0;5965000,0;0,056844006408937275;
+Legacy-format result appended to: results/modern/deeplabv3_resnet50/full_test.txt
+Summary: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=test model=deeplabv3_resnet50 source=Dibco target=Dibco
+pages=1 annotations=8 npatches=1024
+log=logs/modern/test/deeplabv3_resnet50/Dibco__to__Dibco.log
+==================================================================
+CONFIG
+  dataset=Dibco
+  model=deeplabv3_resnet50
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=HW01.png annotated_windows=8 annotated_ratio=0.120115
+BEST checkpoint epoch=50 val_F1=0.714350 threshold=0.40
+TEST page=01.png F1=0.002475 P=0.002345 R=0.002633 IoU=0.001242 time=0.091999s
+TEST page=02.png F1=0.003792 P=0.002561 R=0.007331 IoU=0.001901 time=0.118166s
+TEST page=03.png F1=0.009364 P=0.007912 R=0.011485 IoU=0.004707 time=0.179338s
+TEST page=04.png F1=0.000729 P=0.000793 R=0.000683 IoU=0.000367 time=0.069803s
+TEST page=05.png F1=0.007099 P=0.006801 R=0.007436 IoU=0.003565 time=0.166504s
+TEST page=06.png F1=0.001584 P=0.001689 R=0.001501 IoU=0.000795 time=0.067363s
+TEST page=07.png F1=0.022606 P=0.024322 R=0.021124 IoU=0.011435 time=0.039838s
+TEST page=08.png F1=0.063571 P=0.058769 R=0.069239 IoU=0.032832 time=0.024479s
+TEST page=09.png F1=0.056336 P=0.057747 R=0.055002 IoU=0.028987 time=0.019301s
+TEST page=10.png F1=0.238702 P=0.195673 R=0.306006 IoU=0.135529 time=0.005227s
+TEST GLOBAL F1=0.020944 P=0.019127 R=0.023156 IoU=0.010585 Specificity=0.921367
+Duration AVG: 0.078202 s
+********************************************************************************
+Train;Test;PAG;Num pages train;ANN;Num annotations per page;PAT;Num random patches;Ink rate;VAL;Th_bin;F1-val;P-val;R-val;Num annotated patches-val;Maximum num annotated patches-val;TEST;F1-test;P-test;R-test;Num annotated patches-test;Maximum num annotated patches-test;IoU-test;Specificity-test;TP-test;TN-test;FP-test;FN-test;TimePerPage(s);
+datasets/Dibco/train/SRC;datasets/Dibco/test/SRC;PAG;1;ANN;8;PAT;1024;0,02;;VAL;0,4;61,2;47,2;87,1;8;33;;TEST;2,1;1,9;2,3;8;81;1,1;92,1;1876800,0;1127772700,0;96248700,0;79175000,0;0,07820187117904424;
+Legacy-format result appended to: results/modern/deeplabv3_resnet50/full_test.txt
+Summary: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=test model=deeplabv3_resnet50 source=Einsiedeln target=Einsiedeln
+pages=1 annotations=8 npatches=1024
+log=logs/modern/test/deeplabv3_resnet50/Einsiedeln__to__Einsiedeln.log
+==================================================================
+CONFIG
+  dataset=Einsiedeln
+  model=deeplabv3_resnet50
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=e-codices_sbe-0611_0001r_Layered.png annotated_windows=8 annotated_ratio=0.025303
+BEST checkpoint epoch=50 val_F1=0.850264 threshold=0.20
+==================================================================
+mode=test model=deeplabv3_resnet101 source=Bickley target=Bickley
+pages=1 annotations=8 npatches=1024
+log=logs/modern/test/deeplabv3_resnet101/Bickley__to__Bickley.log
+==================================================================
+CONFIG
+  dataset=Bickley
+  model=deeplabv3_resnet101
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=18.png annotated_windows=8 annotated_ratio=0.328330
+BEST checkpoint epoch=38 val_F1=0.606851 threshold=0.30
+TEST page=30.png F1=0.668891 P=0.597010 R=0.760464 IoU=0.502513 time=0.935946s
+TEST page=5.png F1=0.652142 P=0.557141 R=0.786215 IoU=0.483841 time=1.106321s
+TEST GLOBAL F1=0.660174 P=0.575825 R=0.773489 IoU=0.492737 Specificity=0.925775
+Duration AVG: 1.021134 s
+********************************************************************************
+Train;Test;PAG;Num pages train;ANN;Num annotations per page;PAT;Num random patches;Ink rate;VAL;Th_bin;F1-val;P-val;R-val;Num annotated patches-val;Maximum num annotated patches-val;TEST;F1-test;P-test;R-test;Num annotated patches-test;Maximum num annotated patches-test;IoU-test;Specificity-test;TP-test;TN-test;FP-test;FN-test;TimePerPage(s);
+datasets/Bickley/train/SRC;datasets/Bickley/test/SRC;PAG;1;ANN;8;PAT;1024;0,02;;VAL;0,30000000000000004;55,6;43,1;78,4;8;30;;TEST;66,0;57,6;77,3;8;28;49,3;92,6;25273600,0;232207700,0;18617500,0;7401200,0;1,0211336894426495;
+Legacy-format result appended to: results/modern/deeplabv3_resnet101/full_test.txt
+Summary: models/modern/deeplabv3_resnet101/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=test model=deeplabv3_resnet101 source=Dibco target=Dibco
+pages=1 annotations=8 npatches=1024
+log=logs/modern/test/deeplabv3_resnet101/Dibco__to__Dibco.log
+==================================================================
+TEST page=e-codices_sbe-0611_005r_Layered.png F1=0.832130 P=0.747148 R=0.938936 IoU=0.712526 time=3.958904s
+CONFIG
+  dataset=Dibco
+  model=deeplabv3_resnet101
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=HW01.png annotated_windows=8 annotated_ratio=0.120115
+TEST page=e-codices_sbe-0611_005v_Layered.png F1=0.897524 P=0.849394 R=0.951448 IoU=0.814107 time=0.935925s
+TEST GLOBAL F1=0.864671 P=0.796683 R=0.945357 IoU=0.761612 Specificity=0.935439
+Duration AVG: 2.447414 s
+********************************************************************************
+Train;Test;PAG;Num pages train;ANN;Num annotations per page;PAT;Num random patches;Ink rate;VAL;Th_bin;F1-val;P-val;R-val;Num annotated patches-val;Maximum num annotated patches-val;TEST;F1-test;P-test;R-test;Num annotated patches-test;Maximum num annotated patches-test;IoU-test;Specificity-test;TP-test;TN-test;FP-test;FN-test;TimePerPage(s);
+datasets/Einsiedeln/train/SRC;datasets/Einsiedeln/test/SRC;PAG;1;ANN;8;PAT;1024;0,02;;VAL;0,2;85,8;77,5;96,2;8;291;;TEST;86,5;79,7;94,5;8;315;76,2;93,5;808664600,0;2990219500,0;206374300,0;46741600,0;2,4474143554689363;
+Legacy-format result appended to: results/modern/deeplabv3_resnet50/full_test.txt
+Summary: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=test model=deeplabv3_resnet50 source=ISOS target=ISOS
+pages=1 annotations=8 npatches=1024
+log=logs/modern/test/deeplabv3_resnet50/ISOS__to__ISOS.log
+==================================================================
+BEST checkpoint epoch=50 val_F1=0.717635 threshold=0.40
+TEST page=01.png F1=0.007214 P=0.009632 R=0.005772 IoU=0.003622 time=0.101423s
+TEST page=02.png F1=0.003202 P=0.002505 R=0.004456 IoU=0.001606 time=0.143322s
+TEST page=03.png F1=0.013134 P=0.014101 R=0.012299 IoU=0.006613 time=0.170569s
+TEST page=04.png F1=0.002354 P=0.003207 R=0.001866 IoU=0.001181 time=0.082578s
+TEST page=05.png F1=0.013598 P=0.016400 R=0.011621 IoU=0.006848 time=0.154396s
+CONFIG
+  dataset=ISOS
+  model=deeplabv3_resnet50
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=FH.IP.7v.png annotated_windows=8 annotated_ratio=0.251087
+TEST page=06.png F1=0.002698 P=0.003348 R=0.002266 IoU=0.001353 time=0.073853s
+TEST page=07.png F1=0.625193 P=0.632807 R=0.617769 IoU=0.454754 time=0.038727s
+TEST page=08.png F1=0.351423 P=0.373136 R=0.332107 IoU=0.213171 time=0.036938s
+TEST page=09.png F1=0.417198 P=0.334903 R=0.553130 IoU=0.263585 time=0.029924s
+TEST page=10.png F1=0.380282 P=0.329189 R=0.450163 IoU=0.234787 time=0.007825s
+TEST GLOBAL F1=0.142809 P=0.152585 R=0.134219 IoU=0.076898 Specificity=0.950640
+Duration AVG: 0.083955 s
+********************************************************************************
+Train;Test;PAG;Num pages train;ANN;Num annotations per page;PAT;Num random patches;Ink rate;VAL;Th_bin;F1-val;P-val;R-val;Num annotated patches-val;Maximum num annotated patches-val;TEST;F1-test;P-test;R-test;Num annotated patches-test;Maximum num annotated patches-test;IoU-test;Specificity-test;TP-test;TN-test;FP-test;FN-test;TimePerPage(s);
+datasets/Dibco/train/SRC;datasets/Dibco/test/SRC;PAG;1;ANN;8;PAT;1024;0,02;;VAL;0,4;75,4;63,9;92,1;8;33;;TEST;14,3;15,3;13,4;8;81;7,7;95,1;10878700,0;1163604200,0;60417200,0;70173100,0;0,08395531629212201;
+Legacy-format result appended to: results/modern/deeplabv3_resnet101/full_test.txt
+Summary: models/modern/deeplabv3_resnet101/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=test model=deeplabv3_resnet101 source=Einsiedeln target=Einsiedeln
+pages=1 annotations=8 npatches=1024
+log=logs/modern/test/deeplabv3_resnet101/Einsiedeln__to__Einsiedeln.log
+==================================================================
+BEST checkpoint epoch=44 val_F1=0.889356 threshold=0.60
+TEST page=AC.MSBMMM.90r.png F1=0.829759 P=0.718650 R=0.981521 IoU=0.709056 time=0.155092s
+TEST page=FH.IP.7r.png F1=0.912912 P=0.848018 R=0.988572 IoU=0.839785 time=0.132935s
+TEST page=NLI.MSG18.147.png F1=0.600769 P=0.966548 R=0.435837 IoU=0.429360 time=0.053105s
+TEST page=NLI.MSG18.148.png F1=0.627883 P=0.963886 R=0.465588 IoU=0.457606 time=0.082572s
+TEST page=RIA.MSCiii3.301r.png F1=0.775231 P=0.968459 R=0.646291 IoU=0.632968 time=0.105248s
+TEST page=TCD.1436.81.png F1=0.899464 P=0.880968 R=0.918764 IoU=0.817305 time=0.044118s
+TEST page=TCD.MS1343.60.png F1=0.804576 P=0.924898 R=0.711964 IoU=0.673054 time=0.055479s
+TEST page=UCD.AddIM14.386.png F1=0.906482 P=0.967885 R=0.852414 IoU=0.828968 time=0.096853s
+TEST page=UCD.MSA13.xxv.png F1=0.869980 P=0.897130 R=0.844433 IoU=0.769887 time=0.051377s
+TEST page=UCD.MSA20.127r.png F1=0.899807 P=0.932324 R=0.869491 IoU=0.817871 time=0.045376s
+TEST GLOBAL F1=0.825710 P=0.881802 R=0.776336 IoU=0.703164 Specificity=0.975495
+Duration AVG: 0.082215 s
+********************************************************************************
+Train;Test;PAG;Num pages train;ANN;Num annotations per page;PAT;Num random patches;Ink rate;VAL;Th_bin;F1-val;P-val;R-val;Num annotated patches-val;Maximum num annotated patches-val;TEST;F1-test;P-test;R-test;Num annotated patches-test;Maximum num annotated patches-test;IoU-test;Specificity-test;TP-test;TN-test;FP-test;FN-test;TimePerPage(s);
+datasets/ISOS/train/SRC;datasets/ISOS/test/SRC;PAG;1;ANN;8;PAT;1024;0,02;;VAL;0,6;88,0;96,4;80,8;8;31;;TEST;82,6;88,2;77,6;8;33;70,3;97,5;199683800,0;1065495600,0;26766000,0;57529200,0;0,08221544071566314;
+Legacy-format result appended to: results/modern/deeplabv3_resnet50/full_test.txt
+Summary: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=test model=deeplabv3_resnet50 source=Palm target=Palm
+pages=1 annotations=8 npatches=1024
+log=logs/modern/test/deeplabv3_resnet50/Palm__to__Palm.log
+==================================================================
+CONFIG
+  dataset=Einsiedeln
+  model=deeplabv3_resnet101
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=e-codices_sbe-0611_0001r_Layered.png annotated_windows=8 annotated_ratio=0.025303
+BEST checkpoint epoch=50 val_F1=0.860914 threshold=0.30
+CONFIG
+  dataset=Palm
+  model=deeplabv3_resnet50
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=IIB-2-180-P1.png annotated_windows=4 annotated_ratio=0.081779
+BEST checkpoint epoch=35 val_F1=0.480021 threshold=0.20
+TEST page=Bangli-P18.png F1=0.187963 P=0.108241 R=0.713447 IoU=0.103731 time=0.097733s
+TEST page=Bangli-P65.png F1=0.176948 P=0.103025 R=0.626484 IoU=0.097063 time=0.070897s
+TEST page=Bangli-P66.png F1=0.154626 P=0.087794 R=0.647689 IoU=0.083792 time=0.056969s
+TEST page=Bangli-P73.png F1=0.110299 P=0.060610 R=0.612295 IoU=0.058370 time=0.056799s
+TEST page=Bangli-P74.png F1=0.128295 P=0.071043 R=0.660945 IoU=0.068545 time=0.059639s
+TEST page=Bangli-P75.png F1=0.137192 P=0.076249 R=0.683496 IoU=0.073649 time=0.059563s
+TEST page=Bangli-P77.png F1=0.137549 P=0.078116 R=0.575200 IoU=0.073855 time=0.057216s
+TEST page=IIA-10-1534-P1.png F1=0.023099 P=0.011711 R=0.836125 IoU=0.011684 time=0.128488s
+TEST page=IIA-10-1534-P3.png F1=0.347883 P=0.221631 R=0.808411 IoU=0.210570 time=0.122985s
+TEST page=IIA-5-789-P5.png F1=0.357077 P=0.247902 R=0.638112 IoU=0.217346 time=1.088905s
+TEST page=IIA-5-789-P6.png F1=0.356008 P=0.246199 R=0.642663 IoU=0.216554 time=1.456489s
+TEST page=IIA-5-789-P7.png F1=0.481222 P=0.347957 R=0.779953 IoU=0.316852 time=1.930971s
+TEST page=IIA-5-789-P8.png F1=0.430666 P=0.295691 R=0.792382 IoU=0.274429 time=0.681539s
+TEST page=IIB-2-180-P5.png F1=0.309612 P=0.196299 R=0.732404 IoU=0.183162 time=1.469787s
+TEST page=IIB-2-180-P6.png F1=0.333169 P=0.222745 R=0.660734 IoU=0.199884 time=0.207897s
+TEST page=IIIB-12-306-P1.png F1=0.018412 P=0.009322 R=0.740899 IoU=0.009292 time=0.197330s
+TEST page=e-codices_sbe-0611_005r_Layered.png F1=0.658190 P=0.510255 R=0.926946 IoU=0.490529 time=7.318251s
+TEST page=IIIB-12-306-P2.png F1=0.457734 P=0.340008 R=0.700182 IoU=0.296797 time=0.206890s
+TEST page=IIIB-12-306-P3.png F1=0.476646 P=0.352048 R=0.737777 IoU=0.312897 time=0.488307s
+TEST page=IIIB-12-306-P4.png F1=0.532623 P=0.405748 R=0.774961 IoU=0.362980 time=1.736008s
+TEST page=IIIB-42-1526-P4.png F1=0.403403 P=0.276119 R=0.748424 IoU=0.252668 time=1.651652s
+TEST page=IIIB-45-2296-P1.png F1=0.013926 P=0.007022 R=0.825655 IoU=0.007012 time=1.736077s
+TEST page=IIIB-45-2296-P7.png F1=0.338619 P=0.229715 R=0.643889 IoU=0.203820 time=1.560203s
+TEST page=IIIB-45-2296-P8.png F1=0.279310 P=0.174777 R=0.694999 IoU=0.162327 time=0.145566s
+TEST page=IIIC-19-1293-P7.png F1=0.355305 P=0.238214 R=0.698813 IoU=0.216034 time=0.177305s
+TEST page=e-codices_sbe-0611_005v_Layered.png F1=0.837949 P=0.757354 R=0.937752 IoU=0.721102 time=7.718079s
+TEST GLOBAL F1=0.740136 P=0.613575 R=0.932492 IoU=0.587479 Specificity=0.842845
+Duration AVG: 7.518165 s
+********************************************************************************
+Train;Test;PAG;Num pages train;ANN;Num annotations per page;PAT;Num random patches;Ink rate;VAL;Th_bin;F1-val;P-val;R-val;Num annotated patches-val;Maximum num annotated patches-val;TEST;F1-test;P-test;R-test;Num annotated patches-test;Maximum num annotated patches-test;IoU-test;Specificity-test;TP-test;TN-test;FP-test;FN-test;TimePerPage(s);
+datasets/Einsiedeln/train/SRC;datasets/Einsiedeln/test/SRC;PAG;1;ANN;8;PAT;1024;0,02;;VAL;0,30000000000000004;76,1;63,7;94,6;8;291;;TEST;74,0;61,4;93,2;8;315;58,7;84,3;797659300,0;2694233500,0;502360300,0;57746900,0;7,518164920504205;
+Legacy-format result appended to: results/modern/deeplabv3_resnet101/full_test.txt
+Summary: models/modern/deeplabv3_resnet101/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+TEST page=IIIC-19-1293-P8.png F1=0.386730 P=0.258706 R=0.765624 IoU=0.239721 time=0.124674s
+TEST page=IIIC-20-1397-P1.png F1=0.015721 P=0.007939 R=0.791892 IoU=0.007923 time=0.126097s
+==================================================================
+mode=test model=deeplabv3_resnet101 source=ISOS target=ISOS
+pages=1 annotations=8 npatches=1024
+log=logs/modern/test/deeplabv3_resnet101/ISOS__to__ISOS.log
+==================================================================
+TEST page=IIIC-20-1397-P7.png F1=0.289187 P=0.194200 R=0.566092 IoU=0.169038 time=0.216449s
+TEST page=IIIC-20-1397-P8.png F1=0.279177 P=0.186736 R=0.552896 IoU=0.162237 time=0.118518s
+TEST page=IIIC-23-1506-P1.png F1=0.012672 P=0.006386 R=0.817270 IoU=0.006377 time=0.121455s
+TEST page=IIIC-23-1506-P2.png F1=0.401346 P=0.282340 R=0.693790 IoU=0.251056 time=0.119905s
+TEST page=IIIC-23-1506-P3.png F1=0.289882 P=0.182298 R=0.707344 IoU=0.169512 time=0.119085s
+TEST page=IIIC-23-1506-P4.png F1=0.313639 P=0.199226 R=0.736773 IoU=0.185988 time=0.120023s
+CONFIG
+  dataset=ISOS
+  model=deeplabv3_resnet101
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=FH.IP.7v.png annotated_windows=8 annotated_ratio=0.251087
+TEST page=IIIC-23-1506-P5.png F1=0.080316 P=0.042464 R=0.739720 IoU=0.041839 time=0.120603s
+TEST page=IIIC-24-1641-P7.png F1=0.499334 P=0.355520 R=0.838559 IoU=0.332745 time=0.119763s
+TEST page=IIIC-24-1641-P8.png F1=0.482824 P=0.336156 R=0.856564 IoU=0.318242 time=0.120492s
+TEST page=JG-01-P10.png F1=0.253869 P=0.155451 R=0.692011 IoU=0.145392 time=0.800389s
+BEST checkpoint epoch=49 val_F1=0.889655 threshold=0.60
+TEST page=JG-01-P3.png F1=0.286616 P=0.188768 R=0.595105 IoU=0.167283 time=0.200592s
+TEST page=JG-01-P9.png F1=0.289083 P=0.187693 R=0.628732 IoU=0.168966 time=0.531012s
+TEST page=JG-05-P7.png F1=0.148811 P=0.085000 R=0.597038 IoU=0.080388 time=0.137958s
+TEST page=AC.MSBMMM.90r.png F1=0.824645 P=0.720114 R=0.964691 IoU=0.701621 time=0.130817s
+TEST page=MB-AdiParwa(Purana)-5338.2-IV.a-P2.png F1=0.447966 P=0.315771 R=0.770570 IoU=0.288635 time=0.297698s
+TEST page=FH.IP.7r.png F1=0.393299 P=0.873355 R=0.253798 IoU=0.244789 time=0.254077s
+TEST page=NLI.MSG18.147.png F1=0.729983 P=0.971020 R=0.584820 IoU=0.574788 time=0.924333s
+TEST page=MB-AdiParwa(Purana)-5338.2-IV.a-P3.png F1=0.406623 P=0.267409 R=0.848234 IoU=0.255199 time=1.054315s
+TEST page=NLI.MSG18.148.png F1=0.690227 P=0.969266 R=0.535944 IoU=0.526988 time=0.094157s
+TEST page=RIA.MSCiii3.301r.png F1=0.623593 P=0.979736 R=0.457349 IoU=0.453064 time=1.138088s
+TEST page=TCD.1436.81.png F1=0.888185 P=0.840324 R=0.941838 IoU=0.798868 time=0.042481s
+TEST page=MB-TaruPramana-P31.png F1=0.130148 P=0.071483 R=0.725890 IoU=0.069604 time=1.211856s
+TEST page=TCD.MS1343.60.png F1=0.849245 P=0.874814 R=0.825137 IoU=0.737997 time=0.224659s
+TEST page=UCD.AddIM14.386.png F1=0.889144 P=0.980653 R=0.813264 IoU=0.800421 time=0.801929s
+TEST page=MB-TaruPramana-P32.png F1=0.170412 P=0.095549 R=0.787223 IoU=0.093143 time=1.081099s
+TEST page=UCD.MSA13.xxv.png F1=0.862685 P=0.830853 R=0.897065 IoU=0.758536 time=0.079467s
+TEST page=UCD.MSA20.127r.png F1=0.909135 P=0.936982 R=0.882904 IoU=0.833415 time=0.514288s
+TEST GLOBAL F1=0.773702 P=0.874269 R=0.693893 IoU=0.630932 Specificity=0.976501
+Duration AVG: 0.420430 s
+********************************************************************************
+Train;Test;PAG;Num pages train;ANN;Num annotations per page;PAT;Num random patches;Ink rate;VAL;Th_bin;F1-val;P-val;R-val;Num annotated patches-val;Maximum num annotated patches-val;TEST;F1-test;P-test;R-test;Num annotated patches-test;Maximum num annotated patches-test;IoU-test;Specificity-test;TP-test;TN-test;FP-test;FN-test;TimePerPage(s);
+datasets/ISOS/train/SRC;datasets/ISOS/test/SRC;PAG;1;ANN;8;PAT;1024;0,02;;VAL;0,6;78,8;97,7;66,0;8;31;;TEST;77,4;87,4;69,4;8;33;63,1;97,7;178478200,0;1066594200,0;25667400,0;78734800,0;0,42042959607206287;
+Legacy-format result appended to: results/modern/deeplabv3_resnet101/full_test.txt
+Summary: models/modern/deeplabv3_resnet101/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+TEST page=MB-TaruPramana-P33.png F1=0.090498 P=0.048520 R=0.671326 IoU=0.047394 time=0.649584s
+TEST page=MB-TaruPramana-P34.png F1=0.193579 P=0.109661 R=0.824685 IoU=0.107163 time=0.118741s
+==================================================================
+mode=test model=deeplabv3_resnet101 source=Palm target=Palm
+pages=1 annotations=8 npatches=1024
+log=logs/modern/test/deeplabv3_resnet101/Palm__to__Palm.log
+==================================================================
+TEST page=MB-TaruPramana-P35.png F1=0.165595 P=0.092925 R=0.759789 IoU=0.090273 time=0.153117s
+TEST page=MB-TaruPramana-P36.png F1=0.156953 P=0.088788 R=0.675833 IoU=0.085161 time=0.073902s
+TEST page=MB-TaruPramana-P38.png F1=0.121408 P=0.066085 R=0.745604 IoU=0.064628 time=0.109716s
+TEST page=WN-P1b.png F1=0.016483 P=0.008328 R=0.791008 IoU=0.008310 time=0.071194s
+TEST page=WN-P2.png F1=0.017559 P=0.008879 R=0.786952 IoU=0.008857 time=0.061666s
+TEST GLOBAL F1=0.204202 P=0.119129 R=0.714376 IoU=0.113713 Specificity=0.647199
+Duration AVG: 0.468502 s
+********************************************************************************
+Train;Test;PAG;Num pages train;ANN;Num annotations per page;PAT;Num random patches;Ink rate;VAL;Th_bin;F1-val;P-val;R-val;Num annotated patches-val;Maximum num annotated patches-val;TEST;F1-test;P-test;R-test;Num annotated patches-test;Maximum num annotated patches-test;IoU-test;Specificity-test;TP-test;TN-test;FP-test;FN-test;TimePerPage(s);
+datasets/Palm/train/SRC;datasets/Palm/test/SRC;PAG;1;ANN;8;PAT;1024;0,02;;VAL;0,2;47,3;33,6;80,1;8;63;;TEST;20,4;11,9;71,4;4;4;11,4;64,7;561134300,0;7611509500,0;4149181500,0;224354800,0;0,46850235598161816;
+Legacy-format result appended to: results/modern/deeplabv3_resnet50/full_test.txt
+Summary: models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=test model=deeplabv3_resnet50 source=PHI target=PHI
+pages=1 annotations=8 npatches=1024
+log=logs/modern/test/deeplabv3_resnet50/PHI__to__PHI.log
+==================================================================
+CONFIG
+  dataset=PHI
+  model=deeplabv3_resnet50
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=Persian09.png annotated_windows=8 annotated_ratio=0.226170
+CONFIG
+  dataset=Palm
+  model=deeplabv3_resnet101
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=IIB-2-180-P1.png annotated_windows=4 annotated_ratio=0.081779
+BEST checkpoint epoch=46 val_F1=0.854923 threshold=0.80
+BEST checkpoint epoch=29 val_F1=0.492734 threshold=0.20
+TEST page=Persian07.png F1=0.040156 P=0.081912 R=0.026601 IoU=0.020492 time=0.382531s
+TEST page=Persian12.png F1=0.447016 P=0.864294 R=0.301472 IoU=0.287846 time=0.443810s
+TEST page=Persian14.png F1=0.766733 P=0.727940 R=0.809905 IoU=0.621716 time=0.035394s
+TEST GLOBAL F1=0.552630 P=0.694359 R=0.458958 IoU=0.381821 Specificity=0.976312
+Duration AVG: 0.287245 s
+********************************************************************************
+Train;Test;PAG;Num pages train;ANN;Num annotations per page;PAT;Num random patches;Ink rate;VAL;Th_bin;F1-val;P-val;R-val;Num annotated patches-val;Maximum num annotated patches-val;TEST;F1-test;P-test;R-test;Num annotated patches-test;Maximum num annotated patches-test;IoU-test;Specificity-test;TP-test;TN-test;FP-test;FN-test;TimePerPage(s);
+datasets/PHI/train/SRC;datasets/PHI/test/SRC;PAG;1;ANN;8;PAT;1024;0,02;;VAL;0,8;80,4;83,1;77,9;8;35;;TEST;55,3;69,4;45,9;8;40;38,2;97,6;9887600,0;179382400,0;4352300,0;11656000,0;0,28724465565755963;
+Legacy-format result appended to: results/modern/deeplabv3_resnet50/full_test.txt
+Summary: models/modern/deeplabv3_resnet50/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+TEST page=Bangli-P18.png F1=0.268705 P=0.165408 R=0.715622 IoU=0.155207 time=0.095003s
+==================================================================
+mode=test model=deeplabv3_resnet50 source=Salzinnes target=Salzinnes
+pages=1 annotations=8 npatches=1024
+log=logs/modern/test/deeplabv3_resnet50/Salzinnes__to__Salzinnes.log
+==================================================================
+TEST page=Bangli-P65.png F1=0.183274 P=0.103116 R=0.823254 IoU=0.100882 time=0.173465s
+TEST page=Bangli-P66.png F1=0.185211 P=0.105346 R=0.765798 IoU=0.102058 time=0.089046s
+TEST page=Bangli-P73.png F1=0.177741 P=0.104017 R=0.610357 IoU=0.097540 time=0.086362s
+TEST page=Bangli-P74.png F1=0.155010 P=0.085523 R=0.826818 IoU=0.084018 time=0.084286s
+TEST page=Bangli-P75.png F1=0.171063 P=0.095836 R=0.795552 IoU=0.093532 time=0.084310s
+TEST page=Bangli-P77.png F1=0.168474 P=0.095296 R=0.725934 IoU=0.091987 time=0.083548s
+TEST page=IIA-10-1534-P1.png F1=0.019549 P=0.009880 R=0.915318 IoU=0.009871 time=0.196514s
+TEST page=IIA-10-1534-P3.png F1=0.251192 P=0.147496 R=0.845945 IoU=0.143638 time=0.188125s
+TEST page=IIA-5-789-P5.png F1=0.314155 P=0.205785 R=0.663672 IoU=0.186351 time=0.177160s
+TEST page=IIA-5-789-P6.png F1=0.310963 P=0.201601 R=0.679679 IoU=0.184109 time=0.175398s
+TEST page=IIA-5-789-P7.png F1=0.451901 P=0.326593 R=0.733250 IoU=0.291911 time=0.176234s
+TEST page=IIA-5-789-P8.png F1=0.396455 P=0.263490 R=0.800351 IoU=0.247239 time=0.177427s
+CONFIG
+  dataset=Salzinnes
+  model=deeplabv3_resnet50
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=CF-009.png annotated_windows=8 annotated_ratio=0.032125
+TEST page=IIB-2-180-P5.png F1=0.318849 P=0.201755 R=0.759876 IoU=0.189663 time=0.178392s
+TEST page=IIB-2-180-P6.png F1=0.348328 P=0.231500 R=0.703238 IoU=0.210897 time=0.185054s
+TEST page=IIIB-12-306-P1.png F1=0.019123 P=0.009689 R=0.729123 IoU=0.009654 time=0.210736s
+BEST checkpoint epoch=46 val_F1=0.749927 threshold=0.80
+TEST page=IIIB-12-306-P2.png F1=0.457084 P=0.328374 R=0.751761 IoU=0.296251 time=0.223134s
+TEST page=IIIB-12-306-P3.png F1=0.461793 P=0.332166 R=0.757367 IoU=0.300219 time=1.401660s
+TEST page=IIIB-12-306-P4.png F1=0.521644 P=0.391192 R=0.782649 IoU=0.352858 time=2.544638s
+TEST page=IIIB-42-1526-P4.png F1=0.382334 P=0.248245 R=0.831467 IoU=0.236352 time=1.266484s
+TEST page=IIIB-45-2296-P1.png F1=0.014933 P=0.007529 R=0.899234 IoU=0.007523 time=0.178946s
+TEST page=IIIB-45-2296-P7.png F1=0.297312 P=0.186156 R=0.737987 IoU=0.174615 time=0.187926s
+TEST page=IIIB-45-2296-P8.png F1=0.249704 P=0.148277 R=0.790350 IoU=0.142666 time=0.193513s
+TEST page=IIIC-19-1293-P7.png F1=0.376880 P=0.256984 R=0.706521 IoU=0.232198 time=0.175378s
+TEST page=IIIC-19-1293-P8.png F1=0.389833 P=0.260356 R=0.775518 IoU=0.242110 time=0.857786s
+TEST page=IIIC-20-1397-P1.png F1=0.016456 P=0.008310 R=0.840051 IoU=0.008296 time=1.895212s
+TEST page=IIIC-20-1397-P7.png F1=0.330050 P=0.222963 R=0.635095 IoU=0.197643 time=2.067177s
+TEST page=IIIC-20-1397-P8.png F1=0.297141 P=0.192305 R=0.653312 IoU=0.174498 time=0.199515s
+TEST page=CF-017.png F1=0.776664 P=0.821142 R=0.736766 IoU=0.634881 time=5.122856s
+TEST page=IIIC-23-1506-P1.png F1=0.013397 P=0.006748 R=0.919822 IoU=0.006744 time=0.189915s
+TEST page=IIIC-23-1506-P2.png F1=0.430408 P=0.300122 R=0.760611 IoU=0.274219 time=1.325895s
+TEST page=IIIC-23-1506-P3.png F1=0.324391 P=0.203214 R=0.803582 IoU=0.193598 time=1.764360s
+TEST page=IIIC-23-1506-P4.png F1=0.358209 P=0.228946 R=0.822746 IoU=0.218184 time=2.282448s
+TEST page=IIIC-23-1506-P5.png F1=0.131027 P=0.070937 R=0.856948 IoU=0.070107 time=0.219991s
+TEST page=CF-018.png F1=0.568969 P=0.459685 R=0.746438 IoU=0.397598 time=5.711774s
+TEST GLOBAL F1=0.653773 P=0.584482 R=0.741715 IoU=0.485639 Specificity=0.873151
+Duration AVG: 5.417315 s
+********************************************************************************
+Train;Test;PAG;Num pages train;ANN;Num annotations per page;PAT;Num random patches;Ink rate;VAL;Th_bin;F1-val;P-val;R-val;Num annotated patches-val;Maximum num annotated patches-val;TEST;F1-test;P-test;R-test;Num annotated patches-test;Maximum num annotated patches-test;IoU-test;Specificity-test;TP-test;TN-test;FP-test;FN-test;TimePerPage(s);
+datasets/Salzinnes/train/SRC;datasets/Salzinnes/test/SRC;PAG;1;ANN;8;PAT;1024;0,02;;VAL;0,8;58,1;47,2;75,5;8;221;;TEST;65,4;58,4;74,2;8;221;48,6;87,3;469462500,0;2297309500,0;333748300,0;163479700,0;5,4173149049747735;
+Legacy-format result appended to: results/modern/deeplabv3_resnet50/full_test.txt
+Summary: models/modern/deeplabv3_resnet50/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+TEST page=IIIC-24-1641-P7.png F1=0.477236 P=0.331740 R=0.850085 IoU=0.313405 time=0.207061s
+TEST page=IIIC-24-1641-P8.png F1=0.535323 P=0.386883 R=0.868600 IoU=0.365492 time=0.183343s
+TEST page=JG-01-P10.png F1=0.241037 P=0.141115 R=0.825766 IoU=0.137035 time=0.207181s
+TEST page=JG-01-P3.png F1=0.339099 P=0.230492 R=0.641290 IoU=0.204169 time=0.174076s
+TEST page=JG-01-P9.png F1=0.271406 P=0.166877 R=0.726477 IoU=0.157012 time=0.175879s
+TEST page=JG-05-P7.png F1=0.130382 P=0.070579 R=0.854050 IoU=0.069738 time=0.178508s
+TEST page=MB-AdiParwa(Purana)-5338.2-IV.a-P2.png F1=0.515580 P=0.372608 R=0.836606 IoU=0.347332 time=0.158678s
+TEST page=MB-AdiParwa(Purana)-5338.2-IV.a-P3.png F1=0.405357 P=0.262698 R=0.887131 IoU=0.254202 time=0.167103s
+TEST page=MB-TaruPramana-P31.png F1=0.151926 P=0.084812 R=0.728135 IoU=0.082209 time=0.170584s
+TEST page=MB-TaruPramana-P32.png F1=0.186064 P=0.106347 R=0.743132 IoU=0.102576 time=0.169267s
+TEST page=MB-TaruPramana-P33.png F1=0.129715 P=0.069756 R=0.923605 IoU=0.069356 time=0.162954s
+TEST page=MB-TaruPramana-P34.png F1=0.186712 P=0.105423 R=0.815708 IoU=0.102970 time=0.111733s
+TEST page=MB-TaruPramana-P35.png F1=0.162398 P=0.088882 R=0.939442 IoU=0.088376 time=0.106912s
+TEST page=MB-TaruPramana-P36.png F1=0.159793 P=0.087168 R=0.957896 IoU=0.086835 time=0.120653s
+TEST page=MB-TaruPramana-P38.png F1=0.124699 P=0.066755 R=0.944938 IoU=0.066496 time=0.158473s
+TEST page=WN-P1b.png F1=0.031705 P=0.016158 R=0.839066 IoU=0.016108 time=0.100264s
+TEST page=WN-P2.png F1=0.074269 P=0.039660 R=0.583244 IoU=0.038567 time=0.089954s
+TEST GLOBAL F1=0.217295 P=0.126233 R=0.779964 IoU=0.121892 Specificity=0.639418
+Duration AVG: 0.439553 s
+********************************************************************************
+Train;Test;PAG;Num pages train;ANN;Num annotations per page;PAT;Num random patches;Ink rate;VAL;Th_bin;F1-val;P-val;R-val;Num annotated patches-val;Maximum num annotated patches-val;TEST;F1-test;P-test;R-test;Num annotated patches-test;Maximum num annotated patches-test;IoU-test;Specificity-test;TP-test;TN-test;FP-test;FN-test;TimePerPage(s);
+datasets/Palm/train/SRC;datasets/Palm/test/SRC;PAG;1;ANN;8;PAT;1024;0,02;;VAL;0,2;42,4;28,6;81,8;8;63;;TEST;21,7;12,6;78,0;4;4;12,2;63,9;612653200,0;7519991700,0;4240699300,0;172835900,0;0,4395532558765262;
+Legacy-format result appended to: results/modern/deeplabv3_resnet101/full_test.txt
+Summary: models/modern/deeplabv3_resnet101/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=test model=deeplabv3_resnet101 source=PHI target=PHI
+pages=1 annotations=8 npatches=1024
+log=logs/modern/test/deeplabv3_resnet101/PHI__to__PHI.log
+==================================================================
+CONFIG
+  dataset=PHI
+  model=deeplabv3_resnet101
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=Persian09.png annotated_windows=8 annotated_ratio=0.226170
+BEST checkpoint epoch=41 val_F1=0.837619 threshold=0.90
+TEST page=Persian07.png F1=0.048649 P=0.135821 R=0.029634 IoU=0.024933 time=0.038242s
+TEST page=Persian12.png F1=0.350950 P=0.869136 R=0.219868 IoU=0.212822 time=0.054195s
+TEST page=Persian14.png F1=0.786633 P=0.862310 R=0.723176 IoU=0.648313 time=0.045613s
+TEST GLOBAL F1=0.526033 P=0.800702 R=0.391680 IoU=0.356887 Specificity=0.988569
+Duration AVG: 0.046017 s
+********************************************************************************
+Train;Test;PAG;Num pages train;ANN;Num annotations per page;PAT;Num random patches;Ink rate;VAL;Th_bin;F1-val;P-val;R-val;Num annotated patches-val;Maximum num annotated patches-val;TEST;F1-test;P-test;R-test;Num annotated patches-test;Maximum num annotated patches-test;IoU-test;Specificity-test;TP-test;TN-test;FP-test;FN-test;TimePerPage(s);
+datasets/PHI/train/SRC;datasets/PHI/test/SRC;PAG;1;ANN;8;PAT;1024;0,02;;VAL;0,9;86,5;96,2;78,6;8;35;;TEST;52,6;80,1;39,2;8;40;35,7;98,9;8438200,0;181634400,0;2100300,0;13105400,0;0,04601695636908213;
+Legacy-format result appended to: results/modern/deeplabv3_resnet101/full_test.txt
+Summary: models/modern/deeplabv3_resnet101/full/PHI__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=test model=deeplabv3_resnet101 source=Salzinnes target=Salzinnes
+pages=1 annotations=8 npatches=1024
+log=logs/modern/test/deeplabv3_resnet101/Salzinnes__to__Salzinnes.log
+==================================================================
+CONFIG
+  dataset=Salzinnes
+  model=deeplabv3_resnet101
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=CF-009.png annotated_windows=8 annotated_ratio=0.032125
+BEST checkpoint epoch=49 val_F1=0.704867 threshold=0.90
+TEST page=CF-017.png F1=0.716780 P=0.719651 R=0.713941 IoU=0.558585 time=0.990042s
+TEST page=CF-018.png F1=0.540859 P=0.435833 R=0.712587 IoU=0.370673 time=0.970413s
+TEST GLOBAL F1=0.614588 P=0.539913 R=0.713248 IoU=0.443619 Specificity=0.853785
+Duration AVG: 0.980228 s
+********************************************************************************
+Train;Test;PAG;Num pages train;ANN;Num annotations per page;PAT;Num random patches;Ink rate;VAL;Th_bin;F1-val;P-val;R-val;Num annotated patches-val;Maximum num annotated patches-val;TEST;F1-test;P-test;R-test;Num annotated patches-test;Maximum num annotated patches-test;IoU-test;Specificity-test;TP-test;TN-test;FP-test;FN-test;TimePerPage(s);
+datasets/Salzinnes/train/SRC;datasets/Salzinnes/test/SRC;PAG;1;ANN;8;PAT;1024;0,02;;VAL;0,9;54,0;43,1;72,0;8;221;;TEST;61,5;54,0;71,3;8;221;44,4;85,4;451445000,0;2246358500,0;384699300,0;181497200,0;0,9802275075344369;
+Legacy-format result appended to: results/modern/deeplabv3_resnet101/full_test.txt
+Summary: models/modern/deeplabv3_resnet101/full/Salzinnes__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=test model=deeplabv3_resnet50 source=Bickley target=Bickley
+pages=1 annotations=8 npatches=1024
+log=logs/modern/test/deeplabv3_resnet50/Bickley__to__Bickley.log
+==================================================================
+CONFIG
+  dataset=Bickley
+  model=deeplabv3_resnet50
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=18.png annotated_windows=8 annotated_ratio=0.328330
+BEST checkpoint epoch=49 val_F1=0.616898 threshold=0.30
+TEST page=30.png F1=0.565248 P=0.436214 R=0.802705 IoU=0.393973 time=0.055675s
+TEST page=5.png F1=0.588539 P=0.455359 R=0.831844 IoU=0.416977 time=0.059367s
+TEST GLOBAL F1=0.577001 P=0.445863 R=0.817443 IoU=0.405487 Specificity=0.867652
+Duration AVG: 0.057521 s
+********************************************************************************
+Train;Test;PAG;Num pages train;ANN;Num annotations per page;PAT;Num random patches;Ink rate;VAL;Th_bin;F1-val;P-val;R-val;Num annotated patches-val;Maximum num annotated patches-val;TEST;F1-test;P-test;R-test;Num annotated patches-test;Maximum num annotated patches-test;IoU-test;Specificity-test;TP-test;TN-test;FP-test;FN-test;TimePerPage(s);
+datasets/Bickley/train/SRC;datasets/Bickley/test/SRC;PAG;1;ANN;8;PAT;1024;0,02;;VAL;0,30000000000000004;52,1;39,8;75,2;8;30;;TEST;57,7;44,6;81,7;8;28;40,5;86,8;26709800,0;217629100,0;33196100,0;5965000,0;0,057520961039699614;
+Legacy-format result appended to: results/modern/deeplabv3_resnet50/full_test.txt
+Summary: models/modern/deeplabv3_resnet50/full/Bickley__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=test model=deeplabv3_resnet50 source=Dibco target=Dibco
+pages=1 annotations=8 npatches=1024
+log=logs/modern/test/deeplabv3_resnet50/Dibco__to__Dibco.log
+==================================================================
+CONFIG
+  dataset=Dibco
+  model=deeplabv3_resnet50
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=HW01.png annotated_windows=8 annotated_ratio=0.120115
+BEST checkpoint epoch=50 val_F1=0.714350 threshold=0.40
+TEST page=01.png F1=0.002475 P=0.002345 R=0.002633 IoU=0.001242 time=0.083087s
+TEST page=02.png F1=0.003792 P=0.002561 R=0.007331 IoU=0.001901 time=0.123132s
+TEST page=03.png F1=0.009364 P=0.007912 R=0.011485 IoU=0.004707 time=0.140792s
+TEST page=04.png F1=0.000729 P=0.000793 R=0.000683 IoU=0.000367 time=0.056937s
+TEST page=05.png F1=0.007099 P=0.006801 R=0.007436 IoU=0.003565 time=0.092106s
+TEST page=06.png F1=0.001584 P=0.001689 R=0.001501 IoU=0.000795 time=0.068586s
+TEST page=07.png F1=0.022606 P=0.024322 R=0.021124 IoU=0.011435 time=0.026153s
+TEST page=08.png F1=0.063571 P=0.058769 R=0.069239 IoU=0.032832 time=0.024517s
+TEST page=09.png F1=0.056336 P=0.057747 R=0.055002 IoU=0.028987 time=0.019412s
+TEST page=10.png F1=0.238702 P=0.195673 R=0.306006 IoU=0.135529 time=0.005263s
+TEST GLOBAL F1=0.020944 P=0.019127 R=0.023156 IoU=0.010585 Specificity=0.921367
+Duration AVG: 0.063998 s
+********************************************************************************
+Train;Test;PAG;Num pages train;ANN;Num annotations per page;PAT;Num random patches;Ink rate;VAL;Th_bin;F1-val;P-val;R-val;Num annotated patches-val;Maximum num annotated patches-val;TEST;F1-test;P-test;R-test;Num annotated patches-test;Maximum num annotated patches-test;IoU-test;Specificity-test;TP-test;TN-test;FP-test;FN-test;TimePerPage(s);
+datasets/Dibco/train/SRC;datasets/Dibco/test/SRC;PAG;1;ANN;8;PAT;1024;0,02;;VAL;0,4;61,2;47,2;87,1;8;33;;TEST;2,1;1,9;2,3;8;81;1,1;92,1;1876800,0;1127772700,0;96248700,0;79175000,0;0,06399840810336173;
+Legacy-format result appended to: results/modern/deeplabv3_resnet50/full_test.txt
+Summary: models/modern/deeplabv3_resnet50/full/Dibco__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=test model=deeplabv3_resnet50 source=Einsiedeln target=Einsiedeln
+pages=1 annotations=8 npatches=1024
+log=logs/modern/test/deeplabv3_resnet50/Einsiedeln__to__Einsiedeln.log
+==================================================================
+CONFIG
+  dataset=Einsiedeln
+  model=deeplabv3_resnet50
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=e-codices_sbe-0611_0001r_Layered.png annotated_windows=8 annotated_ratio=0.025303
+BEST checkpoint epoch=50 val_F1=0.850264 threshold=0.20
+TEST page=e-codices_sbe-0611_005r_Layered.png F1=0.832130 P=0.747148 R=0.938936 IoU=0.712526 time=0.811569s
+TEST page=e-codices_sbe-0611_005v_Layered.png F1=0.897524 P=0.849394 R=0.951448 IoU=0.814107 time=0.804681s
+TEST GLOBAL F1=0.864671 P=0.796683 R=0.945357 IoU=0.761612 Specificity=0.935439
+Duration AVG: 0.808125 s
+********************************************************************************
+Train;Test;PAG;Num pages train;ANN;Num annotations per page;PAT;Num random patches;Ink rate;VAL;Th_bin;F1-val;P-val;R-val;Num annotated patches-val;Maximum num annotated patches-val;TEST;F1-test;P-test;R-test;Num annotated patches-test;Maximum num annotated patches-test;IoU-test;Specificity-test;TP-test;TN-test;FP-test;FN-test;TimePerPage(s);
+datasets/Einsiedeln/train/SRC;datasets/Einsiedeln/test/SRC;PAG;1;ANN;8;PAT;1024;0,02;;VAL;0,2;85,8;77,5;96,2;8;291;;TEST;86,5;79,7;94,5;8;315;76,2;93,5;808664600,0;2990219500,0;206374300,0;46741600,0;0,808125012088567;
+Legacy-format result appended to: results/modern/deeplabv3_resnet50/full_test.txt
+Summary: models/modern/deeplabv3_resnet50/full/Einsiedeln__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=test model=deeplabv3_resnet50 source=ISOS target=ISOS
+pages=1 annotations=8 npatches=1024
+log=logs/modern/test/deeplabv3_resnet50/ISOS__to__ISOS.log
+==================================================================
+CONFIG
+  dataset=ISOS
+  model=deeplabv3_resnet50
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=FH.IP.7v.png annotated_windows=8 annotated_ratio=0.251087
+BEST checkpoint epoch=44 val_F1=0.889356 threshold=0.60
+TEST page=AC.MSBMMM.90r.png F1=0.829759 P=0.718650 R=0.981521 IoU=0.709056 time=0.143386s
+TEST page=FH.IP.7r.png F1=0.912912 P=0.848018 R=0.988572 IoU=0.839785 time=0.134614s
+TEST page=NLI.MSG18.147.png F1=0.600769 P=0.966548 R=0.435837 IoU=0.429360 time=0.076676s
+TEST page=NLI.MSG18.148.png F1=0.627883 P=0.963886 R=0.465588 IoU=0.457606 time=0.091665s
+TEST page=RIA.MSCiii3.301r.png F1=0.775231 P=0.968459 R=0.646291 IoU=0.632968 time=0.095065s
+TEST page=TCD.1436.81.png F1=0.899464 P=0.880968 R=0.918764 IoU=0.817305 time=0.046757s
+TEST page=TCD.MS1343.60.png F1=0.804576 P=0.924898 R=0.711964 IoU=0.673054 time=0.059967s
+TEST page=UCD.AddIM14.386.png F1=0.906482 P=0.967885 R=0.852414 IoU=0.828968 time=0.100740s
+TEST page=UCD.MSA13.xxv.png F1=0.869980 P=0.897130 R=0.844433 IoU=0.769887 time=0.075357s
+TEST page=UCD.MSA20.127r.png F1=0.899807 P=0.932324 R=0.869491 IoU=0.817871 time=0.052793s
+TEST GLOBAL F1=0.825710 P=0.881802 R=0.776336 IoU=0.703164 Specificity=0.975495
+Duration AVG: 0.087702 s
+********************************************************************************
+Train;Test;PAG;Num pages train;ANN;Num annotations per page;PAT;Num random patches;Ink rate;VAL;Th_bin;F1-val;P-val;R-val;Num annotated patches-val;Maximum num annotated patches-val;TEST;F1-test;P-test;R-test;Num annotated patches-test;Maximum num annotated patches-test;IoU-test;Specificity-test;TP-test;TN-test;FP-test;FN-test;TimePerPage(s);
+datasets/ISOS/train/SRC;datasets/ISOS/test/SRC;PAG;1;ANN;8;PAT;1024;0,02;;VAL;0,6;88,0;96,4;80,8;8;31;;TEST;82,6;88,2;77,6;8;33;70,3;97,5;199683800,0;1065495600,0;26766000,0;57529200,0;0,08770190915092826;
+Legacy-format result appended to: results/modern/deeplabv3_resnet50/full_test.txt
+Summary: models/modern/deeplabv3_resnet50/full/ISOS__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt.summary.json
+==================================================================
+mode=test model=deeplabv3_resnet50 source=Palm target=Palm
+pages=1 annotations=8 npatches=1024
+log=logs/modern/test/deeplabv3_resnet50/Palm__to__Palm.log
+==================================================================
+CONFIG
+  dataset=Palm
+  model=deeplabv3_resnet50
+  experiment=full masking=True oversampling=True
+  checkpoint=models/modern/deeplabv3_resnet50/full/Palm__pt1__nap8__np1024__win256x256__ink0p02__aug-random-flipH-flipV-rot-scale__freeze0__seed1.pt
+  train_pages=1 val_pages=1
+  virtual_samples_per_page=1024
+  total_samples_per_epoch=1024
+  physical_batch=4 grad_accum=8 effective_batch_nominal=32
+  max_epochs=50 patience=10 min_delta=0.0001
+  early_stopping_monitor=full_page_val_F1
+  train_page[0]=IIB-2-180-P1.png annotated_windows=4 annotated_ratio=0.081779
+BEST checkpoint epoch=35 val_F1=0.480021 threshold=0.20
+TEST page=Bangli-P18.png F1=0.187963 P=0.108241 R=0.713447 IoU=0.103731 time=0.060980s
+TEST page=Bangli-P65.png F1=0.176948 P=0.103025 R=0.626484 IoU=0.097063 time=0.097704s
+TEST page=Bangli-P66.png F1=0.154626 P=0.087794 R=0.647689 IoU=0.083792 time=0.087530s
+TEST page=Bangli-P73.png F1=0.110299 P=0.060610 R=0.612295 IoU=0.058370 time=0.098777s
+TEST page=Bangli-P74.png F1=0.128295 P=0.071043 R=0.660945 IoU=0.068545 time=0.101156s
+TEST page=Bangli-P75.png F1=0.137192 P=0.076249 R=0.683496 IoU=0.073649 time=0.071455s
+TEST page=Bangli-P77.png F1=0.137549 P=0.078116 R=0.575200 IoU=0.073855 time=0.095600s
+TEST page=IIA-10-1534-P1.png F1=0.023099 P=0.011711 R=0.836125 IoU=0.011684 time=0.219881s
+TEST page=IIA-10-1534-P3.png F1=0.347883 P=0.221631 R=0.808411 IoU=0.210570 time=0.177692s
+TEST page=IIA-5-789-P5.png F1=0.357077 P=0.247902 R=0.638112 IoU=0.217346 time=0.116301s
+TEST page=IIA-5-789-P6.png F1=0.356008 P=0.246199 R=0.642663 IoU=0.216554 time=0.117486s
+TEST page=IIA-5-789-P7.png F1=0.481222 P=0.347957 R=0.779953 IoU=0.316852 time=0.117272s
+TEST page=IIA-5-789-P8.png F1=0.430666 P=0.295691 R=0.792382 IoU=0.274429 time=0.119310s
+TEST page=IIB-2-180-P5.png F1=0.309612 P=0.196299 R=0.732404 IoU=0.183162 time=0.200372s
+TEST page=IIB-2-180-P6.png F1=0.333169 P=0.222745 R=0.660734 IoU=0.199884 time=0.195383s
+TEST page=IIIB-12-306-P1.png F1=0.018412 P=0.009322 R=0.740899 IoU=0.009292 time=0.117100s
+TEST page=IIIB-12-306-P2.png F1=0.457734 P=0.340008 R=0.700182 IoU=0.296797 time=0.117414s
+TEST page=IIIB-12-306-P3.png F1=0.476646 P=0.352048 R=0.737777 IoU=0.312897 time=0.117746s
+TEST page=IIIB-12-306-P4.png F1=0.532623 P=0.405748 R=0.774961 IoU=0.362980 time=0.117263s
+TEST page=IIIB-42-1526-P4.png F1=0.403403 P=0.276119 R=0.748424 IoU=0.252668 time=0.118071s
+TEST page=IIIB-45-2296-P1.png F1=0.013926 P=0.007022 R=0.825655 IoU=0.007012 time=0.118950s
+TEST page=IIIB-45-2296-P7.png F1=0.338619 P=0.229715 R=0.643889 IoU=0.203820 time=0.116673s
+TEST page=IIIB-45-2296-P8.png F1=0.279310 P=0.174777 R=0.694999 IoU=0.162327 time=0.117308s
+TEST page=IIIC-19-1293-P7.png F1=0.355305 P=0.238214 R=0.698813 IoU=0.216034 time=0.118679s
+TEST page=IIIC-19-1293-P8.png F1=0.386730 P=0.258706 R=0.765624 IoU=0.239721 time=0.116584s
+TEST page=IIIC-20-1397-P1.png F1=0.015721 P=0.007939 R=0.791892 IoU=0.007923 time=0.119276s
+TEST page=IIIC-20-1397-P7.png F1=0.289187 P=0.194200 R=0.566092 IoU=0.169038 time=0.116618s
+TEST page=IIIC-20-1397-P8.png F1=0.279177 P=0.186736 R=0.552896 IoU=0.162237 time=0.116926s
+TEST page=IIIC-23-1506-P1.png F1=0.012672 P=0.006386 R=0.817270 IoU=0.006377 time=0.118888s
+TEST page=IIIC-23-1506-P2.png F1=0.401346 P=0.282340 R=0.693790 IoU=0.251056 time=0.117027s
+TEST page=IIIC-23-1506-P3.png F1=0.289882 P=0.182298 R=0.707344 IoU=0.169512 time=0.117867s
+TEST page=IIIC-23-1506-P4.png F1=0.313639 P=0.199226 R=0.736773 IoU=0.185988 time=0.121043s
+TEST page=IIIC-23-1506-P5.png F1=0.080316 P=0.042464 R=0.739720 IoU=0.041839 time=0.116885s
+TEST page=IIIC-24-1641-P7.png F1=0.499334 P=0.355520 R=0.838559 IoU=0.332745 time=0.118382s
+TEST page=IIIC-24-1641-P8.png F1=0.482824 P=0.336156 R=0.856564 IoU=0.318242 time=0.118353s
+TEST page=JG-01-P10.png F1=0.253869 P=0.155451 R=0.692011 IoU=0.145392 time=0.117582s
+TEST page=JG-01-P3.png F1=0.286616 P=0.188768 R=0.595105 IoU=0.167283 time=0.117664s
+TEST page=JG-01-P9.png F1=0.289083 P=0.187693 R=0.628732 IoU=0.168966 time=0.117948s
+TEST page=JG-05-P7.png F1=0.148811 P=0.085000 R=0.597038 IoU=0.080388 time=0.132620s
+TEST page=MB-AdiParwa(Purana)-5338.2-IV.a-P2.png F1=0.447966 P=0.315771 R=0.770570 IoU=0.288635 time=0.111075s

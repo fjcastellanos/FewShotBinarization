@@ -40,6 +40,9 @@ EXPERIMENT="${EXPERIMENT:-full}"
 PAGES_TRAIN="${PAGES_TRAIN:-1}"
 VAL_PAGES="${VAL_PAGES:-1}"
 ANNOTATED_PATCHES="${ANNOTATED_PATCHES:-8}"
+# Sweep used when ANNOTATED_PATCHES_LIST is non-empty.
+# -1 means all available annotated windows.
+ANNOTATED_PATCHES_LIST="${ANNOTATED_PATCHES_LIST:-1 2 4 8 16 32 -1}"
 NPATCHES="${NPATCHES:-1024}"
 PATCH="${PATCH:-256}"
 INK_RATE="${INK_RATE:-0.02}"
@@ -72,6 +75,7 @@ Main settings:
   PAGES_TRAIN=$PAGES_TRAIN
   VAL_PAGES=$VAL_PAGES
   ANNOTATED_PATCHES=$ANNOTATED_PATCHES
+  ANNOTATED_PATCHES_LIST=$ANNOTATED_PATCHES_LIST
   NPATCHES=$NPATCHES
   EPOCHS=$EPOCHS
   BATCH_SIZE=$BATCH_SIZE
@@ -91,8 +95,9 @@ run_one() {
     local train_gt="datasets/${source}/train/GT"
     local test_src="datasets/${target}/test/SRC"
     local test_gt="datasets/${target}/test/GT"
-    local result_file="results/modern/${model}/${EXPERIMENT}_${mode}.txt"
-    local log_dir="logs/modern/${mode}/${model}"
+    local config_tag="pt${PAGES_TRAIN}__nap${ANNOTATED_PATCHES}__np${NPATCHES}"
+    local result_file="results/modern/${model}/${EXPERIMENT}__${config_tag}__${mode}.txt"
+    local log_dir="logs/modern/${mode}/${model}/${EXPERIMENT}/${config_tag}"
     local log_file="${log_dir}/${source}__to__${target}.log"
 
     mkdir -p "$log_dir" "$(dirname "$result_file")"
@@ -181,27 +186,50 @@ cross_test_models() {
 
 validate_model
 
-case "$ACTION" in
-    train)
-        train_models
-        ;;
-    test)
-        test_models
-        ;;
-    cross)
-        cross_test_models
-        ;;
-    all)
-        train_models
-        test_models
-        cross_test_models
-        ;;
-    help|-h|--help)
-        usage
-        ;;
-    *)
-        echo "Unknown action: $ACTION" >&2
-        usage >&2
-        exit 2
-        ;;
-esac
+run_action() {
+    case "$ACTION" in
+        train)
+            train_models
+            ;;
+        test)
+            test_models
+            ;;
+        cross)
+            cross_test_models
+            ;;
+        all)
+            train_models
+            test_models
+            cross_test_models
+            ;;
+        help|-h|--help)
+            usage
+            ;;
+        *)
+            echo "Unknown action: $ACTION" >&2
+            usage >&2
+            exit 2
+            ;;
+    esac
+}
+
+if [[ "$ACTION" == "help" || "$ACTION" == "-h" || "$ACTION" == "--help" ]]; then
+    run_action
+    exit 0
+fi
+
+# By default, sweep all requested annotation budgets while keeping one training
+# page and a fixed random-sample budget (NPATCHES=1024 unless overridden).
+# To run a single budget, set ANNOTATED_PATCHES_LIST to that value, e.g. 8.
+if [[ -n "${ANNOTATED_PATCHES_LIST//[[:space:]]/}" ]]; then
+    for annotated in $ANNOTATED_PATCHES_LIST; do
+        ANNOTATED_PATCHES="$annotated"
+        echo
+        echo "##################################################################"
+        echo "ANNOTATION SWEEP: ANNOTATED_PATCHES=$ANNOTATED_PATCHES PAGES_TRAIN=$PAGES_TRAIN NPATCHES=$NPATCHES"
+        echo "##################################################################"
+        run_action
+    done
+else
+    run_action
+fi
