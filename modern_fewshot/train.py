@@ -13,6 +13,7 @@ from torch.utils.data import DataLoader
 
 from .inference import best_threshold, predict_page_tiled
 from .losses import partial_cross_entropy
+from .mixing import cutmix_quadrants, mixup_batch, mixup_partial_loss
 
 
 @dataclass
@@ -30,6 +31,9 @@ class TrainConfig:
     num_workers: int = 0
     seed: int = 1
     threshold_step: float = 0.1
+    mix_strategy: str = "none"
+    mixup_min: float = 0.25
+    mixup_max: float = 0.75
 
     @property
     def effective_batch_size(self) -> int:
@@ -184,13 +188,28 @@ def train_model(
             target = target.to(device, non_blocking=True)
             valid = valid.to(device, non_blocking=True)
 
+            mixed_sources = None
+            if cfg.mix_strategy != "none":
+                rng = random.Random(cfg.seed * 1000003 + epoch * 97409 + step * 9176)
+                if cfg.mix_strategy == "cutmix":
+                    image, target, valid = cutmix_quadrants(image, target, valid, rng)
+                elif cfg.mix_strategy == "mixup":
+                    image, ta, va, tb, vb, lam = mixup_batch(
+                        image, target, valid, rng, cfg.mixup_min, cfg.mixup_max)
+                    mixed_sources = (ta, va, tb, vb, lam)
+                else:
+                    raise ValueError(f"Unknown mix strategy: {cfg.mix_strategy}")
+
             group_start = ((step - 1) // accum) * accum + 1
             group_end = min(group_start + accum - 1, num_batches)
             group_size = group_end - group_start + 1
 
             with _autocast(device, cfg.mixed_precision):
                 logits = model(image)
-                loss = partial_cross_entropy(logits, target, valid, use_masking)
+                if mixed_sources is None:
+                    loss = partial_cross_entropy(logits, target, valid, use_masking)
+                else:
+                    loss = mixup_partial_loss(logits, *mixed_sources, use_masking=use_masking)
                 scaled_loss = loss / float(group_size)
 
             scaler.scale(scaled_loss).backward()

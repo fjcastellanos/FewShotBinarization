@@ -75,6 +75,10 @@ def parser():
 
     p.add_argument("--model", choices=sorted(MODEL_REGISTRY), default="segformer_b0")
     p.add_argument("--experiment", choices=sorted(EXPERIMENTS), default="full")
+    p.add_argument("--mix-strategy", choices=["none", "mixup", "cutmix"], default="none",
+                   help="Optional batch-level augmentation (default: original pipeline)")
+    p.add_argument("--mixup-min", type=float, default=0.25)
+    p.add_argument("--mixup-max", type=float, default=0.75)
     p.add_argument("--freeze-encoder", action="store_true")
     p.add_argument("--gradient-checkpointing", action="store_true")
 
@@ -147,6 +151,11 @@ def default_checkpoint(args, dataset_name: str):
         f"__win{args.window_w}x{args.window_h}__ink{ink}"
         f"__aug-{aug}__freeze{int(args.freeze_encoder)}__seed{args.seed}.pt"
     )
+    if args.mix_strategy != "none":
+        suffix = args.mix_strategy
+        if args.mix_strategy == "mixup":
+            suffix += f"-{args.mixup_min:g}-{args.mixup_max:g}"
+        filename = filename[:-3] + f"__{suffix}.pt"
     return str(Path("models") / "modern" / args.model / args.experiment / filename)
 
 
@@ -303,6 +312,8 @@ def evaluate_test_set(model, pairs, threshold, checkpoint, dataset_name, args):
 def main():
     args = parser().parse_args()
     use_masking, use_oversampling = EXPERIMENTS[args.experiment]
+    if not 0 <= args.mixup_min <= args.mixup_max <= 1:
+        raise ValueError("Require 0 <= --mixup-min <= --mixup-max <= 1")
     dataset_name = sanitize_token(args.dataset_name or infer_dataset_name(args.db_train_src))
     checkpoint = args.checkpoint or default_checkpoint(args, dataset_name)
 
@@ -346,6 +357,7 @@ def main():
     print(f"  dataset={dataset_name}")
     print(f"  model={args.model}")
     print(f"  experiment={args.experiment} masking={use_masking} oversampling={use_oversampling}")
+    print(f"  mix_strategy={args.mix_strategy} mixup_range=[{args.mixup_min}, {args.mixup_max}]")
     print(f"  checkpoint={checkpoint}")
     print(f"  train_pages={len(train_pages)} val_pages={len(val_pages)}")
     print(f"  virtual_samples_per_page={args.npatches}")
@@ -392,6 +404,9 @@ def main():
             num_workers=args.num_workers,
             seed=args.seed,
             threshold_step=args.threshold_step,
+            mix_strategy=args.mix_strategy,
+            mixup_min=args.mixup_min,
+            mixup_max=args.mixup_max,
         )
         metadata = vars(args).copy()
         metadata.update(

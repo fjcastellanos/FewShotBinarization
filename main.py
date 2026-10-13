@@ -36,6 +36,7 @@ import utilConst
 import utilIO
 import util
 import CNNmodel
+import sae_mixing
 
 #util.init()
 
@@ -88,6 +89,10 @@ def menu():
     parser.add_argument('-res', required=False, help='File where append the results.')
     parser.add_argument('-gpu',    default='0',    type=str,   help='GPU')
     parser.add_argument('-no_mask', required=False, action='store_true', help='File where append the results.')
+    parser.add_argument('--sae_mix', choices=['none', 'mixup', 'cutmix'], default='none',
+                        help='Optional 2x2 CutMix or masked MixUp on SAE training batches')
+    parser.add_argument('--mixup_min', type=float, default=0.25)
+    parser.add_argument('--mixup_max', type=float, default=0.75)
     
     args = parser.parse_args()
 
@@ -220,6 +225,12 @@ if __name__ == "__main__":
     config = menu()
     print (config)
     
+    if config.sae_mix == 'mixup' and not (0 <= config.mixup_min <= config.mixup_max <= 1):
+      raise ValueError('Require 0 <= mixup_min <= mixup_max <= 1')
+    if config.sae_mix != 'none' and config.no_mask:
+      raise ValueError('SAE mixing requires masking: do not use -no_mask')
+    if config.sae_mix == 'cutmix' and (config.win_w % 2 or config.win_h % 2):
+      raise ValueError('CutMix requires even window dimensions')
     path_model = utilIO.getPathModel(config)
     utilIO.createParentDirectory(path_model)
     
@@ -247,6 +258,9 @@ if __name__ == "__main__":
       model = CNNmodel.get_model(input_shape, config.no_mask, config.n_la, config.nb_fil, config.ker, dropout=config.drop, stride=2)
       
       train_generator = util.create_generator(train_data, config.no_mask, config.ba, input_shape, config.n_pa, config.n_an, config.aug, config.ink_rate)
+      if config.sae_mix != 'none':
+        train_generator = sae_mixing.augment_generator(
+            train_generator, config.sae_mix, config.mixup_min, config.mixup_max)
       val_generator = util.create_generator(val_data, config.no_mask, config.ba, input_shape, config.n_pa, config.n_an, augmentation_val, config.ink_rate)
       
       nb_train_pages = len(train_data)

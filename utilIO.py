@@ -143,6 +143,13 @@ def getPathModel(config):
     __remove_attribute_namespace(config_copy, 'drop_test')
     __remove_attribute_namespace(config_copy, 'all_ths')
 
+    # Preserve byte-for-byte legacy checkpoint paths when mixing is disabled.
+    if getattr(config_copy, 'sae_mix', 'none') == 'none':
+        __remove_attribute_namespace(config_copy, 'sae_mix')
+    if getattr(config_copy, 'sae_mix', 'none') != 'mixup':
+        __remove_attribute_namespace(config_copy, 'mixup_min')
+        __remove_attribute_namespace(config_copy, 'mixup_max')
+
     if config.ink_rate == 0.0025:
         __remove_attribute_namespace(config_copy, 'ink_rate')
 
@@ -154,4 +161,16 @@ def getPathModel(config):
     str_config = "models/modelCNN/"+str_config + ".h5"
     str_config = str_config.replace("flip","f").replace("rot", "ro").replace("scale", "sc")
     str_config = str_config.replace("datasets","dbs").replace("training", "train").replace("db_train","dtr").replace("pages_train", "pt")
+    # Preserve the historical Namespace-derived checkpoint naming convention.
+    # Only abbreviate the NEW mixing fields, never rename legacy fields.
+    # Parameters are still present in the filename (including MixUp bounds).
+    mix = getattr(config_copy, 'sae_mix', 'none')
+    if mix != 'none':
+        str_config = str_config.replace('sae_mix_mixup', 'mu')
+        str_config = str_config.replace('sae_mix_cutmix', 'cm')
+        str_config = str_config.replace('mixup_min', 'lo')
+        str_config = str_config.replace('mixup_max', 'hi')
+        filename = os.path.basename(str_config)
+        if len(os.fsencode(filename)) > 255:
+            raise ValueError('Checkpoint filename still exceeds 255 bytes (%s): %s. Shorten dataset directory names.' % (len(os.fsencode(filename)), filename))
     return str_config

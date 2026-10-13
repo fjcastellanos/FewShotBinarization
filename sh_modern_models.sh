@@ -1,5 +1,5 @@
 #!/bin/bash
-MODERN_PYTHON="${MODERN_PYTHON:-/opt/conda/envs/modern/bin/python}"
+MODERN_PYTHON="${MODERN_PYTHON:-python}"
 
 # Cache de Hugging Face en una ruta escribible
 export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$(pwd)/.cache}"
