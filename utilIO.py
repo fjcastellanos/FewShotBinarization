@@ -171,6 +171,25 @@ def getPathModel(config):
         str_config = str_config.replace('mixup_min', 'lo')
         str_config = str_config.replace('mixup_max', 'hi')
         filename = os.path.basename(str_config)
+        if mix == 'mixup' and len(os.fsencode(filename)) > 255:
+            # Only compact oversized MixUp names. Keep previous checkpoint
+            # paths unchanged whenever they already fit on the filesystem.
+            # The 'mu' marker is already present later in the name.
+            def compact_bounds(match):
+                high, low = match.group(1), match.group(2)
+                low = low[1:] if low.startswith('0.') else low
+                high = high[1:] if high.startswith('0.') else high
+                return '__a%s-%s' % (low, high)
+
+            str_config = re.sub(r'__hi_([^_]+)__lo_([^_]+)', compact_bounds, str_config, count=1)
+
+            # Preserve already existing compact checkpoint paths. Only when
+            # still oversized, remove one more redundant character from the
+            # bounds marker (the 'mu' suffix identifies MixUp unambiguously).
+            if len(os.fsencode(os.path.basename(str_config))) > 255:
+                str_config = str_config.replace('__a.', '__.', 1)
+
+        filename = os.path.basename(str_config)
         if len(os.fsencode(filename)) > 255:
-            raise ValueError('Checkpoint filename still exceeds 255 bytes (%s): %s. Shorten dataset directory names.' % (len(os.fsencode(filename)), filename))
+            raise ValueError('Checkpoint filename still exceeds 255 bytes (%s): %s' % (len(os.fsencode(filename)), filename))
     return str_config
