@@ -111,3 +111,32 @@ train/modern/<modelo>/<experimento>/...
 ```
 
 `tests/` contiene resultados experimentales. Las pruebas de software estan en `pytest_tests/`.
+
+## Alternativas al oversampling (revision)
+
+Dos experimentos independientes para comparar con el oversampling (`full` = masking + oversampling). No se combinan con el oversampling ni con MixUp/CutMix, y sin los flags nuevos todo funciona exactamente igual que antes (mismos checkpoints, mismos muestreos).
+
+- **Centered larger context** (`centered_context`): el patch anotado de 256x256 se mantiene fijo; en cada muestra se extrae un crop centrado en el de lado `s * 256`, con `s ~ U(1, 2)` (`--context-min/--context-max`), y se redimensiona a 256x256 para mantener el batch. El contexto es imagen real pero no se supervisa (salvo que sea otro patch anotado).
+- **Random output masking** (`output_masking`): se extrae siempre el patch anotado, sin desplazamiento; se elimina la supervision de una fraccion `r ~ U(0, 0.95)` (`--mask-min/--mask-max`) del patch en bloques cuadrados aleatorios de `--mask-block` px (32 por defecto). La imagen de entrada no se modifica.
+
+Ambos usan el mismo presupuesto de muestras por epoca que el oversampling (`-npatches` por pagina). La implementacion comun esta en `modern_fewshot/context_sampling.py`.
+
+Modernos (requiere `--experiment masking`; checkpoint con sufijo `__ctx1-2` o `__rom0-0.95-b32`):
+
+```bash
+MODEL=segformer_b0 bash scripts/run_modern_alt_sampling.sh
+# o directamente:
+python main_modern.py ... --experiment masking --sampling centered_context
+python main_modern.py ... --experiment masking --sampling output_masking
+```
+
+SAE (`main.py`, `-aug none -npatches 1024`; checkpoint con sufijo `__ctx1-2` o `__rom0-.95b32`):
+
+```bash
+python3 scripts/run_sae_table_baselines.py --jobs centered_context,output_masking --gpu 0
+# o directamente:
+python main.py ... -aug none -npatches 1024 --sae_sampling centered_context
+python main.py ... -aug none -npatches 1024 --sae_sampling output_masking
+```
+
+En el SAE la supervision normalmente se desactiva poniendo la entrada a -1. Para estas dos alternativas la entrada se muestra sin enmascarar y los pixeles no supervisados reciben `sample_weight = 0` por pixel; el modelo se recompila con `mse` ponderado para que `val_mse` (checkpoint/early stopping) solo mida pixeles anotados. La validacion usa los mismos crops que el oversampling historico, con imagen real y peso = regiones anotadas.

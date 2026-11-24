@@ -10,6 +10,16 @@ import numpy as np
 import torch
 from torch.utils.data import Dataset
 
+from .context_sampling import (
+    SAMPLING_CHOICES,
+    SAMPLING_DEFAULT,
+    SAMPLING_CENTERED_CONTEXT,
+    SAMPLING_OUTPUT_MASKING,
+    sample_annotated_patch,
+    validate_context_range,
+    validate_mask_range,
+)
+
 
 Window = Tuple[int, int, int, int]  # top, left, height, width
 SampleLocation = Tuple[int, int, int]  # page_idx, top, left
@@ -272,6 +282,12 @@ class PartialPatchDataset(Dataset):
         legacy_row_offset: int = 100,
         legacy_col_offset: int = 50,
         max_tries: int = 100,
+        sampling: str = SAMPLING_DEFAULT,
+        context_min: float = 1.0,
+        context_max: float = 2.0,
+        mask_min: float = 0.0,
+        mask_max: float = 0.95,
+        mask_block: int = 32,
     ):
         if not pages:
             raise ValueError("At least one page is required")
@@ -287,6 +303,21 @@ class PartialPatchDataset(Dataset):
         self.max_tries = int(max_tries)
         self.augmenter = PatchAugmenter(augmentations)
         self.epoch = 0
+
+        # Alternative samplers (reviewer request). ``default`` keeps the
+        # historical uniform/oversampling behaviour byte for byte.
+        if sampling not in SAMPLING_CHOICES:
+            raise ValueError(f"Unknown sampling strategy: {sampling}")
+        self.sampling = sampling
+        self.context_min = float(context_min)
+        self.context_max = float(context_max)
+        self.mask_min = float(mask_min)
+        self.mask_max = float(mask_max)
+        self.mask_block = int(mask_block)
+        if sampling == SAMPLING_CENTERED_CONTEXT:
+            validate_context_range(self.context_min, self.context_max)
+        elif sampling == SAMPLING_OUTPUT_MASKING:
+            validate_mask_range(self.mask_min, self.mask_max, self.mask_block)
 
         self._annotated: List[Tuple[int, Window]] = []
         for page_idx, page in enumerate(self.pages):
@@ -369,8 +400,37 @@ class PartialPatchDataset(Dataset):
         rng = self._rng(index)
         return self._oversampled_crop(rng) if self.oversampling else self._uniform_crop(rng)
 
+    def _alternative_sample(self, rng: random.Random):
+        """Centered-context or output-masking sample of one fixed annotated patch."""
+        page_idx, (top, left, _, _) = self._annotated[rng.randrange(len(self._annotated))]
+        page = self.pages[page_idx]
+        return sample_annotated_patch(
+            self.sampling,
+            page.image,
+            page.partial_gt,
+            page.valid_mask,
+            top,
+            left,
+            self.patch_h,
+            self.patch_w,
+            rng,
+            image_fill=255,
+            context_min=self.context_min,
+            context_max=self.context_max,
+            mask_min=self.mask_min,
+            mask_max=self.mask_max,
+            mask_block=self.mask_block,
+        )
+
     def __getitem__(self, index):
         rng = self._rng(index)
+        if self.sampling != SAMPLING_DEFAULT:
+            image, target, valid = self._alternative_sample(rng)
+            image, target, valid = self.augmenter(image, target, valid, rng)
+            image_t = torch.from_numpy(np.ascontiguousarray(image.transpose(2, 0, 1))).float() / 255.0
+            target_t = torch.from_numpy(np.ascontiguousarray(target)).long()
+            valid_t = torch.from_numpy(np.ascontiguousarray(valid)).bool()
+            return image_t, target_t, valid_t
         if self.oversampling:
             page_idx, top, left = self._oversampled_crop(rng)
         else:

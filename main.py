@@ -37,6 +37,7 @@ import utilIO
 import util
 import CNNmodel
 import sae_mixing
+import sae_sampling
 
 #util.init()
 
@@ -93,6 +94,15 @@ def menu():
                         help='Optional 2x2 CutMix or masked MixUp on SAE training batches')
     parser.add_argument('--mixup_min', type=float, default=0.25)
     parser.add_argument('--mixup_max', type=float, default=0.75)
+    parser.add_argument('--sae_sampling', choices=['default', 'centered_context', 'output_masking'], default='default',
+                        help='Alternative to oversampling: fixed annotated patch with random larger centred context '
+                             '(resized to the window) or with a random fraction of its labels masked. '
+                             'Unsupervised pixels stay visible and get sample_weight 0.')
+    parser.add_argument('--context_min', type=float, default=1.0, help='centered_context: min crop side / window side')
+    parser.add_argument('--context_max', type=float, default=2.0, help='centered_context: max crop side / window side')
+    parser.add_argument('--mask_min', type=float, default=0.0, help='output_masking: min masked fraction of the patch')
+    parser.add_argument('--mask_max', type=float, default=0.95, help='output_masking: max masked fraction of the patch')
+    parser.add_argument('--mask_block', type=int, default=32, help='output_masking: side (px) of the masked square blocks')
     
     args = parser.parse_args()
 
@@ -231,6 +241,19 @@ if __name__ == "__main__":
       raise ValueError('SAE mixing requires masking: do not use -no_mask')
     if config.sae_mix == 'cutmix' and (config.win_w % 2 or config.win_h % 2):
       raise ValueError('CutMix requires even window dimensions')
+    if config.sae_sampling != 'default':
+      if config.sae_mix != 'none':
+        raise ValueError('--sae_sampling alternatives are not combined with --sae_mix')
+      if config.no_mask:
+        raise ValueError('--sae_sampling alternatives rely on masked supervision: do not use -no_mask')
+      if config.n_pa <= 0:
+        raise ValueError('--sae_sampling requires -npatches > 0 (same sample budget as oversampling)')
+      if any(a not in (utilConst.AUGMENTATION_NONE, utilConst.AUGMENTATION_RANDOM) for a in config.aug):
+        raise ValueError('--sae_sampling alternatives do not support geometric augmentations (use -aug none)')
+      if config.sae_sampling == 'centered_context':
+        sae_sampling.validate_context_range(config.context_min, config.context_max)
+      else:
+        sae_sampling.validate_mask_range(config.mask_min, config.mask_max, config.mask_block)
     path_model = utilIO.getPathModel(config)
     utilIO.createParentDirectory(path_model)
     
@@ -257,11 +280,19 @@ if __name__ == "__main__":
       
       model = CNNmodel.get_model(input_shape, config.no_mask, config.n_la, config.nb_fil, config.ker, dropout=config.drop, stride=2)
       
-      train_generator = util.create_generator(train_data, config.no_mask, config.ba, input_shape, config.n_pa, config.n_an, config.aug, config.ink_rate)
-      if config.sae_mix != 'none':
-        train_generator = sae_mixing.augment_generator(
-            train_generator, config.sae_mix, config.mixup_min, config.mixup_max)
-      val_generator = util.create_generator(val_data, config.no_mask, config.ba, input_shape, config.n_pa, config.n_an, augmentation_val, config.ink_rate)
+      if config.sae_sampling == 'default':
+        train_generator = util.create_generator(train_data, config.no_mask, config.ba, input_shape, config.n_pa, config.n_an, config.aug, config.ink_rate)
+        if config.sae_mix != 'none':
+          train_generator = sae_mixing.augment_generator(
+              train_generator, config.sae_mix, config.mixup_min, config.mixup_max)
+        val_generator = util.create_generator(val_data, config.no_mask, config.ba, input_shape, config.n_pa, config.n_an, augmentation_val, config.ink_rate)
+      else:
+        # Unmasked input + per-pixel sample_weight; val_mse only on annotated pixels.
+        sae_sampling.compile_with_weighted_mse(model)
+        train_generator = sae_sampling.create_train_generator(
+            train_data, config.ba, input_shape, config.n_an, config.ink_rate, config.sae_sampling,
+            config.context_min, config.context_max, config.mask_min, config.mask_max, config.mask_block)
+        val_generator = sae_sampling.create_val_generator(val_data, config.ba, input_shape, config.n_an, config.ink_rate)
       
       nb_train_pages = len(train_data)
       nb_val_pages = len(val_data)
@@ -275,7 +306,10 @@ if __name__ == "__main__":
       number_annotated_patches = util.get_number_annotated_patches(train_data, input_shape[0], input_shape[1], config.ink_rate, config.n_pa)  
       number_annotated_patches_val = util.get_number_annotated_patches(val_data, input_shape[0], input_shape[1], config.ink_rate, config.n_pa)  
       
-      if utilConst.AUGMENTATION_RANDOM in config.aug:
+      if config.sae_sampling != 'default':
+        # Same sample budget per epoch as the oversampling baseline.
+        steps_per_epoch = int(np.ceil((config.n_pa*nb_train_pages)/ config.ba))
+      elif utilConst.AUGMENTATION_RANDOM in config.aug:
         assert(config.n_pa!=-1)
         steps_per_epoch = int(np.ceil((config.n_pa*nb_train_pages)/ config.ba))
       else:

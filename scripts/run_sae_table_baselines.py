@@ -9,6 +9,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATASETS = ('ISOS', 'Bickley', 'Dibco', 'Einsiedeln', 'Palm', 'PHI', 'Salzinnes')
 CASES = ('noover_noaug', 'over_noaug', 'over_aug')
+# Reviewer-requested alternatives to oversampling. Only run when requested
+# explicitly with --jobs; the default job list is unchanged.
+ALT_CASES = ('centered_context', 'output_masking')
 
 
 def arguments():
@@ -41,8 +44,12 @@ def run(opts, dataset, case, lam):
     elif case == 'over_noaug':
         aug = ['random']
         npatches = opts.np
-    else:
+    elif case == 'over_aug':
         aug = ['random', 'flipH', 'flipV', 'rot', 'scale']
+        npatches = opts.np
+    else:
+        # Same sample budget as over_noaug, no geometric augmentation.
+        aug = ['none']
         npatches = opts.np
 
     outdir = ROOT / 'results' / 'sae_baselines_1page' / dataset
@@ -68,6 +75,8 @@ def run(opts, dataset, case, lam):
               '-pages_train', '1', '-npatches', str(npatches),
               '-n_annotated_patches', str(lam), '-ink_rate', '0.02',
               '-e', str(opts.epochs), '-b', '32', '-verbose', '1', '-gpu', '0']
+    if case in ALT_CASES:
+        common += ['--sae_sampling', case]
     env = os.environ.copy()
     env['CUDA_VISIBLE_DEVICES'] = str(opts.gpu)
     for stage, cmd, logfile in [('train', common, logtrain),
@@ -91,7 +100,7 @@ def run(opts, dataset, case, lam):
 def main():
     opts = arguments()
     datasets = subset(opts.datasets, DATASETS, 'datasets')
-    jobs = subset(opts.jobs, CASES, 'jobs')
+    jobs = subset(opts.jobs, CASES + ALT_CASES, 'jobs')
     lambdas = [int(x) for x in subset(opts.lambdas, ('1','8','32'), 'lambdas')]
     failures = 0
     for dataset in datasets:

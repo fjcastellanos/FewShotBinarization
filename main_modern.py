@@ -19,6 +19,14 @@ from modern_fewshot.data import (
     match_src_gt,
     order_pairs_by_resolution,
 )
+from modern_fewshot.context_sampling import (
+    SAMPLING_CHOICES,
+    SAMPLING_CENTERED_CONTEXT,
+    SAMPLING_DEFAULT,
+    SAMPLING_OUTPUT_MASKING,
+    validate_context_range,
+    validate_mask_range,
+)
 from modern_fewshot.inference import predict_page_tiled
 from modern_fewshot.models import MODEL_REGISTRY, create_model
 from modern_fewshot.reporting import (
@@ -79,6 +87,25 @@ def parser():
                    help="Optional batch-level augmentation (default: original pipeline)")
     p.add_argument("--mixup-min", type=float, default=0.25)
     p.add_argument("--mixup-max", type=float, default=0.75)
+    p.add_argument(
+        "--sampling", choices=SAMPLING_CHOICES, default=SAMPLING_DEFAULT,
+        help=(
+            "Alternative to oversampling (requires --experiment masking). "
+            "centered_context: fixed annotated patch with random larger centred context, resized to the window. "
+            "output_masking: fixed annotated patch with a random fraction of its labels masked. "
+            "default: original pipeline."
+        ),
+    )
+    p.add_argument("--context-min", type=float, default=1.0,
+                   help="centered_context: minimum crop side as a multiple of the window side")
+    p.add_argument("--context-max", type=float, default=2.0,
+                   help="centered_context: maximum crop side as a multiple of the window side")
+    p.add_argument("--mask-min", type=float, default=0.0,
+                   help="output_masking: minimum fraction of the annotated patch to mask")
+    p.add_argument("--mask-max", type=float, default=0.95,
+                   help="output_masking: maximum fraction of the annotated patch to mask")
+    p.add_argument("--mask-block", type=int, default=32,
+                   help="output_masking: side in pixels of the square masked blocks")
     p.add_argument("--freeze-encoder", action="store_true")
     p.add_argument("--gradient-checkpointing", action="store_true")
 
@@ -156,6 +183,10 @@ def default_checkpoint(args, dataset_name: str):
         if args.mix_strategy == "mixup":
             suffix += f"-{args.mixup_min:g}-{args.mixup_max:g}"
         filename = filename[:-3] + f"__{suffix}.pt"
+    if args.sampling == SAMPLING_CENTERED_CONTEXT:
+        filename = filename[:-3] + f"__ctx{args.context_min:g}-{args.context_max:g}.pt"
+    elif args.sampling == SAMPLING_OUTPUT_MASKING:
+        filename = filename[:-3] + f"__rom{args.mask_min:g}-{args.mask_max:g}-b{args.mask_block}.pt"
     return str(Path("models") / "modern" / args.model / args.experiment / filename)
 
 
@@ -314,6 +345,17 @@ def main():
     use_masking, use_oversampling = EXPERIMENTS[args.experiment]
     if not 0 <= args.mixup_min <= args.mixup_max <= 1:
         raise ValueError("Require 0 <= --mixup-min <= --mixup-max <= 1")
+    if args.sampling != SAMPLING_DEFAULT:
+        # The alternatives replace oversampling and rely on the valid mask:
+        # they are only defined as masking + <alternative sampler>.
+        if args.experiment != "masking":
+            raise ValueError(f"--sampling {args.sampling} replaces oversampling; use --experiment masking")
+        if args.mix_strategy != "none":
+            raise ValueError("--sampling alternatives are not combined with --mix-strategy")
+        if args.sampling == SAMPLING_CENTERED_CONTEXT:
+            validate_context_range(args.context_min, args.context_max)
+        else:
+            validate_mask_range(args.mask_min, args.mask_max, args.mask_block)
     dataset_name = sanitize_token(args.dataset_name or infer_dataset_name(args.db_train_src))
     checkpoint = args.checkpoint or default_checkpoint(args, dataset_name)
 
@@ -358,6 +400,10 @@ def main():
     print(f"  model={args.model}")
     print(f"  experiment={args.experiment} masking={use_masking} oversampling={use_oversampling}")
     print(f"  mix_strategy={args.mix_strategy} mixup_range=[{args.mixup_min}, {args.mixup_max}]")
+    if args.sampling == SAMPLING_CENTERED_CONTEXT:
+        print(f"  sampling={args.sampling} context_scale=[{args.context_min}, {args.context_max}]")
+    elif args.sampling == SAMPLING_OUTPUT_MASKING:
+        print(f"  sampling={args.sampling} mask_fraction=[{args.mask_min}, {args.mask_max}] block={args.mask_block}")
     print(f"  checkpoint={checkpoint}")
     print(f"  train_pages={len(train_pages)} val_pages={len(val_pages)}")
     print(f"  virtual_samples_per_page={args.npatches}")
@@ -391,6 +437,12 @@ def main():
             min_ink_rate=args.ink_rate,
             augmentations=args.aug,
             seed=args.seed,
+            sampling=args.sampling,
+            context_min=args.context_min,
+            context_max=args.context_max,
+            mask_min=args.mask_min,
+            mask_max=args.mask_max,
+            mask_block=args.mask_block,
         )
         cfg = TrainConfig(
             epochs=args.epochs,
@@ -471,6 +523,9 @@ def main():
         "n_annotated_val": n_annotated_val,
         "max_annotated_val": max_annotated_val,
     }
+
+    if args.sampling != SAMPLING_DEFAULT:
+        summary["sampling"] = args.sampling
 
     if args.db_test_src and args.db_test_gt:
         test_pairs = match_src_gt(

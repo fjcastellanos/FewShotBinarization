@@ -127,6 +127,11 @@ def __remove_attribute_namespace(config, key):
     except:
         pass
 
+def __compact_number(value):
+    text = '%g' % value
+    return text[1:] if text.startswith('0.') else text
+
+
 def getPathModel(config):
     config_copy = copy.deepcopy(config)
     
@@ -149,6 +154,17 @@ def getPathModel(config):
     if getattr(config_copy, 'sae_mix', 'none') != 'mixup':
         __remove_attribute_namespace(config_copy, 'mixup_min')
         __remove_attribute_namespace(config_copy, 'mixup_max')
+
+    # Alternative samplers (reviewer request) never alter legacy checkpoint
+    # paths: their options are removed here and encoded as a compact suffix.
+    sae_sampling = getattr(config_copy, 'sae_sampling', 'default')
+    sampling_suffix = ''
+    if sae_sampling == 'centered_context':
+        sampling_suffix = '__ctx%s-%s' % (__compact_number(config.context_min), __compact_number(config.context_max))
+    elif sae_sampling == 'output_masking':
+        sampling_suffix = '__rom%s-%sb%d' % (__compact_number(config.mask_min), __compact_number(config.mask_max), config.mask_block)
+    for key in ('sae_sampling', 'context_min', 'context_max', 'mask_min', 'mask_max', 'mask_block'):
+        __remove_attribute_namespace(config_copy, key)
 
     if config.ink_rate == 0.0025:
         __remove_attribute_namespace(config_copy, 'ink_rate')
@@ -192,4 +208,9 @@ def getPathModel(config):
         filename = os.path.basename(str_config)
         if len(os.fsencode(filename)) > 255:
             raise ValueError('Checkpoint filename still exceeds 255 bytes (%s): %s' % (len(os.fsencode(filename)), filename))
+    if sampling_suffix:
+        str_config = str_config[:-len('.h5')] + sampling_suffix + '.h5'
+        filename = os.path.basename(str_config)
+        if len(os.fsencode(filename)) > 255:
+            raise ValueError('Checkpoint filename exceeds 255 bytes (%s): %s' % (len(os.fsencode(filename)), filename))
     return str_config
